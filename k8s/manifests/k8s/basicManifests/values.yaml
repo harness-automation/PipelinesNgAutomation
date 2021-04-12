@@ -1,5 +1,5 @@
 name: <+stage.variables.resourceNamePrefix>
-replicas: 3
+replicas: 2
 
 image: <+artifact.image>
 dockercfg: <+artifact.imagePullSecret>
