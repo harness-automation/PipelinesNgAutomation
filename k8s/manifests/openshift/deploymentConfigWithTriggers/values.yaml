@@ -1,4 +1,4 @@
-name: <+resourceName>
+name: <+resourceNamePrefix>
 replicas: 1
 
 createNamespace: true
