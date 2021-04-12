@@ -3,13 +3,13 @@ kind: DeploymentConfig
 metadata:
   labels:
     app: dc-{{.Values.name}}-no-trigger
-  name: dc-no-trigger
+  name: dc-{{.Values.name}}-no-trigger
 spec:
   replicas: 1
   revisionHistoryLimit: 10
   selector:
-    app: dc-no-trigger
-    deploymentconfig: dc-no-trigger
+    app: dc-{{.Values.name}}-no-trigger
+    deploymentconfig: dc-{{.Values.name}}-no-trigger
   strategy:
     activeDeadlineSeconds: 21600
     resources: {}
@@ -24,8 +24,8 @@ spec:
     metadata:
       creationTimestamp: null
       labels:
-        app: dc-no-trigger
-        deploymentconfig: dc-no-trigger
+        app: dc-{{.Values.name}}-no-trigger
+        deploymentconfig: dc-{{.Values.name}}-no-trigger
       annotations:
         prometheus.io/scrape: 'true'
         prometheus.io/port: "9080"
@@ -37,7 +37,7 @@ spec:
           valueFrom:
             configMapKeyRef:
               key: key1
-              name: cm
+              name: dc-{{.Values.name}}-no-trigger-cm
         image: twalter/openshift-nginx:latest
         imagePullPolicy: Always
         name: anshul-test
@@ -63,4 +63,4 @@ data:
 kind: ConfigMap
 metadata:
   creationTimestamp: null
-  name: cm
+  name: dc-{{.Values.name}}-no-trigger-cm
