@@ -55,6 +55,10 @@ spec:
         release: {{ .Release.Name }}
         harness.io/release: {{ .Release.Name }}
     spec:
+      {{- if .Values.dockercfg}}
+      imagePullSecrets:
+      - name: {{.Values.name}}-dockercfg
+      {{- end}}
       containers:
         - name: {{ .Chart.Name }}
           image: {{.Values.image}}
@@ -69,8 +73,4 @@ spec:
           - secretRef:
               name: {{.Values.name}}
           {{- end}}
-          {{- end}}
-          {{- if .Values.dockercfg}}
-          imagePullSecrets:
-          - name: {{.Values.name}}-dockercfg
           {{- end}}
