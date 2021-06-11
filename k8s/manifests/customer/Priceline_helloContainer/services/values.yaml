@@ -25,4 +25,4 @@ env:
   config:
     key1: value1
   secrets:
-    key2: <+service.variables.encrypted_variable>
+    key2: <+serviceConfig.serviceDefinition.spec.variables.encrypted_variable>
