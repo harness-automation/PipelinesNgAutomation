@@ -20,7 +20,7 @@ serviceTargetPort: 80
 # Specify all environment variables to be added to the container.
 # The following two maps, config and secrets, are put into a ConfigMap
 # and a Secret, respectively.
-# Both are added to the container environment in podSpec as envFrom source.
+# Both are added to the container environment in podSpec as envFrom source. 
 env:
   config:
     key1: value1
