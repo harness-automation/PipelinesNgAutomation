@@ -5,7 +5,7 @@ dockercfg: <+artifact.imagePullSecret>
 replicas: 1
 
 createNamespace: true
-namespace: <+infrastructure.namespace>
+namespace: <+infra.namespace>
 
 labels:
   default: Default-Value
