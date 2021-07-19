@@ -30,4 +30,3 @@ spec:
     protocol: TCP
   selector:
     app: test-deployment
-{"mode":"full","isActive":false}
