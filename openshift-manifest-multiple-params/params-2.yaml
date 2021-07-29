@@ -1,0 +1,2 @@
+IMAGE=<+artifact.image>
+DOCKER_CFG=<+artifact.imagePullSecret>
