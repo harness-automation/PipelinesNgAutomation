@@ -16,4 +16,4 @@ metadata:
   name: the-deployment
   namespace: default
 spec:
-  replicas: 1
+  replicas: <+stages.s1.variables.replica>

@@ -1,6 +1,6 @@
 resources:
   - ../../application
-namePrefix: production-
+namePrefix: dev-
 configMapGenerator:
 - name: example-config
   namespace: default
@@ -9,6 +9,3 @@ configMapGenerator:
     - configs/config.json
 patchesStrategicMerge:
   - env.yaml
-images:
-- name: harness/todolist-sample
-  newTag: latest

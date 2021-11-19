@@ -10,7 +10,7 @@ spec:
   selector:
     matchLabels:
       app: example-app
-  replicas: 2
+  replicas: 1
   strategy:
     type: RollingUpdate
     rollingUpdate:
@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
       - name: example-app
-        image: fdhur
+        image: willReplace
         imagePullPolicy: Always
         ports:
         - containerPort: 5000

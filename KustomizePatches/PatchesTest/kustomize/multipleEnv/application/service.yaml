@@ -8,7 +8,7 @@ metadata:
 spec:
   type: LoadBalancer
   selector:
-    app: naman
+    app: willReplace
   ports:
     - protocol: TCP
       name: http
