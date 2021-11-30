@@ -3,6 +3,10 @@
 commonLabels:
   app: hello-bogdan
 
+data:
+  altGreeting: "Good Morning Bogdan!"
+  enableRisky: "false"
+
 resources:
 - deployment.yaml
 - service.yml
