@@ -16,4 +16,4 @@ metadata:
   name: the-deployment
   namespace: default
 spec:
-  replicas: <+stages.s1.variables.replica>
+  replicas: <+serviceConfig.serviceDefinition.spec.variables.replica>
