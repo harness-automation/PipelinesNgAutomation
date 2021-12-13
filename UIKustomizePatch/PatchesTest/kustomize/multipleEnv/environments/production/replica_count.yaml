@@ -3,4 +3,4 @@ kind: Deployment
 metadata:
   name: example-deploy
 spec:
-  replicas: <+stages.s1.variables.replica>
+  replicas: <+stage.variables.replica>
