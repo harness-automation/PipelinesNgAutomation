@@ -9,6 +9,3 @@ configMapGenerator:
     - configs/config.json
 patchesStrategicMerge:
   - env.yaml
-images:
-- name: harness/todolist-sample
-  newTag: latest
