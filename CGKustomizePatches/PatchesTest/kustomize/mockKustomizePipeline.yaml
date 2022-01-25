@@ -41,7 +41,7 @@ pipeline:
                                                     connectorRef: gitNaman
                                                     gitFetchType: Branch
                                                     paths:
-                                                        - kustomize/multipleEnv/environments/production/patch1.yaml
+                                                        - kustomize/multipleEnv/environments/production/patchService.yaml
                                                         - kustomize/multipleEnv/environments/production/patch2.yaml
                                                     branch: master
                               artifacts:
