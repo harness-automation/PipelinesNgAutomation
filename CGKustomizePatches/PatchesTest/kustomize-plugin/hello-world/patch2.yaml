@@ -8,7 +8,7 @@ spec:
     spec:
       containers:
         - name: the-container
-          image: ${artifact.metadata.image}
+          image: ${serviceVariable.image}
 ---
 apiVersion: apps/v1
 kind: Deployment
