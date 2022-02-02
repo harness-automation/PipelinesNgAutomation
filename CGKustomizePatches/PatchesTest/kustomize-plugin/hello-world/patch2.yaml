@@ -8,7 +8,7 @@ spec:
     spec:
       containers:
         - name: the-container
-          image: <+serviceConfig.serviceDefinition.spec.variables.image>
+          image: ${artifact.metadata.image}
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -16,4 +16,4 @@ metadata:
   name: the-deployment
   namespace: default
 spec:
-  replicas: 3
+  replicas: ${serviceVariable.replica}
