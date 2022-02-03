@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
       - name: example-app
-        image: harness/todolist-sample:latest
+        image: willReplace
         imagePullPolicy: Always
         ports:
         - containerPort: 5000
