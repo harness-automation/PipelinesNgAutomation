@@ -1,1 +1,1 @@
-replicaCount: <+stage.variables.replicaCount>
+replicaCount: 5
