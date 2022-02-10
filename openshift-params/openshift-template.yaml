@@ -10,17 +10,29 @@ objects:
 - apiVersion: apps/v1
   kind: Deployment
   metadata:
-    name: redis-master
+    name: redis-master-deployment
+    labels:
+      app: redis
   spec:
-    containers:
-    - env:
-      - name: REDIS_PASSWORD
-        value: ${REDIS_PASSWORD}
-      image: dockerfile/redis
-      name: master
-      ports:
-      - containerPort: 6379
-        protocol: TCP
+    replicas: 1
+    selector:
+      matchLabels:
+        app: redis
+    template:
+      metadata:
+        name: redis-master
+        labels:
+          app: redis
+      spec:
+        containers:
+        - env:
+          - name: REDIS_PASSWORD
+            value: ${REDIS_PASSWORD}
+          image: dockerfile/redis
+          name: master
+          ports:
+          - containerPort: 6379
+            protocol: TCP
 parameters:
 - description: Password used for Redis authentication
   from: '[A-Z0-9]{8}'
