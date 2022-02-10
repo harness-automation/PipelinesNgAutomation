@@ -8,7 +8,7 @@ metadata:
     tags: "database,nosql"
 objects:
 - apiVersion: v1
-  kind: Pod
+  kind: Deployment
   metadata:
     name: redis-master
   spec:
