@@ -28,7 +28,7 @@ objects:
         - env:
           - name: REDIS_PASSWORD
             value: ${REDIS_PASSWORD}
-          image: dockerfile/redis
+          image: redis
           name: master
           ports:
           - containerPort: 6379
