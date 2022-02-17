@@ -1,1 +1,1 @@
-replicas: ${service.replicas}
+replicas: ${serviceVariable.replicas}
