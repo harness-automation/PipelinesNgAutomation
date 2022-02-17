@@ -1,2 +1,1 @@
-name: <+stage.variables.secretPrefix>
-replicaCount: 4
+replicas: ${serviceVariable.replicas2} 
