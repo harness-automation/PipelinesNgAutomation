@@ -6,12 +6,13 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      deploy: example
+      app: example
   template:
     metadata:
       labels:
-        deploy: example
+        app: example
     spec:
       containers:
         - name: nginx
           image: nginx:1.7.9
+ 
