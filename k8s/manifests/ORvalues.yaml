@@ -1,1 +1,2 @@
-replicas: 4
+replicas: 3
+image: harness/todolist-sample:131
