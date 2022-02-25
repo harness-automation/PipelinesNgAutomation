@@ -1,2 +1,2 @@
 replicas: ${workflow.variables.replicas}
-image: ${secrets.getValue("image")}
+image: ${workflow.variables.image}
