@@ -1,0 +1,2 @@
+replicas: 3sv
+image: harness/todolist-sample:latest
