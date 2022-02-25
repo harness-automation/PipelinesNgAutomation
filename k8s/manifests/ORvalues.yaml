@@ -1,2 +1,2 @@
 replicas: 3
-image: harness/todolist-sample:131
+image: ${secrets.getValue("image")}
