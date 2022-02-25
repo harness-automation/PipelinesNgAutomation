@@ -13,6 +13,6 @@ spec:
         app: example
     spec:
       containers:
-        - name: nginx
+        - name: {{.Values.image}}
           image: nginx:1.7.9
  
