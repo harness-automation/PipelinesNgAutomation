@@ -1,4 +1,5 @@
 {
    "name": "<+pipeline.variables.name1>",
    "place": "blr"
+   "color": "green"
 }
