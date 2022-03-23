@@ -1,4 +1,4 @@
 {
-   "name": "achyuth",
+   "name": <+pipeline.variables.name1>,
    "place": "blr"
 }
