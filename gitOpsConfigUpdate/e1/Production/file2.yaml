@@ -1,9 +1,9 @@
 ---
-name: anshul
+name: "alex"
 place:
-  country: usa
+  country: "usa"
   details:
-    city: sfo
-    state: cal
-color: blue
-number: <+pipeline.variables.two>
+    city: "la"
+    state: "cal"
+color: "blue"
+number: 2
