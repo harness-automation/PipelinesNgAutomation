@@ -1,6 +1,10 @@
 {
    "name": "anshul",
-   "place": "sfo",
+   "place": 
+   {
+      "city": "sfo",
+      "state": "cal"
+   },
    "color": "blue",
    "no": "<+pipeline.variables.two>"
 }
