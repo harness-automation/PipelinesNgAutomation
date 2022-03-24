@@ -1,7 +1,9 @@
 ---
 name: anshul
 place:
-  city: sfo
-  state: cal
+  country: usa
+  details:
+    city: sfo
+    state: cal
 color: blue
 number: "<+pipeline.variables.two>"
