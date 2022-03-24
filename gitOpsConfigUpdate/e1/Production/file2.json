@@ -2,5 +2,5 @@
    "name": "anshul",
    "place": "sfo",
    "color": "blue",
-   "no": "2"
+   "no": "<+pipeline.variables.two>"
 }
