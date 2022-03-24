@@ -10,5 +10,5 @@
       }
    },
    "color": "blue",
-   "no": "<+pipeline.variables.two>"
+   "number": "<+pipeline.variables.two>"
 }
