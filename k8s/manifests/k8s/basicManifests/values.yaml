@@ -1,11 +1,11 @@
-name: <+stage.variables.resourceNamePrefix>
-replicas: 2
+name: bogdan-ng
+replicas: 1
 
 image: <+artifact.image>
 dockercfg: <+artifact.imagePullSecret>
 
 createNamespace: true
-namespace: <+infra.namespace>
+namespace: bogdan
 
 # Service Type allow you to specify what kind of service you want.
 # Possible values for ServiceType are:
