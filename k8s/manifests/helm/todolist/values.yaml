@@ -8,7 +8,7 @@ replicaCount: 1
 namespace: default
 
 image: nginx:latest
-pullPolicy: IfNotPresent
+pullPolicy: Always
 dockercfg: 
 
 service:
