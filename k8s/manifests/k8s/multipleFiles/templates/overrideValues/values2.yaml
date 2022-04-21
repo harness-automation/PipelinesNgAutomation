@@ -2,4 +2,3 @@ name: <+stage.variables.resourceNamePrefix>
 
 image: <+artifact.image>
 dockercfg: <+artifact.imagePullSecret>
-replicaCount: 2
