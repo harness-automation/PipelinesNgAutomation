@@ -59,6 +59,8 @@ spec:
       - name: {{.Values.name}}-dockercfg
       {{- end}}
       containers:
+        - name: todolist-harness
+          image: registry.hub.docker.com/harness/todolist-sample:latest
         - name: {{ .Chart.Name }}
           image: {{.Values.image}}
           imagePullPolicy: {{ .Values.pullPolicy }}
