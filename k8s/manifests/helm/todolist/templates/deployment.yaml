@@ -72,6 +72,6 @@ spec:
           - secretRef:
               name: {{.Values.name}}
         - name: nginx 
-          image: library/nginx:1.14    
+          image: registry.hub.docker.com/library/nginx:1.14.2    
           {{- end}}
           {{- end}}
