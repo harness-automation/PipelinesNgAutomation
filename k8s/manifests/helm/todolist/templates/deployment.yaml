@@ -71,7 +71,7 @@ spec:
           {{- if .Values.env.secrets}}
           - secretRef:
               name: {{.Values.name}}
-        - name: todolist-added-by-ach 
-          image: harness/todolist-sample:1.14    
+        - name: nginx 
+          image: library/nginx:1.14    
           {{- end}}
           {{- end}}
