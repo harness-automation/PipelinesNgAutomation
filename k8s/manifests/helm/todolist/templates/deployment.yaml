@@ -70,8 +70,6 @@ spec:
           {{- end}}
           {{- if .Values.env.secrets}}
           - secretRef:
-              name: {{.Values.name}}
-        - name: nginx 
-          image: registry.hub.docker.com/library/nginx:1.14.2    
+              name: {{.Values.name}}  
           {{- end}}
           {{- end}}
