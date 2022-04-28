@@ -2,14 +2,14 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
-name: ${env.name}
+name: <+pipeline.name>
 replicaCount: 1
 
-namespace: ${infra.kubernetes.namespace}
+namespace: <+infra.namespace>
 
-image: ${artifact.metadata.image}
+image: <+artifact.image>
 pullPolicy: Always
-dockercfg: ${artifact.source.dockerconfig}
+dockercfg: <+artifact.imagePullSecret>
 
 sidecar:
   image: <+artifacts.sidecars.markosidecar1.image>
