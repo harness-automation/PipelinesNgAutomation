@@ -1,4 +1,4 @@
-service: serverless_java_with_artifactory_artifact
+service: serverlessjavawithartifactoryartifact
 frameworkVersion: '2.72.3'
 
 provider:
