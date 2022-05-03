@@ -1,4 +1,4 @@
-service: <+pipeline.variables.serviceName>
+service: serverless_java_with_artifactory_artifact
 frameworkVersion: '2.72.3'
 
 provider:
