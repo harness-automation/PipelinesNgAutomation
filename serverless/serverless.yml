@@ -1,4 +1,4 @@
-service: service1
+service: servicenw
 frameworkVersion: '2.72.3'
 
 provider:
