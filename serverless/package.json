@@ -18,8 +18,5 @@
   "dependencies": {
     "moment": "latest"
   },
-  "homepage": "https://github.com/harness/serverless-yaml-files#readme",
-  "devDependencies": {
-    "serverless": "2.35.0"
-  }
+  "homepage": "https://github.com/harness/serverless-yaml-files#readme"
 }
