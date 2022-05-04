@@ -29,7 +29,7 @@ layers:
     path: first_layer
 
 plugins:
-  - serverless-plugin-aws-alerts@1.5.0
+  - serverless-plugin-tracing
 
 resources: # CloudFormation template syntax
   Resources:
