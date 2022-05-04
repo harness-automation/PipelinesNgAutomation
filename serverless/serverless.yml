@@ -29,4 +29,4 @@ layers:
     path: first_layer
 
 plugins:
-  - serverless-plugin-tracing
+  - serverless-plugin-aws-alerts@1.5.0
