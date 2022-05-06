@@ -1,4 +1,4 @@
-service: serverlessjavawithartifactoryartifact
+service: <+pipeline.stages.sls.variables.serviceName>
 frameworkVersion: '2.35.0'
 
 provider:
