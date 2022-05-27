@@ -3,7 +3,7 @@ name: "ach"
 place:
   country: "usa"
   details:
-    city: "mumbai"
+    city: "chn"
     state: "cal"
 color: "blue"
 number: 2
