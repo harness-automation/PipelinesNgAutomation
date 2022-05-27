@@ -1,9 +1,9 @@
 ---
-name: "yogesh"
+name: "naman"
 place:
   country: "usa"
   details:
-    city: "sfo"
+    city: "seattle"
     state: "cal"
 color: "blue"
 number: 2
