@@ -1,9 +1,9 @@
 ---
-name: "ach"
+name: "prs"
 place:
   country: "usa"
   details:
-    city: "chn"
+    city: "blr"
     state: "cal"
 color: "blue"
 number: 2
