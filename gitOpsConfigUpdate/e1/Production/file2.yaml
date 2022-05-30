@@ -1,9 +1,9 @@
 ---
-name: "naman"
+name: "ach"
 place:
   country: "usa"
   details:
-    city: "san diego"
+    city: "sacramento"
     state: "cal"
 color: "blue"
 number: 2
