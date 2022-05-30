@@ -1,9 +1,9 @@
 ---
-name: "anshul"
+name: "naman"
 place:
   country: "usa"
   details:
-    city: "sfo"
+    city: "san diego"
     state: "cal"
 color: "blue"
 number: 2
