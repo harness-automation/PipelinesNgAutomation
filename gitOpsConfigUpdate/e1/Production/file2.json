@@ -1,10 +1,11 @@
 {
   "number" : 3,
   "color" : "blue",
-  "name" : "abc",
+  "__uuid" : "bM2s3F6sTeCzDS0B8-FqPw",
+  "name" : "tom",
   "place" : {
     "details" : {
-      "city" : "san diego"
+      "city" : "la"
     }
   }
 }
