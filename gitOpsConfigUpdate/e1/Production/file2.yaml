@@ -1,9 +1,8 @@
 ---
-name: "ach"
-place:
-  country: "usa"
-  details:
-    city: "sacramento"
-    state: "cal"
-color: "blue"
 number: 2
+color: "blue"
+__uuid: "Mwe7JOb0S7-dIvQv0g-2SA"
+name: "achyuth"
+place:
+  details:
+    city: "san fran"
