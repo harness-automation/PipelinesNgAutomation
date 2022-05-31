@@ -1,7 +1,6 @@
 {
-  "number" : "<+pipeline.variables.two>",
+  "number" : 3,
   "color" : "blue",
-  "__uuid" : "ViDJ_ZP-QJ2TyOMpZ-_hEQ",
   "name" : "abc",
   "place" : {
     "details" : {
