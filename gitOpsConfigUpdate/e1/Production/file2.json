@@ -1,14 +1,1 @@
-{
-   "name": "anshul",
-   "place": 
-   {  
-      "country": "usa",
-      "details":
-      {
-         "city": "sfo",
-         "state": "cal"
-      }
-   },
-   "color": "blue",
-   "number": "<+pipeline.variables.two>"
-}
+{"number":"<+pipeline.variables.two>","color":"blue","__uuid":"h93SjhhiSbSm6EEnYchbVw","name":"ach","place":{"details":{"city":"san diego"}}}
