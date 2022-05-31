@@ -1,1 +1,11 @@
-{"number":"<+pipeline.variables.two>","color":"blue","__uuid":"h93SjhhiSbSm6EEnYchbVw","name":"ach","place":{"details":{"city":"san diego"}}}
+{
+  "number" : "<+pipeline.variables.two>",
+  "color" : "blue",
+  "__uuid" : "ViDJ_ZP-QJ2TyOMpZ-_hEQ",
+  "name" : "abc",
+  "place" : {
+    "details" : {
+      "city" : "san diego"
+    }
+  }
+}
