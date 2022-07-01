@@ -3,4 +3,4 @@ kind: ConfigMap
 metadata:
   name: dummy-configmap 
 data:
-  test: {{.Values.testVal}}
+  test: "{{.Values.testVal}}"
