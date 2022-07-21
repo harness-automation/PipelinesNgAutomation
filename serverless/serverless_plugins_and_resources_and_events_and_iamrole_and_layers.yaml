@@ -36,7 +36,7 @@ resources: # CloudFormation template syntax
     usersTable:
       Type: AWS::DynamoDB::Table
       Properties:
-        TableName: usersTableThree
+        TableName: usersTableTemp
         AttributeDefinitions:
           - AttributeName: email
             AttributeType: S
