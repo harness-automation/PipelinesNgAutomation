@@ -37,7 +37,7 @@ type: kubernetes.io/dockercfg
   metadata:
     name: {{.Values.name}}-sidecar-dockercfg
     annotations:
-      harness.io/skip-versioning: true
+      harness.io/skip-versioning: "true"
   data:
     .dockercfg: {{.Values.sidecar.dockercfg}}
   type: kubernetes.io/dockercfg
