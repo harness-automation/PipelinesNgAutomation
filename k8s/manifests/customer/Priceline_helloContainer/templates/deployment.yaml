@@ -4,7 +4,7 @@ kind: ConfigMap
 metadata:
   name: {{.Values.name}}
   annotations:
-    harness.io/skip-versioning: true
+    harness.io/skip-versioning: "true"
 data:
 {{.Values.env.config | toYaml | indent 2}}
 ---
@@ -16,7 +16,7 @@ kind: Secret
 metadata:
   name: {{.Values.name}}
   annotations:
-    harness.io/skip-versioning: true
+    harness.io/skip-versioning: "true"
 stringData:
 {{.Values.env.secrets | toYaml | indent 2}}
 ---
@@ -28,7 +28,7 @@ kind: Secret
 metadata:
   name: {{.Values.name}}-dockercfg
   annotations:
-    harness.io/skip-versioning: true
+    harness.io/skip-versioning: "true"
 data:
   .dockercfg: {{.Values.dockercfg}}
 type: kubernetes.io/dockercfg
