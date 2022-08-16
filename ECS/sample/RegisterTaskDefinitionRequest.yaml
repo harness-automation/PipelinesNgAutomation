@@ -1,5 +1,5 @@
 ipcMode:
-executionRoleArn: arn:aws:iam::806630305776:role/ecsTaskExecutionRole
+executionRoleArn: arn:aws:iam::479370281431:role/ecsTaskExecutionRole
 containerDefinitions:
 - dnsSearchDomains:
   environmentFiles:
@@ -7,7 +7,7 @@ containerDefinitions:
     logDriver: awslogs
     secretOptions:
     options:
-      awslogs-group: "/ecs/sainath-fargate"
+      awslogs-group: "/aws/ecs/containerinsights/ecs-cluster-3/performance"
       awslogs-region: us-east-1
       awslogs-stream-prefix: ecs
   entryPoint:
@@ -50,7 +50,7 @@ containerDefinitions:
   name: nginx
 placementConstraints: []
 memory: '512'
-taskRoleArn: arn:aws:iam::806630305776:role/ecsTaskExecutionRole
+taskRoleArn: arn:aws:iam::479370281431:role/ecsTaskExecutionRole
 family: auto-fargate
 pidMode:
 requiresCompatibilities:
