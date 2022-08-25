@@ -44,8 +44,7 @@ containerDefinitions:
   memory: '512'
   entryPoint: []
   command: []
-  environment:
-  - NGINX_PORT: 8080
+  environment: []
   mountPoints: []
   volumesFrom: []
   dependsOn: []
