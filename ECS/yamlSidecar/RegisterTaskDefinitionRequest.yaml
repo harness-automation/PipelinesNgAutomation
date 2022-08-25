@@ -56,12 +56,12 @@ containerDefinitions:
   ulimits: []
   systemControls: []
   resourceRequirements: []
-executionRoleArn: arn:aws:iam::806630305776:role/ecsTaskExecutionRole
+executionRoleArn: arn:aws:iam::479370281431:role/ecsTaskExecutionRole
 volumes: []
 requiresAttributes:
 - FARGATE
 networkMode: awsvpc
-taskRoleArn: arn:aws:iam::806630305776:role/ecsTaskExecutionRole
+taskRoleArn: arn:aws:iam::479370281431:role/ecsTaskExecutionRole
 family: vamsi-sidecar
 placementConstraints: []
 compatibilities: []
