@@ -38,7 +38,7 @@ containerDefinitions:
     logDriver: awslogs
     secretOptions:
     options:
-      awslogs-group: "/ecs/sainath-fargate"
+      awslogs-group: "/aws/ecs/containerinsights/ecs-cluster-3/performance"
       awslogs-region: us-east-1
       awslogs-stream-prefix: ecs
   memory: '512'
