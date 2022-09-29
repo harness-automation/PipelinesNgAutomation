@@ -16,3 +16,7 @@ Resources:
             Iops: 200
             DeleteOnTermination: false
             VolumeSize: 20
+Outputs:
+  region: "us-east-1"
+  cluster: "ecs-cluster-3"
+  
