@@ -19,6 +19,6 @@ Resources:
 Outputs:
   region:
     Value: us-east-1
-  clusterName:
+  cluster:
     Value: ecs-cluster-3
   
