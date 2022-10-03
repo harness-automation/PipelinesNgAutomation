@@ -11,3 +11,7 @@ networkConfiguration:
 deploymentConfiguration:
   maximumPercent: 100
   minimumHealthyPercent: 0
+loadBalancers:
+- targetGroupArn: <+targetGroupArn>
+  containerName: nginx
+  containerPort: 80
