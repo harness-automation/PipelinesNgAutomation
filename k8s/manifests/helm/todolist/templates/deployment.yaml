@@ -42,6 +42,7 @@ metadata:
     harness.io/release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
 spec:
+  progressDeadlineSeconds: 1
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
