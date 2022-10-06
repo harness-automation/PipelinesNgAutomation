@@ -61,6 +61,7 @@ spec:
       containers:
         - name: todolist-harness-old
           image: registry.hub.docker.com/harness/todolist-sample:9
+          imagePullPolicy: Always
         - name: {{ .Chart.Name }}
           image: {{.Values.image}}
           imagePullPolicy: {{ .Values.pullPolicy }}
