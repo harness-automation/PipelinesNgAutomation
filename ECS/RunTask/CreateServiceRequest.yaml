@@ -2,8 +2,8 @@ launchType: FARGATE
 networkConfiguration:
   awsvpcConfiguration:
     securityGroups:
-    - sg-08ef5ca063a440404
+    - sg-afc848e7 
     subnets:
-    - subnet-0f3f0ef96fbc46e46
+    - subnet-9757dc98
     assignPublicIp: ENABLED
 count: <+pipeline.variables.runtaskcount>
