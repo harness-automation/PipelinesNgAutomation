@@ -51,7 +51,7 @@ containerDefinitions:
 placementConstraints: []
 memory: '512'
 taskRoleArn: arn:aws:iam::479370281431:role/ecsTaskExecutionRole
-family: ecs-auto
+family: task-auto
 pidMode:
 requiresCompatibilities:
 - FARGATE
