@@ -53,7 +53,7 @@ containerDefinitions:
 placementConstraints: []
 memory: '512'
 taskRoleArn: arn:aws:iam::479370281431:role/ecsTaskExecutionRole
-family: <+pipeline.stages.ecs.variables.taskName>
+family: "ecs-ng-task"
 pidMode:
 requiresCompatibilities:
 - FARGATE
