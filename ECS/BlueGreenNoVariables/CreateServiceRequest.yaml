@@ -1,5 +1,5 @@
 launchType: FARGATE
-serviceName: ecs-service
+serviceName: "ecs-service"
 desiredCount: 2
 networkConfiguration:
   awsvpcConfiguration:
