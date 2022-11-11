@@ -1,5 +1,5 @@
 launchType: FARGATE
-serviceName: <+pipeline.stages.ecs.variables.serviceName>
+serviceName: <+serviceVariables.serviceName>
 desiredCount: <+pipeline.stages.ecs.variables.desiredCount>
 networkConfiguration:
   awsvpcConfiguration:
