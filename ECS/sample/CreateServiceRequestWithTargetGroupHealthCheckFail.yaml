@@ -11,3 +11,7 @@ networkConfiguration:
 deploymentConfiguration:
   maximumPercent: 100
   minimumHealthyPercent: 0
+loadBalancers:
+- targetGroupArn: arn:aws:elasticloadbalancing:us-east-1:479370281431:targetgroup/ecs-fargate-wrong-health-check/68ec5337fa00fb1e 
+  containerName: nginx
+  containerPort: 80  
