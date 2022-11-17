@@ -1,5 +1,5 @@
 launchType: FARGATE
-serviceName: ecs-auto
+serviceName: ecs-auto-unhealthy-tgs
 desiredCount: 1
 networkConfiguration:
   awsvpcConfiguration:
