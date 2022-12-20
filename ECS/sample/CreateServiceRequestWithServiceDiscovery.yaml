@@ -1,5 +1,5 @@
 launchType: FARGATE
-serviceName: ecs-svc-discovery
+serviceName: ecs-svc-discovery-temp
 desiredCount: 1
 networkConfiguration:
   awsvpcConfiguration:
@@ -11,5 +11,4 @@ networkConfiguration:
 deploymentConfiguration:
   maximumPercent: 100
   minimumHealthyPercent: 0
-serviceRegistries:
-  - registryArn: arn:aws:servicediscovery:us-east-1:479370281431:service/srv-xeycgshb42ydmokf
+
