@@ -11,3 +11,5 @@ networkConfiguration:
 deploymentConfiguration:
   maximumPercent: 100
   minimumHealthyPercent: 0
+serviceRegistries:
+  - registryArn
