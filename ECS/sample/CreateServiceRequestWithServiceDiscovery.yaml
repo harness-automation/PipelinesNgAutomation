@@ -1,5 +1,5 @@
 launchType: FARGATE
-serviceName: ecs-svc-discovery-temp
+serviceName: ecs-svc-discovery
 desiredCount: 1
 networkConfiguration:
   awsvpcConfiguration:
