@@ -25,7 +25,7 @@ metadata:
   name: {{.Values.name}}-range
 data:
 {{range $k, $v := .Values.env.config -}}
-{{$k | indent 2}}: {{$v}}
+{{$k | indent 2}}: {{$v | quote}}
 {{end}}
 ---
 {{- end -}}
