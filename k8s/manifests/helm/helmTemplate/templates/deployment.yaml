@@ -4,7 +4,7 @@ kind: ConfigMap
 metadata:
   name: {{.Values.name}}
 data:
-{{.Values.env.config | toYaml | quote | indent 2}}
+{{.Values.env.config | toYaml | indent 2}}
 ---
 {{- end -}}
 
