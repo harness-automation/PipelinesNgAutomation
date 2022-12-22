@@ -31,21 +31,21 @@ env:
     key3: true
     key4: "false"
     key5: "08"
-    VAR: 'Y'
-    VAR_Y_DOUBLE_QUOTED: "Y"
-    VAR_NO_QUOTES: Y
-    VAR_SMALL_CAPS: y
-    VAR_N_NO_QUOTE: N
-    VAR_N_SMALL_CAPS: n
-    VAR_N_DOUBLE_QUOTED: "N"
-    VAR_TRUE: true
-    VAR_YES: yes
-    VAR_WRONG_YES: yEs
-    VAR_NO_SMALL_CAPS: no
-    VAR_NO_NOT_QUOTED: No
-    VAR_NO_DOUBLE_QUOTED: "No"
-    VAR_ON_NOT_QUOTED: On
-    VAR_OFF_DOUBLE_QUOTED: "Off"
+#     VAR: 'Y'
+#     VAR_Y_DOUBLE_QUOTED: "Y"
+#     VAR_NO_QUOTES: Y
+#     VAR_SMALL_CAPS: y
+#     VAR_N_NO_QUOTE: N
+#     VAR_N_SMALL_CAPS: n
+#     VAR_N_DOUBLE_QUOTED: "N"
+#     VAR_TRUE: true
+#     VAR_YES: yes
+#     VAR_WRONG_YES: yEs
+#     VAR_NO_SMALL_CAPS: no
+#     VAR_NO_NOT_QUOTED: No
+#     VAR_NO_DOUBLE_QUOTED: "No"
+#     VAR_ON_NOT_QUOTED: On
+#     VAR_OFF_DOUBLE_QUOTED: "Off"
   secrets:
     key2: value2
 immutable: "false"
