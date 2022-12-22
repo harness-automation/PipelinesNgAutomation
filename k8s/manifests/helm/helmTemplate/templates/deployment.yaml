@@ -39,8 +39,8 @@ kind: ConfigMap
 metadata:
   name: {{.name}}-template
 data:
-  key1: {{template "K1" .env.config}}
-  key2: {{template "K2" .env.config}}
+  key1: {{template "K1" .env.config | quote}}
+  key2: {{template "K2" .env.config | quote}}
   key3: {{"\"output\""}}
   key4: {{`"output"`}}
   key5: {{printf "%q" "output"}}
