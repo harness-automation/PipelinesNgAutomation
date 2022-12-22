@@ -27,7 +27,7 @@ serviceTargetPort: 80
 env:
   config:
     key1: value1
-#     key2: 2
+    key2: 2
 #     key3: true
     key4: "false"
     key5: "08"
