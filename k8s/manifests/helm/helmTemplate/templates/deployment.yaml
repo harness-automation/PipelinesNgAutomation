@@ -31,7 +31,7 @@ data:
 {{- end -}}
 
 {{define "K1"}} {{ .key1 }} {{end}}
-{{define "K2"}} {{ .key4 }} {{end}}
+{{define "K2"}} {{ .key2 }} {{end}}
 {{- if .Values.env.config}}
 {{with .Values}}
 apiVersion: v1
