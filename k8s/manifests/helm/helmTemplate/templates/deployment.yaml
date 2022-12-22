@@ -8,6 +8,56 @@ data:
 ---
 {{- end -}}
 
+{{- if .Values.env.config}}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+ name: {{.Values.name}}-index
+data:
+{{index .Values.env "1" | mergeOverwrite .Values.env.config | toYaml | indent 2}}
+---
+{{- end}}
+
+{{- if .Values.env.config}}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{.Values.name}}-range
+data:
+{{range $k, $v := .Values.env.config -}}
+{{$k | indent 2}}: {{$v | quote}}
+{{end}}
+---
+{{- end -}}
+
+{{define "K1"}} {{ .key1 }} {{end}}
+{{define "K2"}} {{ .key4 }} {{end}}
+{{- if .Values.env.config}}
+{{with .Values}}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{.name}}-template
+data:
+  key1: {{template "K1" .env.config}}
+  key2: {{template "K2" .env.config}}
+  key3: {{"\"output\""}}
+  key4: {{`"output"`}}
+  key5: {{printf "%q" "output"}}
+  key6: {{"output" | printf "%q"}}
+  key7: {{printf "%q" (print "out" "put")}}
+  key8: {{printf "%q" (print "out" "put")}}
+  key9: {{"put" | printf "%s%s" "out" | printf "%q"}}
+  key10: {{"output" | printf "%s" | printf "%q"}}
+  key11: {{with "output"}}{{printf "%q" .}}{{end}}
+  key12: {{with $x := "output" | printf "%q"}}{{$x}}{{end}}
+  key13: {{with $x := "output"}}{{printf "%q" $x}}{{end}}
+  key14: {{with $x := "output"}}{{$x | printf "%q"}}{{end}}
+  key15: {{.name | quote}}
+{{end}}
+---
+{{- end -}}
+
 {{- if .Values.env.secrets}}
 apiVersion: v1
 kind: Secret
