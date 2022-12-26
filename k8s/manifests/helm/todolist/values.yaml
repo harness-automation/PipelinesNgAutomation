@@ -2,12 +2,12 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
-name: todolist-chart
+name: todolist-chart-${workflow.variables.namespace}
 replicaCount: 2
 
-namespace: default
+namespace: ${workflow.variables.namespace}
 
-image: nginx:latest
+image: harness/todolist-sample:latest
 pullPolicy: Always
 dockercfg: 
 
