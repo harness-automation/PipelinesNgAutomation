@@ -4,11 +4,11 @@ minReadySeconds: 2
 maxSurge: 50%
 revisionHistoryLimit: "9"
 
-image: library/nginx
+image: harness/todolist-sample
 #dockercfg: ${artifact.source.dockerconfig}
 
 createNamespace: "true"
-namespace: <+infra.namespace>
+namespace: ${workflow.variables.namespace}
 
 # Service Type allow you to specify what kind of service you want.
 # Possible values for ServiceVariableType are:
