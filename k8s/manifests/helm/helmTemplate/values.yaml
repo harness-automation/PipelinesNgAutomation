@@ -1,4 +1,4 @@
-name: todolist-chart
+name: todolist-chart-${workflow.variables.namespace}
 replicas: 1
 minReadySeconds: 2
 maxSurge: 50%
