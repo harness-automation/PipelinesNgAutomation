@@ -3,7 +3,7 @@
 # Declare variables to be passed into your templates.
 
 name: todolist-chart-${workflow.variables.name}
-replicaCount: 2
+replicaCount: 1
 
 namespace: ${workflow.variables.namespace}
 
