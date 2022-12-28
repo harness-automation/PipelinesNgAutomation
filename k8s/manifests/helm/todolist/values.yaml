@@ -7,7 +7,7 @@ replicaCount: 2
 
 namespace: ${workflow.variables.namespace}
 
-image: harness/todolist-sample:latest
+image: library/nginx:latest
 pullPolicy: Always
 dockercfg: 
 
