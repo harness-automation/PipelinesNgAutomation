@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: example-deploy-1
+  name: example-deploy
   namespace: default
 spec:
   template :
