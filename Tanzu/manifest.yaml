@@ -4,6 +4,8 @@ applications:
   timeout: 5
   instances: ((INSTANCE))
   memory: 250M
+  services:
+    - myautoscaler
   routes:
     - route: ((ROUTE))
   processes:
