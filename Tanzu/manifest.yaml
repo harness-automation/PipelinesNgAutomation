@@ -3,12 +3,6 @@ applications:
   health-check-type: process
   timeout: 5
   instances: ((INSTANCE))
-  memory: 250M
-  services:
-    - myautoscaler
+  memory: 750M
   routes:
     - route: ((ROUTE))
-  processes:
-    - type: web
-      instances: ((INSTANCE))
-      memory: 100M
