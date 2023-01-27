@@ -1,0 +1,28 @@
+{
+"parent": "projects/qa-target/locations/us-west1",
+"function":{
+  "name": "pragyesh-test-1",
+  "buildConfig": {
+    "runtime": "java17",
+    "entryPoint": "functions.HelloWorld",
+    "source": {
+      "storageSource": {
+        "bucket": "",
+        "object": ""
+      }
+    }
+  },
+  "serviceConfig": {
+    "service": "projects/qa-target/locations/us-west1/services/pragyesh-test-1",
+    "timeoutSeconds": 60,
+    "maxInstanceCount": 100,
+    "ingressSettings": "ALLOW_ALL",
+    "availableMemory": "256M",
+    "maxInstanceRequestConcurrency": 1,
+    "availableCpu": "0.1666",
+    "allTrafficOnLatestRevision": true
+  },
+  "environment": "GEN_2"
+},
+"function_id": "pragyesh-test-1"
+}
