@@ -20,7 +20,11 @@
     "availableMemory": "256M",
     "maxInstanceRequestConcurrency": 1,
     "availableCpu": "0.1666",
-    "allTrafficOnLatestRevision": true
+    "allTrafficOnLatestRevision": true,
+    "environmentVariables": 
+    {
+    "PORT":"5000"
+    }
   },
   "environment": "GEN_2"
 },
