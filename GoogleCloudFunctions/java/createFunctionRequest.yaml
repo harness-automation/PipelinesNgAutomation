@@ -1,7 +1,7 @@
 {
-"parent": "projects/qa-target/locations/us-west1",
+"parent": "projects/cd-play/locations/us-west1",
 "function":{
-  "name": "pragyesh-test-1",
+  "name": "java-hello-world",
   "buildConfig": {
     "runtime": "java17",
     "entryPoint": "functions.HelloWorld",
@@ -13,7 +13,7 @@
     }
   },
   "serviceConfig": {
-    "service": "projects/qa-target/locations/us-west1/services/pragyesh-test-1",
+    "service": "projects/cd-play/locations/us-west1/services/java-hello-world",
     "timeoutSeconds": 60,
     "maxInstanceCount": 100,
     "ingressSettings": "ALLOW_ALL",
@@ -24,5 +24,5 @@
   },
   "environment": "GEN_2"
 },
-"function_id": "pragyesh-test-1"
+"function_id": "java-hello-world"
 }
