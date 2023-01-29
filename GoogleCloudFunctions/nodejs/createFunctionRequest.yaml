@@ -13,7 +13,7 @@
     }
   },
   "serviceConfig": {
-    "service": "projects/cd-play/locations/us-west1/services/nodejs-hello-world-repo",
+    "service": "",
     "timeoutSeconds": 60,
     "maxInstanceCount": 100,
     "ingressSettings": "ALLOW_ALL",
