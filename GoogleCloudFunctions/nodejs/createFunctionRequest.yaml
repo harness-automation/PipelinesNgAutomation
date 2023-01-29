@@ -1,7 +1,7 @@
 {
 "parent": "projects/cd-play/locations/us-west1",
 "function":{
-  "name": "nodejs-hello-world",
+  "name": "nodejs-hello-world-repo",
   "buildConfig": {
     "runtime": "nodejs18",
     "entryPoint": "helloGET",
@@ -13,7 +13,7 @@
     }
   },
   "serviceConfig": {
-    "service": "projects/cd-play/locations/us-west1/services/nodejs-hello-world",
+    "service": "projects/cd-play/locations/us-west1/services/nodejs-hello-world-repo",
     "timeoutSeconds": 60,
     "maxInstanceCount": 100,
     "ingressSettings": "ALLOW_ALL",
@@ -24,5 +24,5 @@
   },
   "environment": "GEN_2"
 },
-"function_id": "nodejs-hello-world"
+"function_id": "nodejs-hello-world-repo"
 }
