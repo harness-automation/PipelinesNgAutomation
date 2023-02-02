@@ -3,13 +3,7 @@
         "name": "nodejs-hello-world",
         "buildConfig": {
             "runtime": "nodejs18",
-            "entryPoint": "helloGET",
-            "source": {
-                "storageSource": {
-                    "bucket": "",
-                    "object": ""
-                }
-            }
+            "entryPoint": "helloGET"
         },
         "serviceConfig": {
             "service": "",
