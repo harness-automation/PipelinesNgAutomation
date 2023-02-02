@@ -1,5 +1,4 @@
-{
-"parent": "projects/cd-play/locations/us-west1", 
+{ 
 "function":{
   "name": "nodejs-hello-world",
   "buildConfig": {
