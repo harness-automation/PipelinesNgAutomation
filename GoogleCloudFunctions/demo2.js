@@ -7,5 +7,6 @@
     "entryPoint": "helloGet"
   },
   "environment": "GEN_2"
-}
+},
+ "function_id": "nodejs-hello-world"
 }
