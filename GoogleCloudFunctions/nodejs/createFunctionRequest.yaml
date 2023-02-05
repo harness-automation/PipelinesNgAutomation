@@ -15,7 +15,7 @@
   },
   "serviceConfig": {
     "service": "",
-    "timeoutSeconds": 55,
+    "timeoutSeconds": 75,
     "maxInstanceCount": 100,
     "ingressSettings": "ALLOW_ALL",
     "availableMemory": "256M",
