@@ -15,10 +15,10 @@
   },
   "serviceConfig": {
     "service": "",
-    "timeoutSeconds": 50,
+    "timeoutSeconds": 55,
     "maxInstanceCount": 100,
     "ingressSettings": "ALLOW_ALL",
-    "availableMemory": "512M",
+    "availableMemory": "256M",
     "maxInstanceRequestConcurrency": 1,
     "availableCpu": "0.1666",
     "allTrafficOnLatestRevision": true
