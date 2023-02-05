@@ -1,7 +1,7 @@
 {
 "parent": "projects/cd-play/locations/us-west1",
 "function":{
-  "name": "nodejs-hello-world",
+  "name": "nodejs-hello-world-three",
   "description": "test",
   "buildConfig": {
     "runtime": "nodejs18",
@@ -35,5 +35,5 @@
     ]
   }
   },
-"function_id": "nodejs-hello-world"
+"function_id": "nodejs-hello-world-three"
 }
