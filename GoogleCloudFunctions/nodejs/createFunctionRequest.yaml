@@ -15,15 +15,15 @@
   },
   "serviceConfig": {
     "service": "",
-    "timeoutSeconds": 70,
+    "timeoutSeconds": 50,
     "maxInstanceCount": 100,
     "ingressSettings": "ALLOW_ALL",
-    "availableMemory": "256M",
+    "availableMemory": "512M",
     "maxInstanceRequestConcurrency": 1,
     "availableCpu": "0.1666",
     "allTrafficOnLatestRevision": true
   },
-  "environment": "GEN_2"
+  "environment": "GEN_1"
 },
 "function_id": "nodejs-hello-world"
 }
