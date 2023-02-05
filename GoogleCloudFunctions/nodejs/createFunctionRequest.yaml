@@ -24,6 +24,9 @@
     "allTrafficOnLatestRevision": true
   },
   "environment": "GEN_2",
+  "labels": {
+      "key": "test"
+     },
   "eventTrigger": {
     "triggerRegion": "us-central1",
     "eventType": "google.cloud.apigateway.gateway.v1.created",
