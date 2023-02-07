@@ -1,0 +1,23 @@
+{{- define "utility.deployment" }}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.global.appName }}-deployment
+  labels:
+    app: {{ .Values.global.appName }}
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: {{ .Values.global.appName }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.global.appName }}
+    spec:
+      containers:
+      - name: {{ .Values.deployment.container.name }}
+        image: {{ .Values.deployment.container.image }}
+        ports:
+        - containerPort: {{ .Values.deployment.container.port }}
+{{- end }}
