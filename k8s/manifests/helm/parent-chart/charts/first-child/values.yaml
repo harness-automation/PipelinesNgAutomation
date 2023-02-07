@@ -4,6 +4,7 @@
 
 appName: "first-child"
 name: "first-child"
+name: "first-child"
 kubeApiVersion: "apps/v1"
 replicaCount: 2
 
