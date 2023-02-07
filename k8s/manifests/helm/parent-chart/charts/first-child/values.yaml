@@ -3,6 +3,7 @@
 # Declare variables to be passed into your templates.
 
 appName: "first-child"
+name: "first-child"
 kubeApiVersion: "apps/v1"
 replicaCount: 2
 
