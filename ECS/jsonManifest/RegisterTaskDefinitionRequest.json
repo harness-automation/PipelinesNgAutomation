@@ -60,7 +60,7 @@
     "placementConstraints": [],
     "memory": "512",
     "taskRoleArn": "arn:aws:iam::479370281431:role/ecsTaskExecutionRole",
-    "family": "task-auto",
+    "family": "task-json-auto",
     "pidMode": null,
     "requiresCompatibilities": [
         "FARGATE"
