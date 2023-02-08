@@ -5,7 +5,7 @@ service:
 
 deployment:
     container:
-      image: <+artifact.image>
+      image: <+artifact.imagePath>
       name: <+serviceVariables.serviceName>-container
       port: 80
 
