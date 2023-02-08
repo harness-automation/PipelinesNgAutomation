@@ -5,6 +5,7 @@ metadata:
   name: {{ .Values.global.appName }}-deployment
   labels:
     app: {{ .Values.global.appName }}
+    release: {{ .Release.Name }}
 spec:
   replicas: 3
   selector:
@@ -13,6 +14,7 @@ spec:
   template:
     metadata:
       labels:
+        release: {{ .Release.Name }}
         app: {{ .Values.global.appName }}
     spec:
       containers:
