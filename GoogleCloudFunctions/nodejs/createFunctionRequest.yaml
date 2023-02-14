@@ -1,30 +1,7 @@
 parent: projects/cd-play/locations/us-west1
 function:
-  name: nodejs-hello-world-three
+  name: <+stage.variables.functionName>
   description: test
   buildConfig:
     runtime: nodejs18
     entryPoint: helloGET
-    source:
-      storageSource:
-        bucket: ''
-        object: ''
-  serviceConfig:
-    service: ''
-    timeoutSeconds: 75
-    maxInstanceCount: 100
-    ingressSettings: ALLOW_ALL
-    availableMemory: 256M
-    maxInstanceRequestConcurrency: 1
-    availableCpu: '0.1666'
-    allTrafficOnLatestRevision: true
-  environment: GEN_2
-  labels:
-    key: test
-  eventTrigger:
-    triggerRegion: us-central1
-    eventType: google.cloud.apigateway.gateway.v1.created
-    eventFilters:
-      - attribute: gateway
-        value: def
-function_id: nodejs-hello-world-three
