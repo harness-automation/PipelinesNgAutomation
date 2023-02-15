@@ -1,6 +1,6 @@
 parent: projects/cd-play/locations/us-west1
 function:
-  name: <+stage.variables.functionName>
+  name: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
   description: test
   buildConfig:
     runtime: nodejs18
