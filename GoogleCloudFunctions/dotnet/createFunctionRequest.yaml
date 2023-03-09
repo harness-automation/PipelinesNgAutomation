@@ -1,28 +1,17 @@
 {
-"parent": "projects/cd-play/locations/us-west1",
 "function":{
   "name": "dotnet-hello-world",
   "buildConfig": {
     "runtime": "dotnet6",
-    "entryPoint": "HelloWorld.Function",
-    "source": {
-      "storageSource": {
-        "bucket": "",
-        "object": ""
-      }
-    }
+    "entryPoint": "HelloWorld.Function"
   },
   "serviceConfig": {
-    "service": "projects/cd-play/locations/us-west1/services/dotnet-hello-world",
-    "timeoutSeconds": 60,
+    "timeoutSeconds": 70,
     "maxInstanceCount": 100,
     "ingressSettings": "ALLOW_ALL",
     "availableMemory": "256M",
     "maxInstanceRequestConcurrency": 1,
-    "availableCpu": "0.1666",
-    "allTrafficOnLatestRevision": true
-  },
-  "environment": "GEN_2"
-},
-"function_id": "dotnet-hello-world"
+    "availableCpu": "0.1666"
+  }
+}
 }
