@@ -1,5 +1,5 @@
 {
-  "autoScalingGroupName": "vitasg5",
+  "autoScalingGroupName": "AUTO-<+pipeline.identifier>",
   "minSize": 0,
   "maxSize": 0,
   "desiredCapacity": 0,
