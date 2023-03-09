@@ -1,6 +1,17 @@
-function:
-  name: gcf-nodejs-helloworld-automation
-  description: automation - do not delete
-  buildConfig:
-    runtime: nodejs18
-    entryPoint: helloGET
+ {
+"function":{
+  "name": "<+stage.variables.functionName>",
+  "buildConfig": {
+    "runtime": "<+stage.variables.runtime>",
+    "entryPoint": "<+stage.variables.entryPoint>"
+  },
+  "serviceConfig": {
+    "timeoutSeconds": 70,
+    "maxInstanceCount": "<+stage.variables.maxInstance>",
+    "ingressSettings": "ALLOW_ALL",
+    "availableMemory": "<+stage.variables.memory>",
+    "maxInstanceRequestConcurrency": 1,
+    "availableCpu": "<+stage.variables.cpu>"
+  }
+}
+}    
