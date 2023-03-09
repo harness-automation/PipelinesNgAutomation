@@ -1,17 +1,17 @@
  {
 "function":{
-  "name": "<+stage.variables.functionName>",
+  "name": "<+serviceVariables.functionName>",
   "buildConfig": {
-    "runtime": "<+stage.variables.runtime>",
-    "entryPoint": "<+stage.variables.entryPoint>"
+    "runtime": "<+serviceVariables.runtime>",
+    "entryPoint": "<+serviceVariables.entryPoint>"
   },
   "serviceConfig": {
     "timeoutSeconds": 70,
-    "maxInstanceCount": "<+stage.variables.maxInstance>",
+    "maxInstanceCount": <+serviceVariables.maxInstance>,
     "ingressSettings": "ALLOW_ALL",
-    "availableMemory": "<+stage.variables.memory>",
+    "availableMemory": "<+serviceVariables.memory>",
     "maxInstanceRequestConcurrency": 1,
-    "availableCpu": "<+stage.variables.cpu>"
+    "availableCpu": "<+serviceVariables.cpu>"
   }
 }
 }    
