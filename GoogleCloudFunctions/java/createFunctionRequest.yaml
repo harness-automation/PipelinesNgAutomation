@@ -1,28 +1,5 @@
-{
-"parent": "projects/cd-play/locations/us-west1",
-"function":{
-  "name": "java-hello-world",
-  "buildConfig": {
-    "runtime": "java17",
-    "entryPoint": "functions.HelloWorld",
-    "source": {
-      "storageSource": {
-        "bucket": "",
-        "object": ""
-      }
-    }
-  },
-  "serviceConfig": {
-    "service": "projects/cd-play/locations/us-west1/services/java-hello-world",
-    "timeoutSeconds": 60,
-    "maxInstanceCount": 100,
-    "ingressSettings": "ALLOW_ALL",
-    "availableMemory": "256M",
-    "maxInstanceRequestConcurrency": 1,
-    "availableCpu": "0.1666",
-    "allTrafficOnLatestRevision": true
-  },
-  "environment": "GEN_2"
-},
-"function_id": "java-hello-world"
-}
+function:
+  name: gcf-java-helloworld-automation
+  buildConfig:
+    runtime: java17
+    entryPoint: functions.HelloWorld
