@@ -1,5 +1,5 @@
 {
-  "autoScalingGroupName": "AUTO-<+pipeline.identifier>",
+  "autoScalingGroupName": "AUTO-<+service.identifier>",
   "minSize": 0,
   "maxSize": 0,
   "desiredCapacity": 0,
