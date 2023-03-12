@@ -1,28 +1,5 @@
-{
-"parent": "projects/cd-play/locations/us-west1",
-"function":{
-  "name": "go-hello-world",
-  "buildConfig": {
-    "runtime": "go119",
-    "entryPoint": "HelloGet",
-    "source": {
-      "storageSource": {
-        "bucket": "",
-        "object": ""
-      }
-    }
-  },
-  "serviceConfig": {
-    "service": "projects/cd-play/locations/us-west1/services/go-hello-world",
-    "timeoutSeconds": 60,
-    "maxInstanceCount": 100,
-    "ingressSettings": "ALLOW_ALL",
-    "availableMemory": "256M",
-    "maxInstanceRequestConcurrency": 1,
-    "availableCpu": "0.1666",
-    "allTrafficOnLatestRevision": true
-  },
-  "environment": "GEN_2"
-},
-"function_id": "go-hello-world"
-}
+function:
+  name: gcf-go-helloworld-automation
+  buildConfig:
+    runtime: go119
+    entryPoint: HelloGet
