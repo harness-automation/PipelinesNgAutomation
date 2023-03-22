@@ -1,6 +1,6 @@
 instance_limits:
   min: 1
-  max: <+env.variables.max_instance_limit>
+  max: 2
 rules:
 - rule_type: <+secrets.getValue("autoScalar_rule_type")>
   rule_sub_type: "avg_99th"
