@@ -2,7 +2,7 @@ instance_limits:
   min: 1
   max: 2
 rules:
-- rule_type: <+secrets.getValue(<+pipeline.variables.autoscalar_secret_id>)>
+- rule_type: <+secrets.getValue(<+serviceVariables.autoscalar_secret_id>)>
   rule_sub_type: "avg_99th"
   threshold:
     min: 100
