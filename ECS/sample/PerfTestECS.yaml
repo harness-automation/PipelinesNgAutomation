@@ -1,5 +1,5 @@
 launchType: FARGATE
-serviceName: <+pipeline.stages.ECSStage.spec.service>
+serviceName: <+service.name>
 desiredCount: 1
 networkConfiguration:
   awsvpcConfiguration:
@@ -11,4 +11,3 @@ networkConfiguration:
 deploymentConfiguration:
   maximumPercent: 100
   minimumHealthyPercent: 0
-
