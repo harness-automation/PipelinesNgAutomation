@@ -1,6 +1,6 @@
 launchType: FARGATE
 serviceName: <+service.name>
-desiredCount: 1
+desiredCount: 50
 networkConfiguration:
   awsvpcConfiguration:
     securityGroups:
