@@ -3,6 +3,6 @@ applications:
   health-check-type: process
   timeout: 5
   instances: ((INSTANCE))
-  memory: 2G
+  memory: 750M
   routes:
     - route: ((ROUTE))
