@@ -5,3 +5,5 @@ applications:
   disk: <+stage.variables.disk>
   routes:
     - route: ((ROUTE))
+  services:
+    - my-autoscaler
