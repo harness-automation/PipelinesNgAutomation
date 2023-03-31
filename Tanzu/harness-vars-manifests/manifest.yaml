@@ -6,4 +6,4 @@ applications:
   routes:
     - route: ((ROUTE))
   services:
-    - my-autoscaler
+    - myautoscaler
