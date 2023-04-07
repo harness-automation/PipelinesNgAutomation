@@ -1,0 +1,2 @@
+NAME=<+infra.releaseName>
+REVISION=<+kubernetes.release.revision>
