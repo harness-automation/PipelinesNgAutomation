@@ -29,7 +29,7 @@ objects:
       metadata:
         labels:
           app: ${NAME}-nginx
-          revision: "${REVSION}"
+          revision: "${REVISION}"
       spec:
         containers:
         - name: nginx
