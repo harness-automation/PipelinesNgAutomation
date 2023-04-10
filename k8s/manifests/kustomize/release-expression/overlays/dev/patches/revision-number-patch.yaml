@@ -10,7 +10,6 @@ metadata:
   name: kustomize-revision-test-deployment
   labels:
     app: kustomize-revision-test-nginx
-    revision: "<+kubernetes.release.revision>"
 spec:
   template:
     metadata:
