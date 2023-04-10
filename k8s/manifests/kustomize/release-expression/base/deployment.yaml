@@ -36,6 +36,6 @@ spec:
         - containerPort: 80
         readinessProbe:
           exec:
-            command: [sh, -c, "[ $REVISION -eq 0x42 ] && exit 0 || exit 1"] # expect to fail without proper patch
+            command: [sh, -c, "[ $REVISION_NUMBER -eq 0x42 ] && exit 0 || exit 1"] # expect to fail without proper patch
           initialDelaySeconds: 1
           periodSeconds: 10
