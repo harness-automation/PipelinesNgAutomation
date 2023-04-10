@@ -1,2 +1,2 @@
 revision: <+kubernetes.release.revision>
-name: release-<+INFRA_KEY>
+name: <+INFRA_KEY>
