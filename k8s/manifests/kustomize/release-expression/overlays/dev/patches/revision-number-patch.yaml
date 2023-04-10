@@ -30,6 +30,6 @@ spec:
         - containerPort: 80
         readinessProbe:
           exec:
-            command: [sh, -c, "[ $REVISION -eq <+kubernetes.release.revision> ] && exit 0 || exit 1"] # expect to fail without proper patch
+            command: [sh, -c, "[ $REVISION_NUMBER -eq <+kubernetes.release.revision> ] && exit 0 || exit 1"] # expect to fail without proper patch
           initialDelaySeconds: 1
           periodSeconds: 10
