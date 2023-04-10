@@ -44,7 +44,7 @@ objects:
           - containerPort: 80
           readinessProbe:
             exec:
-              command: [sh, -c, "[ $REVISION -eq ${REVISION} ] && exit 0 || exit 1"]
+              command: [sh, -c, "[ $REVISION_NUMBER -eq ${REVISION} ] && exit 0 || exit 1"]
             initialDelaySeconds: 1
             periodSeconds: 10
 parameters:
