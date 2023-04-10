@@ -5,6 +5,7 @@ metadata:
 data:
   revision: "<+kubernetes.release.revision>"
 ---
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: kustomize-revision-test-deployment
