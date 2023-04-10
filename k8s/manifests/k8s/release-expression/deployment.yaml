@@ -36,6 +36,6 @@ spec:
         - containerPort: 80
         readinessProbe:
           exec:
-            command: [sh, -c, "[ $REVISION -eq {{.Values.revision}} ] && exit 0 || exit 1"]
+            command: [sh, -c, "[ $REVISION_NUMBER -eq {{.Values.revision}} ] && exit 0 || exit 1"]
           initialDelaySeconds: 1
           periodSeconds: 10
