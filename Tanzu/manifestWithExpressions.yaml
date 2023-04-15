@@ -2,7 +2,7 @@ applications:
 - name: ((NAME))
   health-check-type: process
   timeout: 5
-  instances: ((INSTANCE))
-  memory: 50M
+  instances: <+stage.variables.Count>
+  memory: <+secrets.getValue("memory")>
   routes:
     - route: ((ROUTE))
