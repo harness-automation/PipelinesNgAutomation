@@ -1,5 +1,5 @@
 function:
-  name: <+serviceVariables.functionName>
+  name: gcf-java-helloworld-automation
   buildConfig:
     runtime: java17
     entryPoint: functions.HelloWorld
