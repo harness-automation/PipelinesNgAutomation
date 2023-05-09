@@ -53,3 +53,7 @@ env:
     key2: value2
 
 testVal: "2"
+
+trivy-operator:
+  trivy:
+    ignoreUnfixed: true
