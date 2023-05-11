@@ -1,7 +1,7 @@
 ame: <+stage.variables.resourceNamePrefix>
 replicas: 1
 
-image: <+artifact.image>
+image: library/nginx
 #dockercfg: ${artifact.source.dockerconfig}
 
 createNamespace: true
