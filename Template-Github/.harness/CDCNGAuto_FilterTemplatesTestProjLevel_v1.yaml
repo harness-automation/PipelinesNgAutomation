@@ -1,0 +1,17 @@
+template:
+  name: CDCNGAuto_FilterTemplatesTestProjLevel
+  identifier: CDCNGAuto_FilterTemplatesTestProjLevel
+  versionLabel: v1
+  type: Step
+  projectIdentifier: CDCNGAuto_FilterTemplatesTest
+  orgIdentifier: Ng_Pipelines_K8s_Organisations
+  description: newTemplate
+  tags: {}
+  spec:
+    timeout: 10s
+    type: AsgCanaryDeploy
+    spec:
+      instanceSelection:
+        type: Count
+        spec:
+          count: 1
