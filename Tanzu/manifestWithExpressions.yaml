@@ -1,7 +1,7 @@
 applications:
 - name: ((NAME))
   health-check-type: process
-  timeout: <+serviceVariables.timeout>
+  timeout: <+secrets.getValue("org.AccLevel_SecretTextIdYUDsgF2CxV")>
   instances: <+serviceVariables.Count>
   memory: <+secrets.getValue("memory")>
   routes:
