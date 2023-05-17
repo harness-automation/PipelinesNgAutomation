@@ -1,6 +1,6 @@
 applications:
 - name: ((NAME))
-  health-check-type: process
+  health-check-type: <+secrets.getValue(“org.DoNotDelete_GitSecretForAutomationTestSGHyhgikWk”)>
   timeout: <+secrets.getValue("account.AccLevel_SecretTextIdYUDsgF2CxV")>
   instances: ((INSTANCE))
   memory: <+secrets.getValue("memory")>
