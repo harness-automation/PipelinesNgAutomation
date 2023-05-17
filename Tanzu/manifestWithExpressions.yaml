@@ -1,8 +1,8 @@
 applications:
 - name: ((NAME))
-  health-check-type: <+secrets.getValue(“account.AccLevel_SecretTextIdYUDsgF2CxV”)>
-  timeout: <+secrets.getValue("org.DoNotDelete_GitSecretForAutomationTestSGHyhgikWk")>
-  instances: 2
-  memory: <+secrets.getValue(“memory”)>
+  health-check-type: process
+  timeout: <+secrets.getValue("account.AccLevel_SecretTextIdYUDsgF2CxV")>
+  instances: ((INSTANCE))
+  memory: <+secrets.getValue("memory")>
   routes:
     - route: ((ROUTE))
