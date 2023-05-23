@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMapList
+items:
+  - apiVersion: v1
+    kind: ConfigMap
+    metadata:
+      name: foo
+  - apiVersion: v1
+    kind: ConfigMap
+    metadata:
+      name: bar
