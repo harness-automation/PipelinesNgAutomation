@@ -8,3 +8,6 @@ dependencies:
   - name: trivy-operator
     version: "0.1.9"
     repository: "https://aquasecurity.github.io/helm-charts/"
+  - name: kube-prometheus-stack
+    version: "16.13.0"
+    repository: "@test-art-remote"
