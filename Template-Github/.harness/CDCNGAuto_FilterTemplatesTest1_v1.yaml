@@ -3,8 +3,7 @@ template:
   identifier: CDCNGAuto_FilterTemplatesTest1
   versionLabel: v1
   type: Step
-  tags: {
-    }
+  tags: {}
   spec:
     timeout: 10s
     type: AsgCanaryDeploy
