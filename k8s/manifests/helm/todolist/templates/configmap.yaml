@@ -1,6 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
-metadata:
-  name: dummy-configmap 
 data:
   test: "{{.Values.testVal}}"
+metadata:
+  name: dummy-configmap 
+
