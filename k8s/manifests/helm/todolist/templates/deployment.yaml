@@ -16,7 +16,7 @@ stringData:
 {{.Values.env.secrets | toYaml | indent 2}}
 ---
 {{- end}}
-//Whats this
+
 {{- if .Values.dockercfg}}
 apiVersion: v1
 kind: Secret
@@ -29,7 +29,7 @@ data:
 type: kubernetes.io/dockercfg
 ---
 {{- end}}
-//Well helllo
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -74,3 +74,5 @@ spec:
               name: {{.Values.name}}  
           {{- end}}
           {{- end}}
+
+// sdffdsfdsfds
