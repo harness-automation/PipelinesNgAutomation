@@ -7,7 +7,7 @@ data:
 {{.Values.env.config | toYaml | indent 2}}
 ---
 {{- end}}
-
+// thiufgcgcgcgncg
 {{- if .Values.env.secrets}}
 apiVersion: v1
 kind: Secret
