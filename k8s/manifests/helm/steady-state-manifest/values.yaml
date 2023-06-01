@@ -4,7 +4,7 @@ replicas: 1
 image: library/nginx
 #dockercfg: ${artifact.source.dockerconfig}
 
-createNamespace: true
+createNamespace: false
 #namespace: ${infra.kubernetes.namespace}
 namespace: <+infra.namespace>
 
