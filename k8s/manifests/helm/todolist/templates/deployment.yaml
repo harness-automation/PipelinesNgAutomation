@@ -50,8 +50,8 @@ spec:
     metadata:
       labels:
         app: {{ template "todolist.name" . }}
-        release: {{ .Release.Name }}
         harness.io/release: {{ .Release.Name }}
+        release: {{ .Release.Name }}
     spec:
       {{- if .Values.dockercfg}}
       imagePullSecrets:
