@@ -16,7 +16,7 @@ stringData:
 {{.Values.env.secrets | toYaml | indent 2}}
 ---
 {{- end}}
-
+# adasdads
 {{- if .Values.dockercfg}}
 apiVersion: v1
 metadata:
