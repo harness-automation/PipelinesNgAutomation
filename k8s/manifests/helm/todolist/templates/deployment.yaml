@@ -20,11 +20,11 @@ stringData:
 
 {{- if .Values.dockercfg}}
 apiVersion: v1
-kind: Secret
 metadata:
   name: {{.Values.name}}-dockercfg
   annotations:
     harness.io/skip-versioning: "true"
+kind: Secret
 data:
   .dockercfg: {{.Values.dockercfg}}
 type: kubernetes.io/dockercfg
