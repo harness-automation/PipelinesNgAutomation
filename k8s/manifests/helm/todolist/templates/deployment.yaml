@@ -30,6 +30,7 @@ type: kubernetes.io/dockercfg
 ---
 {{- end}}
 # dasdjaksndkjasdnkajsdnkask
+#fdjkaskjdnsk
 apiVersion: apps/v1
 kind: Deployment
 metadata:
