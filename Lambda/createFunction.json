@@ -2,5 +2,5 @@
    "runtime": "<+stage.variables.runtime>",
    "functionName": "test-lambda-10",
    "handler": "handler.hello",
-   "role": "arn:aws:lambda:us-east-1:479370281431:function:NodeJs18Function1"
+   "role": "arn:aws:iam::479370281431:role/allu-lambda"
 }
