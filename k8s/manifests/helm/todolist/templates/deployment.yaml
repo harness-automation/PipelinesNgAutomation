@@ -29,7 +29,7 @@ data:
 type: kubernetes.io/dockercfg
 ---
 {{- end}}
-{{- if not (lookup "apps/v1" "Deployment" (.Values.namespace) (template "todolist.fullname" . )) }}
+{{- if not (lookup "apps/v1" "Deployment" "tarun-ng" "" }}
 ---
 apiVersion: apps/v1
 kind: Deployment
