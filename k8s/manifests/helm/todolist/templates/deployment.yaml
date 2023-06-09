@@ -30,8 +30,7 @@ type: kubernetes.io/dockercfg
 ---
 {{- end}}
 {{- if not (lookup "apps/v1" "Deployment" (.Values.namespace) (template "todolist.fullname" . )) }}
-# dasdjaksndkjasdnkajsdnkask
-#fdjkaskjdnsk
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -76,3 +75,6 @@ spec:
               name: {{.Values.name}}
           {{- end}}
           {{- end}}
+---
+{{- end }}
+
