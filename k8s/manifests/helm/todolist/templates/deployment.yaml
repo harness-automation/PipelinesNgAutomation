@@ -30,7 +30,7 @@ data:
 type: kubernetes.io/dockercfg
 ---
 {{- end}}
-{{- if not (lookup "apps/v1" "Deployment" "tarun-ng" "" )}}
+{{- if not (lookup "apps/v1" "Deployment" "tarun-ng" "release-f95a3cd2800c07ce90cef6620176cfe54949bcf9-todolist-blue" )}}
 ---
 apiVersion: apps/v1
 kind: Deployment
