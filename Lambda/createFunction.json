@@ -1,6 +1,6 @@
 {
    "runtime": "<+stage.variables.runtime>",
-   "functionName": "test-lambda-10",
+   "functionName": "auto-lambda",
    "handler": "handler.hello",
    "role": "arn:aws:iam::479370281431:role/allu-lambda"
 }
