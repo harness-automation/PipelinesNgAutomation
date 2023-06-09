@@ -9,7 +9,7 @@ metadata:
     helm.sh/resource-policy: "keep"
 spec:
   hosts:
-  - www.google.com # place any test host here
+  - www.google.com
   ports:
   - number: 443
     name: https-port
