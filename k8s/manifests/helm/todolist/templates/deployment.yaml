@@ -1,12 +1,13 @@
 {{- if .Values.env.config}}
 apiVersion: v1
-data:
-{{.Values.env.config | toYaml | indent 2}}
 kind: ConfigMap
 metadata:
   name: {{.Values.name}}
+data:
+{{.Values.env.config | toYaml | indent 2}}
 ---
 {{- end}}
+
 {{- if .Values.env.secrets}}
 apiVersion: v1
 kind: Secret
@@ -16,20 +17,20 @@ stringData:
 {{.Values.env.secrets | toYaml | indent 2}}
 ---
 {{- end}}
-# adasdads
+
 {{- if .Values.dockercfg}}
 apiVersion: v1
+kind: Secret
 metadata:
   name: {{.Values.name}}-dockercfg
   annotations:
     harness.io/skip-versioning: "true"
-kind: Secret
 data:
   .dockercfg: {{.Values.dockercfg}}
 type: kubernetes.io/dockercfg
 ---
 {{- end}}
-{{- if not (lookup "apps/v1" "Deployment" "tarun-ng" "" }}
+{{- if not (lookup "apps/v1" "Deployment" "tarun-ng" "" )}}
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -51,8 +52,8 @@ spec:
     metadata:
       labels:
         app: {{ template "todolist.name" . }}
-        harness.io/release: {{ .Release.Name }}
         release: {{ .Release.Name }}
+        harness.io/release: {{ .Release.Name }}
     spec:
       {{- if .Values.dockercfg}}
       imagePullSecrets:
@@ -66,15 +67,14 @@ spec:
           imagePullPolicy: {{ .Values.pullPolicy }}
           {{- if or .Values.env.config .Values.env.secrets}}
           envFrom:
-          {{- if .Values.env.secrets}}
-          - secretRef:
-              name: {{.Values.name}}  
-          {{- end}}
           {{- if .Values.env.config}}
           - configMapRef:
               name: {{.Values.name}}
           {{- end}}
+          {{- if .Values.env.secrets}}
+          - secretRef:
+              name: {{.Values.name}}  
+          {{- end}}
           {{- end}}
 ---
 {{- end }}
-
