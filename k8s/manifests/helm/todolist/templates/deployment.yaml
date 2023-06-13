@@ -78,8 +78,7 @@ spec:
           {{- end}}
 ---
 {{- end }}
-{{- if not (lookup "v1" "ServiceEntry" "tarun-ng" "test-service-entry") }}
----
+
 apiVersion: v1
 kind: ServiceEntry
 metadata:
@@ -96,5 +95,3 @@ spec:
     protocol: HTTPS
   resolution: DNS
   location: MESH_EXTERNAL
----
-{{- end }}
