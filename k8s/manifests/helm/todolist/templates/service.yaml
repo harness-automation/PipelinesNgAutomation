@@ -3,6 +3,8 @@ apiVersion: v1
 kind: Service
 metadata:
   name: {{ template "todolist.fullname" . }}
+  annotations:
+    helm.sh/resource-policy: "keep"
   labels:
     app: {{ template "todolist.name" . }}
     chart: {{ template "todolist.chart" . }}
