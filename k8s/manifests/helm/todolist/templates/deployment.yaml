@@ -78,9 +78,9 @@ spec:
           {{- end}}
 ---
 {{- end }}
-{{- if not (lookup "networking.istio.io/v1alpha3" "ServiceEntry" "tarun-ng" "test-service-entry") }}
+{{- if not (lookup "v1" "ServiceEntry" "tarun-ng" "test-service-entry") }}
 ---
-apiVersion: networking.istio.io/v1alpha3
+apiVersion: v1
 kind: ServiceEntry
 metadata:
   name: test-service-entry
