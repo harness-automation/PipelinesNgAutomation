@@ -78,20 +78,3 @@ spec:
           {{- end}}
 ---
 {{- end }}
-
-apiVersion: v1
-kind: ServiceEntry
-metadata:
-  name: test-service-entry
-  namespace: test
-  annotations:
-    helm.sh/resource-policy: "keep"
-spec:
-  hosts:
-  - www.google.com # place any test host here
-  ports:
-  - number: 443
-    name: https-port
-    protocol: HTTPS
-  resolution: DNS
-  location: MESH_EXTERNAL
