@@ -4,8 +4,8 @@ kind: IngressClass
 metadata:
   name: {{.Values.name}}-ingressclass
 spec:
-  controller: acme.io
+  controller: acme.io/foo
   parameters:
-    apiGroup: networking.k8s.io/v1
+    apiGroup: networking.k8s.io
     kind: Ingress
     name: {{.Values.name}}-ingress
