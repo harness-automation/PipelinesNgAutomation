@@ -21,12 +21,10 @@ spec:
             spec:
               type: object
               properties:
-                cronSpec:
+                foo:
                   type: string
-                image:
+                bar:
                   type: string
-                replicas:
-                  type: integer
   # either Namespaced or Cluster
   scope: Namespaced
   names:
