@@ -23,8 +23,8 @@ spec:
           imagePullSecrets:
             - name: {{.Values.name}}-dockercfg
           containers:
-            - name: hello
-              image: busybox:1.28
+            - name: {{.Values.name}}
+              image: {{.Values.image}}
               imagePullPolicy: IfNotPresent
               command:
                 - /bin/sh

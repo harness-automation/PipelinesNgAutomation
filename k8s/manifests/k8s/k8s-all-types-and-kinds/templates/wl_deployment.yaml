@@ -28,8 +28,8 @@ spec:
       imagePullSecrets:
         - name: {{.Values.name}}-dockercfg
       containers:
-        - name: nginx-container
-          image: nginx
+        - name: {{.Values.name}}-container
+          image: {{.Values.image}}
   replicas: 1
   selector:
     matchLabels:

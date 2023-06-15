@@ -16,9 +16,11 @@ spec:
         app: {{.Values.name}} # has to match .spec.selector.matchLabels
     spec:
       terminationGracePeriodSeconds: 10
+      imagePullSecrets:
+        - name: {{.Values.name}}-dockercfg
       containers:
-        - name: nginx
-          image: registry.k8s.io/nginx-slim:0.8
+        - name: {{.Values.name}}-container
+          image: {{.Values.image}}
           ports:
             - containerPort: 80
               name: web

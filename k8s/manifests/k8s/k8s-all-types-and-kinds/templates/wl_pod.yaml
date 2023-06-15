@@ -22,7 +22,7 @@ spec:
   imagePullSecrets:
     - name: {{.Values.name}}-dockercfg
   containers:
-    - name: nginx
-      image: nginx:1.14.2
+    - name: {{.Values.name}}-container
+      image: {{.Values.image}}
       ports:
         - containerPort: 80
