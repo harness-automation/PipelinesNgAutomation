@@ -1,5 +1,5 @@
 function:
-  name: <+stage.variables.functionName>
+  name: gcf-go-helloworld-automation
   runtime: go119
   entryPoint: HelloGet
   httpsTrigger:
