@@ -1,0 +1,16 @@
+# https://kubernetes.io/docs/concepts/architecture/leases/
+apiVersion: coordination.k8s.io/v1
+kind: Lease
+metadata:
+  creationTimestamp: "2022-11-30T15:37:15Z"
+  labels:
+    k8s.io/component: kube-apiserver
+    kubernetes.io/hostname: kind-control-plane
+  name: {{.Values.name}}-lease
+  namespace: kube-system
+  resourceVersion: "18171"
+  uid: d6c68901-4ec5-4385-b1ef-2d783738da6c
+spec:
+  holderIdentity: kube-apiserver-c4vwjftbvpc5os2vvzle4qg27a_9cbf54e5-1136-44bd-8f9a-1dcd15c346b4
+  leaseDurationSeconds: 60
+  renewTime: "2022-11-30T18:04:27.912073Z"

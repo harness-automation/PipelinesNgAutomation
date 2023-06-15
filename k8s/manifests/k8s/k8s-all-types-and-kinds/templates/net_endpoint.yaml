@@ -1,0 +1,14 @@
+# https://theithollow.com/2019/02/04/kubernetes-endpoints/
+kind: "Endpoints"
+apiVersion: "v1"
+metadata:
+  name: {{.Values.name}}-endpoint
+subsets:
+  -
+    addresses:
+      -
+        ip: "127.0.0.1" #The IP Address of the external web server
+    ports:
+      -
+        port: 80
+        name: "apache"

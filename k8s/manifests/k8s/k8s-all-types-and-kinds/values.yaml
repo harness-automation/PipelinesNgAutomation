@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: {{.Values.name}}
+  labels:
+    app: {{.Values.name}}
+spec:
+  containers:
+    - name: {{.Values.name}}
+      image: quay.io/lachie83/croc-hunter
+      ports:
+        - containerPort: 8080

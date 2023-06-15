@@ -1,0 +1,16 @@
+# https://kubernetes.io/docs/concepts/policy/limit-range/
+apiVersion: v1
+kind: LimitRange
+metadata:
+  name: {{.Values.name}}-limitrange-cpu
+spec:
+  limits:
+    - default: # this section defines default limits
+        cpu: "1"
+      defaultRequest: # this section defines default requests
+        cpu: 500m
+      max: # max and min define the limit range
+        cpu: 1500m
+      min:
+        cpu: 100m
+      type: Container
