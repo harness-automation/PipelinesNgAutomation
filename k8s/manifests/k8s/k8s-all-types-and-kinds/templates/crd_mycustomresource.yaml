@@ -3,7 +3,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   # name must match the spec fields below, and be in the form: <plural>.<group>
-  name: {{.Values.name}}-crds.stable.example.com
+  name: {{.Values.name}}crds.stable.example.com
 spec:
   # group name to use for REST API: /apis/<group>/<version>
   group: stable.example.com
@@ -29,11 +29,11 @@ spec:
   scope: Namespaced
   names:
     # plural name to be used in the URL: /apis/<group>/<version>/<plural>
-    plural: {{.Values.name}}-crds
+    plural: {{.Values.name}}crds
     # singular name to be used as an alias on the CLI and for display
-    singular: {{.Values.name}}-crd
+    singular: {{.Values.name}}crd
     # kind is normally the CamelCased singular type. Your resource manifests use this.
-    kind: {{.Values.name}}-crd
+    kind: {{.Values.name}}crd
     # shortNames allow shorter string to match your resource on the CLI
     shortNames:
       - ct
