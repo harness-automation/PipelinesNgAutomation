@@ -3,6 +3,7 @@ apiVersion: stable.example.com/v1
 kind: {{.Values.name}}crd
 metadata:
   name: {{.Values.name}}-crd-inst
+  namespace: {{.Values.namespace}}
 spec:
   foo: bar
   baz: true
