@@ -1,12 +1,13 @@
-apiVersion: v1
-kind: Pod
-metadata:
-  name: {{.Values.name}}
-  labels:
-    app: {{.Values.name}}
-spec:
-  containers:
-    - name: {{.Values.name}}
-      image: quay.io/lachie83/croc-hunter
-      ports:
-        - containerPort: 8080
+name: <+stage.variables.resourceNamePrefix>
+replicas: <+stage.variables.replicas>
+
+image: <+artifacts.primary.image>
+dockercfg: <+artifacts.primary.imagePullSecret>
+
+createNamespace: true
+namespace: <+infra.namespace>
+
+serviceType: ClusterIP
+
+servicePort: 80
+serviceTargetPort: 3000

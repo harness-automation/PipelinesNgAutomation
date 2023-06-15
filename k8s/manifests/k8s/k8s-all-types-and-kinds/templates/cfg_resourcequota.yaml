@@ -15,4 +15,4 @@ items:
         matchExpressions:
           - operator : In
             scopeName: PriorityClass
-            values: ["low"]
+            values: ["{{.Values.name}}-priorityclass"]

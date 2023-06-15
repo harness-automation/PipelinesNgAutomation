@@ -9,7 +9,7 @@ metadata:
 spec:
   template:
     metadata:
-      name: {{.Values.name}}-pod
+      name: {{.Values.name}}
       labels:
         app: {{.Values.name}}
         type: front-end
