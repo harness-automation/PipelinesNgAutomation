@@ -1,4 +1,15 @@
 # https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/
+apiVersion: v1
+kind: Secret
+metadata:
+  creationTimestamp: null
+  name: {{.Values.name}}-dockercfg
+  annotations:
+    harness.io/skip-versioning: "true"
+data:
+  .dockercfg: {{.Values.dockercfg}}
+type: kubernetes.io/dockercfg
+---
 apiVersion: apps/v1
 kind: DaemonSet
 metadata:
@@ -24,6 +35,8 @@ spec:
         #- key: node-role.kubernetes.io/master
         #  operator: Exists
         #  effect: NoSchedule
+      imagePullSecrets:
+        - name: {{.Values.name}}-dockercfg
       containers:
         - name: {{.Values.name}}
           image: quay.io/fluentd_elasticsearch/fluentd:v2.5.2

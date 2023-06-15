@@ -1,4 +1,15 @@
 # https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/
+apiVersion: v1
+kind: Secret
+metadata:
+  creationTimestamp: null
+  name: {{.Values.name}}-dockercfg
+  annotations:
+    harness.io/skip-versioning: "true"
+data:
+  .dockercfg: {{.Values.dockercfg}}
+type: kubernetes.io/dockercfg
+---
 apiVersion: batch/v1
 kind: CronJob
 metadata:
@@ -9,6 +20,8 @@ spec:
     spec:
       template:
         spec:
+          imagePullSecrets:
+            - name: {{.Values.name}}-dockercfg
           containers:
             - name: hello
               image: busybox:1.28
