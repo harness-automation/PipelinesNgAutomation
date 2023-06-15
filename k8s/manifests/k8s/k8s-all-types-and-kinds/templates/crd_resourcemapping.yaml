@@ -13,7 +13,7 @@ spec:
     namespace: default
   versionMappings:
     - name: v1
-      kind: MyCustomResource
+      kind: {{.Values.name}}-crd
       mapping:
         name: {{.Values.name}}-crd-mapping
         kind: {{.Values.name}}-crd
