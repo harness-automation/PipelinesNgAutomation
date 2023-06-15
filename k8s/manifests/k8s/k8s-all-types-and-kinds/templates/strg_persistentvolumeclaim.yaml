@@ -5,7 +5,7 @@ metadata:
   name: {{.Values.name}}-persistentvolumeclaim
   namespace: {{.Values.namespace}}
 spec:
-  storageClassName: "local" # Empty string must be explicitly set otherwise default StorageClass will be set
+  storageClassName: "manual" # Empty string must be explicitly set otherwise default StorageClass will be set
   volumeName: {{.Values.name}}-persistentvolume
   accessModes:
     - ReadWriteOnce

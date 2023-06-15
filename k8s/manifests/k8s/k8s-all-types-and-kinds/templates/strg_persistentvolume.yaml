@@ -4,7 +4,7 @@ kind: PersistentVolume
 metadata:
   name: {{.Values.name}}-persistentvolume
 spec:
-  storageClassName: "local"
+  storageClassName: "manual"
   capacity:
     storage: 200Mi
   volumeMode: Filesystem
