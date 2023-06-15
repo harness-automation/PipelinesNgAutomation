@@ -7,6 +7,9 @@ spec:
   storageClassName: "local"
   capacity:
     storage: 200Mi
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteOnce
   claimRef:
     name: {{.Values.name}}-persistentvolumeclaim
     namespace: {{.Values.namespace}}
