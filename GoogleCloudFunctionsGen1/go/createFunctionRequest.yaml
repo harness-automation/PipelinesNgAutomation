@@ -1,5 +1,5 @@
 function:
-  name: gcf-go-helloworld-automation-mayank-kaushal
+  name: gcf-go-helloworld-automation
   runtime: go119
   entryPoint: HelloGet
   httpsTrigger:
