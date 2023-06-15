@@ -24,8 +24,6 @@ spec:
                   type: string
                 image:
                   type: string
-                replicas:
-                  type: integer
   # either Namespaced or Cluster
   scope: Namespaced
   names:
@@ -37,4 +35,4 @@ spec:
     kind: CronTab
     # shortNames allow shorter string to match your resource on the CLI
     shortNames:
-      - ct
+      - crdct
