@@ -5,6 +5,8 @@ metadata:
   name: {{.Values.name}}-persistentvolume
 spec:
   storageClassName: "local"
+  capacity:
+    storage: 200Mi
   claimRef:
     name: {{.Values.name}}-persistentvolumeclaim
     namespace: {{.Values.namespace}}
