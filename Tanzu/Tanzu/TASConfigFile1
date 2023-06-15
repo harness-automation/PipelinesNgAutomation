@@ -1,0 +1,4 @@
+  config:
+    key1: value10000000
+  secrets:
+    key2: value2
