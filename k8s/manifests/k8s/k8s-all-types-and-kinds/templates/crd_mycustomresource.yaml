@@ -4,6 +4,7 @@ kind: CustomResourceDefinition
 metadata:
   # name must match the spec fields below, and be in the form: <plural>.<group>
   name: {{.Values.name}}crds.stable.example.com
+  namespace: {{.Values.namespace}}
 spec:
   # group name to use for REST API: /apis/<group>/<version>
   group: stable.example.com
