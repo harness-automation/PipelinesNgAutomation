@@ -9,6 +9,7 @@ spec:
   volumeName: {{.Values.name}}-persistentvolume
   accessModes:
     - ReadWriteOnce
+  volumeMode: Filesystem
   resources:
     requests:
       storage: 200Mi
