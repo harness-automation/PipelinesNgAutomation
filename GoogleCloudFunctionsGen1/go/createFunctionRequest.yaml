@@ -1,0 +1,6 @@
+function:
+  name: <+stage.variables.functionName>
+  runtime: go119
+  entryPoint: HelloGet
+  httpsTrigger:
+    securityLevel: SECURE_OPTIONAL
