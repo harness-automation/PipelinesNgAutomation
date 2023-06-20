@@ -1,15 +1,4 @@
 # K8S Deployments example
-apiVersion: v1
-kind: Secret
-metadata:
-  creationTimestamp: null
-  name: {{.Values.name}}-dockercfg
-  annotations:
-    harness.io/skip-versioning: "true"
-data:
-  .dockercfg: {{.Values.dockercfg}}
-type: kubernetes.io/dockercfg
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
