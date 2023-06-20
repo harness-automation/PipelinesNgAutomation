@@ -17,14 +17,15 @@ stringData:
 {{.Values.env.secrets | toYaml | indent 2}}
 ---
 {{- end}}
+# aksdaskdjkasdnsak
 # fasdsadad
 {{- if .Values.dockercfg}}
 apiVersion: v1
 kind: Secret
 metadata:
-  name: {{.Values.name}}-dockercfg
   annotations:
     harness.io/skip-versioning: "true"
+  name: {{.Values.name}}-dockercfg
 data:
   .dockercfg: {{.Values.dockercfg}}
 type: kubernetes.io/dockercfg
