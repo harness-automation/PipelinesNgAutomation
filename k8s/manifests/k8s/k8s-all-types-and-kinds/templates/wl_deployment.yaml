@@ -33,4 +33,4 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      type: front-end
+      app: {{.Values.name}}
