@@ -1,13 +1,13 @@
 {{- if .Values.env.config}}
 apiVersion: v1
-kind: ConfigMap
 metadata:
   name: {{.Values.name}}
+kind: ConfigMap
 data:
 {{.Values.env.config | toYaml | indent 2}}
 ---
 {{- end}}
-
+# dasdsada
 {{- if .Values.env.secrets}}
 apiVersion: v1
 metadata:
