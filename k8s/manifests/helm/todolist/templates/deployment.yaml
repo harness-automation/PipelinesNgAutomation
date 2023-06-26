@@ -1,7 +1,7 @@
 {{- if .Values.env.config}}
 apiVersion: v1
 metadata:
-  name: hehehereleasee
+  name: {{.Values.name}}
 kind: ConfigMap
 data:
 {{.Values.env.config | toYaml | indent 2}}
@@ -11,7 +11,7 @@ data:
 {{- if .Values.env.secrets}}
 apiVersion: v1
 metadata:
-  name: hehehereleasee
+  name: {{.Values.name}}
 kind: Secret
 stringData:
 {{.Values.env.secrets | toYaml | indent 2}}
