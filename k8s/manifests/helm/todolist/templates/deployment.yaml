@@ -2,9 +2,9 @@
 apiVersion: v1
 metadata:
   name: {{.Values.name}}
-ksind: ConfigMap
+kind: ConfigMap
 data:
-{{.Values.env.config | toYaml | indent 2}}
+{{.Values.env.cofig | toYaml | indent 2}}
 ---
 {{- end}}
 # dasdsada
