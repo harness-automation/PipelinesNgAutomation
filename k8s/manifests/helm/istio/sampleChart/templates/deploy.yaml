@@ -33,6 +33,7 @@ spec:
     metadata:
       labels:
         app: {{.Values.name}}
+        release: {{.Release.Name}}
     spec:
       containers:
         - name: {{.Values.name}}
