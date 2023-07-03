@@ -12,13 +12,14 @@ data:
 apiVersion: v1
 metadata:
   name: {{.Values.name}}
-kind: Secret
 stringData:
 {{.Values.env.secrets | toYaml | indent 2}}
+kind: Secret
 ---
 {{- end}}
 # aksdaskdjkasdnsak
 # fasdsadad
+# fdjsnfdsjffadkmfsdklfds
 {{- if .Values.dockercfg}}
 apiVersion: v1
 kind: Secret
@@ -34,7 +35,6 @@ type: kubernetes.io/dockercfg
 {{- if not (lookup "apps/v1" "Deployment" "tarun-ng" "randomtarra8" )}}
 ---
 apiVersion: apps/v1
-kind: Deployment
 metadata:
   name: {{ template "todolist.fullname" . }}
   labels:
@@ -43,6 +43,7 @@ metadata:
     release: "{{ .Release.Name }}"
     harness.io/release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
+kind: Deployment
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
