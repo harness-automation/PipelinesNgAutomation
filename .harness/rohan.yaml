@@ -10,8 +10,8 @@ pipeline:
         identifier: Deploy
         template:
           templateRef: Deploy
-          versionLabel: "1.0"
-          gitBranch: master
+          versionLabel: "1.1"
+          gitBranch: naman-test
           templateInputs:
             type: Deployment
             spec:
