@@ -7,7 +7,7 @@ pipeline:
   stages:
     - stage:
         name: Deploy
-        identifier: Deploy
+        identifier: Deploy_11
         template:
           templateRef: Deploy
           versionLabel: "1.1"
