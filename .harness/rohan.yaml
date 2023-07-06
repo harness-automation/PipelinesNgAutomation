@@ -7,19 +7,12 @@ pipeline:
   stages:
     - stage:
         name: Deploy
-        identifier: Deploy_11
+        identifier: Deploy
         template:
           templateRef: Deploy
           versionLabel: "1.1"
           gitBranch: naman-test
           templateInputs:
-            type: Deployment
             spec:
               service:
-                serviceRef: <+input>
                 serviceInputs: <+input>
-              environment:
-                environmentRef: <+input>
-                environmentInputs: <+input>
-                serviceOverrideInputs: <+input>
-                infrastructureDefinitions: <+input>
