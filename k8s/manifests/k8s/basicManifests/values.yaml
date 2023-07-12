@@ -3,7 +3,7 @@ replicas: 1
 
 image: <+artifact.image>
 dockercfg: <+artifact.imagePullSecret>
-initdelay: 60
+initdelay: 180
 
 createNamespace: true
 namespace: <+infra.namespace>
