@@ -52,12 +52,6 @@ spec:
       containers:
       - name: {{.Values.name}}
         image: {{.Values.image}}
-        readinessProbe:
-          exec:
-            command:
-            - cat
-            - /tmp/healthy
-          initialDelaySeconds: {{ .Values.initdelay }}
         {{- if or .Values.env.config .Values.env.secrets}}
         envFrom:
         {{- if .Values.env.config}}
