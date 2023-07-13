@@ -53,6 +53,15 @@ spec:
       - name: {{.Values.name}}
         image: {{.Values.image}}
         {{- if or .Values.env.config .Values.env.secrets}}
+        resources:
+          limits:
+            cpu: 512m
+            ephemeral-storage: 128Mi
+            memory: 512Mi
+          requests:
+            cpu: 250m
+            ephemeral-storage: 10Mi
+            memory: 512Mi
         envFrom:
         {{- if .Values.env.config}}
         - configMapRef:
