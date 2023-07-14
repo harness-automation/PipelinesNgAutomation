@@ -1,5 +1,5 @@
 resources:
-  - ../../application
+  - ../../appl
 namePrefix: prod-
 configMapGenerator:
 - name: example-config
