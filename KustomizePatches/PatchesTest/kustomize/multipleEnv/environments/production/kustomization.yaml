@@ -2,4 +2,10 @@ resources:
   - ../../application
 namePrefix: prod-
 configMapGenerator:
-- name:
+- name: example-config
+  namespace: example
+  #behavior: replace
+  files:
+    - configs/config.json
+patchesStrategicMerge:
+  - env.yaml
