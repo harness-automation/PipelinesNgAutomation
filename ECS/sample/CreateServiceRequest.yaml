@@ -1,5 +1,5 @@
 launchType: FARGATE
-serviceName: <+serviceVariables.var1>
+serviceName: ecs-auto
 desiredCount: 1
 networkConfiguration:
   awsvpcConfiguration:
