@@ -27,7 +27,7 @@ containerDefinitions:
   secrets:
   dockerSecurityOptions:
   memory:
-  memoryReservation: 256
+  memoryReservation: 128
   volumesFrom: []
   stopTimeout:
   image: <+artifact.image>
@@ -49,7 +49,7 @@ containerDefinitions:
   privileged:
   name: nginx
 placementConstraints: []
-memory: '1024'
+memory: '512'
 taskRoleArn: arn:aws:iam::479370281431:role/ecsTaskExecutionRole
 family: taskauto
 pidMode:
@@ -57,7 +57,7 @@ requiresCompatibilities:
 - FARGATE
 networkMode: awsvpc
 runtimePlatform:
-cpu: '512'
+cpu: '256'
 inferenceAccelerators:
 proxyConfiguration:
 volumes: []
