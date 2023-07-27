@@ -1,5 +1,5 @@
 launchType: FARGATE
-serviceName: ecs-sidecar
+serviceName: ecs-sidecar-mayank
 desiredCount: 1
 networkConfiguration:
   awsvpcConfiguration:
