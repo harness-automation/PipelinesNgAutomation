@@ -11,6 +11,7 @@ provider:
 functions:
   currentTime61:
     # handler: com.serverless.Handler
+    name : ${opt:stage}-${self:custom.PARAMETERS.oem}
     image: <+artifact.image>
     events:
       - httpApi:
@@ -23,3 +24,7 @@ functions:
       - httpApi:
           path: /time1
           method: get   
+custom:
+  DEFAULT_ENV_SETUP: devint
+  DEPLOYMENT_ENV: ${self:custom.CONFIG.ENV, self:custom.DEFAULT_ENV_SETUP}
+  PARAMETERS: ${file(./env/${self:custom.DEPLOYMENT_ENV}/parameters.json)}           
