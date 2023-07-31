@@ -1,0 +1,19 @@
+service: newcheckstry
+frameworkVersion: '3.30.1'
+
+provider:
+  name: aws
+  runtime: java8
+
+package:
+  artifact: <+artifact.path>
+
+functions:
+  currentTime:
+    handler: com.serverless.Handler
+    # image: <+artifact.image>
+    events:
+      - schedule: ${file(./myCustom.yml):globalSchedule}  
+      - httpApi:
+          path: /time
+          method: get
