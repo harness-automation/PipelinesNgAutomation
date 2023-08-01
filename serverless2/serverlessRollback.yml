@@ -11,7 +11,7 @@ provider:
 functions:
   currentTime65:
     # handler: com.serverless.Handler
-    name : ${opt:stage}-${self:custom.PARAMETERS.oem}
+    name : ${opt:stage}-${self:custom.PARAMETERS.oem}-ne
     image: <+artifact.image>
     events:
       - httpApi:
