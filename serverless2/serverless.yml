@@ -30,5 +30,5 @@ custom:
   PARAMETERS: ${file(./env/${self:custom.DEPLOYMENT_ENV}/parameters.json)}           
 
 plugins:
-  - serverless-webpack
+  - serverless-manifest-plugin
   
