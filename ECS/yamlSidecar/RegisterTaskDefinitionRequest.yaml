@@ -28,7 +28,7 @@ containerDefinitions:
   systemControls: []
   resourceRequirements: []
 - name: image_sidecar
-  image: "<+artifacts.sidecars.sidecar.imagePath>"
+  image: "<+artifacts.sidecars.sidecar.image>"
   links: []
   portMappings:
   - hostPort: 8080
