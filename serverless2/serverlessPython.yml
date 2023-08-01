@@ -3,7 +3,7 @@ frameworkVersion: '3.30.1'
 
 provider:
   name: aws
-  runtime: python3.6
+  runtime: python3.9
 
 package:
   artifact: <+artifact.path>
