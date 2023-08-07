@@ -1,5 +1,5 @@
 launchType: FARGATE
-serviceName: "ecs-service"
+serviceName: <+stage.variables.var1>
 desiredCount: 2
 networkConfiguration:
   awsvpcConfiguration:
