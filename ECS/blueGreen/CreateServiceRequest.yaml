@@ -14,4 +14,4 @@ deploymentConfiguration:
 loadBalancers:
 - targetGroupArn: <+targetGroupArn>
   containerName: nginx
-  containerPort: 80
+  containerPort: 8080
