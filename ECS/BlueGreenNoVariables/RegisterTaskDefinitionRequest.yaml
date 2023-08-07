@@ -1,5 +1,3 @@
-
-
 ipcMode:
 executionRoleArn: arn:aws:iam::479370281431:role/ecsTaskExecutionRole
 containerDefinitions:
@@ -14,9 +12,9 @@ containerDefinitions:
       awslogs-stream-prefix: ecs
   entryPoint:
   portMappings:
-  - hostPort: 80
+  - hostPort: 8080
     protocol: tcp
-    containerPort: 80
+    containerPort: 8080
   command:
   linuxParameters:
   cpu: 0
@@ -53,7 +51,7 @@ containerDefinitions:
 placementConstraints: []
 memory: '512'
 taskRoleArn: arn:aws:iam::479370281431:role/ecsTaskExecutionRole
-family: "ecs-ng-task"
+family: <+stage.variables.taskName>
 pidMode:
 requiresCompatibilities:
 - FARGATE
