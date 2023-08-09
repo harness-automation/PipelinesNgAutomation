@@ -36,7 +36,7 @@ type: kubernetes.io/dockercfg
 ---
 apiVersion: apps/v1
 metadata:
-  name: {{ template "todolist.fullnamessss" . }}
+  name: {{ template "todolist.fullname" . }}
   labels:
     app: {{ template "todolist.name" . }}
     chart: {{ template "todolist.chart" . }}
