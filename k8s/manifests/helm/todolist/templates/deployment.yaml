@@ -78,7 +78,5 @@ spec:
               name: {{.Values.name}}  
           {{- end}}
           {{- end}}
-
-replicas: {{ dig "replicas" $.Values }}
 ---
 {{- end }}
