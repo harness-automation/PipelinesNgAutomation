@@ -1,7 +1,7 @@
 apiVersion: example.com/v1
-kind: {{.Values.name}}-crd-sample
+kind: {{.Values.name}}-helm-crd-sample
 metadata:
-  name: {{.Values.name}}-crd-object
+  name: {{.Values.name}}-helm-crd-object
 spec:
   replicas: 1
   environment: dev
