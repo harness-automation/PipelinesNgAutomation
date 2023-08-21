@@ -1,0 +1,2 @@
+name: <+stage.variables.resourceNamePrefix>
+group : "k8s-crd-sample.harness.io"
