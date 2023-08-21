@@ -1,0 +1,9 @@
+apiVersion: example.com/v1
+kind: {{.Values.name}}-crd-sample
+metadata:
+  name: {{.Values.name}}-crd-object
+spec:
+  replicas: 1
+  environment: dev
+  version: release-1.0.0
+  language: golang

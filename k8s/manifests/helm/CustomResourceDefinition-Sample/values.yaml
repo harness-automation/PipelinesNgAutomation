@@ -1,2 +1,2 @@
 name: <+stage.variables.resourceNamePrefix>
-group : "heml-crd-sample.harness.io"
+group : "helm-crd-sample.harness.io"
