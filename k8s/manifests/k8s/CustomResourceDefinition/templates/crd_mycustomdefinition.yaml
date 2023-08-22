@@ -3,8 +3,6 @@ kind: CustomResourceDefinition
 metadata:
   # name must match the spec fields below, and be in the form: <plural>.<group>
   name: {{.Values.name}}-crd-samples.{{.Values.group}}
-  annotations:
-    "harness.io/managed-workload": "true"
 spec:
   group: {{.Values.group}}
   # list of versions supported by this CustomResourceDefinition

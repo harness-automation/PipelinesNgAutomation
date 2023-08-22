@@ -2,6 +2,8 @@ apiVersion: example.com/v1
 kind: {{.Values.name}}-crd-sample
 metadata:
   name: {{.Values.name}}-crd-object
+  annotations:
+    "harness.io/managed-workload": "true"
 spec:
   replicas: 1
   environment: dev
