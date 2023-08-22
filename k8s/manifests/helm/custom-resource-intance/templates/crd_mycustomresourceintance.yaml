@@ -2,10 +2,6 @@ apiVersion: "stable.example.com/v1"
 kind: CronTab
 metadata:
   name: {{.Values.name}}-crd-resource
-  annotations:
-    "harness.io/managed-workload": "true"
-    "harness.io/steadyStateCondition": ${json.select("$..status.availableReplicas", response) == json.select("$..spec.replicas", response) && json.select("$..spec.deploymentName", response) == "{{.Values.name}}-crd-resource"}
-
 spec:
   cronSpec: "* * * * */5"
   image: my-awesome-cron-image
