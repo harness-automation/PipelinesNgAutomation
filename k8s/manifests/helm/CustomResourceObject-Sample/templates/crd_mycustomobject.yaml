@@ -1,0 +1,11 @@
+apiVersion: example.com/v1
+kind: {{.Values.name}}-helm-crd-sample
+metadata:
+  name: {{.Values.name}}-helm-crd-object
+  annotations:
+    "harness.io/managed-workload": "true"
+spec:
+  replicas: 1
+  environment: dev
+  version: release-1.0.0
+  language: golang
