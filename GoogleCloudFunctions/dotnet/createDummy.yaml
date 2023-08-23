@@ -2,8 +2,7 @@
 "function":{
   "name": "gcf-dotnet-helloworld-automation",
   "buildConfig": {
-    "runtime": "dotnet6",
-    "SHS": 
+    "entryPoint": @%@%@^@^@^
   },
   "serviceConfig": {
     "timeoutSeconds": 70,
