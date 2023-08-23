@@ -1,8 +1,9 @@
 {
 "function":{
-  "name": "@#$@%@%@%@",
+  "name": "gcf-dotnet-helloworld-!!@",
   "buildConfig": {
-    "entryPoint": @%@%@^@^@^
+    "runtime": "dotnet6",
+    "entryPoint": "HelloWorld.Function"
   },
   "serviceConfig": {
     "timeoutSeconds": 70,
