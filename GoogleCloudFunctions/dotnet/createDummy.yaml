@@ -1,6 +1,6 @@
 {
 "function":{
-  "name": "gcf-dotnet-helloworld-!!@",
+  "name": "gcf-dotnet-helloworld",
   "buildConfig": {
     "runtime": "dotnet6",
     "entryPoint": "HelloWorld.Function"
