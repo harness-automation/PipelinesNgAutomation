@@ -2,8 +2,8 @@
 "function":{
   "name": "gcf-dotnet-helloworld-automation",
   "buildConfig": {
-    "runtime": "??",
-    "entryPoint": "HelloWorld.Function"
+    "runtime": "dotnet6",
+    "entryPoint": "HelloWorld.MayankKaushal"
   },
   "serviceConfig": {
     "timeoutSeconds": 70,
