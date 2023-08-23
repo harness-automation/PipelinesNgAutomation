@@ -2,7 +2,7 @@
 "function":{
   "name": "gcf-dotnet-helloworld-automation",
   "buildConfig": {
-    "runtime": "dotnet6",
+    "runtime": "??",
     "entryPoint": "HelloWorld.Function"
   },
   "serviceConfig": {
