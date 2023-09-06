@@ -14,8 +14,8 @@ kind: Secret
 metadata:
   name: {{.Values.name}}
 stringData: 
-  key2: {{.Values.secrets.secretdata | b64enc}}
-  key3: {{.Values.secrets.secretdata2 | b64enc}}
+  key2: |-
+{{.Values.secrets.secretdata | b64enc | indent 4}}
 ---
 {{- end}}
 
