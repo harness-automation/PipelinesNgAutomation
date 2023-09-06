@@ -1,6 +1,7 @@
 name: <+stage.variables.resourceNamePrefix>
 replicas: 1
-secretdata: <+secrets.getValue("getsecgo")>
+secrets:
+  secretdata: <+secrets.getValue("getsecgo")>
 image: <+artifact.image>
 dockercfg: <+artifact.imagePullSecret>
 
