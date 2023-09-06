@@ -13,8 +13,7 @@ apiVersion: v1
 kind: Secret
 metadata:
   name: {{.Values.name}}
-stringData:
-"{{ toYaml .Values.env.secrets | b64enc | indent 2}}"
+stringData: {{ toYaml .Values.env.secrets | b64enc }}
 ---
 {{- end}}
 
