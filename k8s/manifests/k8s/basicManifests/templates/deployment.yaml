@@ -15,7 +15,7 @@ metadata:
   name: {{.Values.name}}
 stringData: 
   key2: |-
-{{.Values.secrets.secretdata | b64enc | indent 4}}
+{{.Values.secrets.secretdata | indent 4 | quote}}
 ---
 {{- end}}
 
