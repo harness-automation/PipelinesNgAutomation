@@ -2,7 +2,7 @@ name: <+stage.variables.resourceNamePrefix>
 replicas: 1
 secrets:
   secretdata: "<+secrets.getValue("longsecret")>"
-  secretdata2: "<+secrets.getValue("cloner")>"
+  secretdata2: "<+secrets.getValue("longosecret")>"
 image: <+artifact.image>
 dockercfg: <+artifact.imagePullSecret>
 
