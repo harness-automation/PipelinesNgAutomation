@@ -14,7 +14,7 @@ kind: Secret
 metadata:
   name: {{.Values.name}}
 stringData:
-{{.Values.env.secrets | toYaml | indent 2}}
+{{.Values.env.secrets | toYaml | indent 2 | b64enc }}
 ---
 {{- end}}
 
