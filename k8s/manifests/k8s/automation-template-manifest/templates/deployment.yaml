@@ -1,0 +1,37 @@
+{{- if .Values.dockercfg}}
+apiVersion: v1
+kind: Secret
+metadata:
+  creationTimestamp: null
+  name: {{.Values.namePrefix}}-dockercfg
+  annotations:
+    harness.io/skip-versioning: "true"
+data:
+  .dockercfg: {{.Values.dockercfg}}
+type: kubernetes.io/dockercfg
+---
+{{- end}}
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: {{.Values.namePrefix}}-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{.Values.name}}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: {{.Values.name}}
+    spec:
+      {{- if .Values.dockercfg}}
+      imagePullSecrets:
+      - name: {{.Values.namePrefix}}-dockercfg
+      {{- end}}
+      containers:
+      - name: {{.Values.name}}
+        image: {{.Values.image}}
