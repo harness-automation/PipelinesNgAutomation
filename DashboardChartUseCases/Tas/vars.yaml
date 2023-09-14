@@ -1,0 +1,6 @@
+INSTANCES: 1
+APP_NAME: rishabh_<+service.name>_<+infra.name>_<+serviceVariables.name>
+APP_MEMORY: 1024M
+disk: 1024M
+ROUTES:
+  - route: rishabh_<+service.name>_<+infra.name>_<+serviceVariables.name>.apps.tas-harness.com

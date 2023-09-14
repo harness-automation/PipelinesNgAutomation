@@ -1,0 +1,6 @@
+applications:
+- name: ((APP_NAME))
+  memory: ((APP_MEMORY))
+  disk_quota: ((disk))
+  instances: ((INSTANCES))
+  routes: ((ROUTES))
