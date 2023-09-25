@@ -21,17 +21,17 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: {{.Values.name}}
+      app: {{.Values.namePrefix}}
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: {{.Values.name}}
+        app: {{.Values.namePrefix}}
     spec:
       {{- if .Values.dockercfg}}
       imagePullSecrets:
       - name: {{.Values.namePrefix}}-dockercfg
       {{- end}}
       containers:
-      - name: {{.Values.name}}
+      - name: {{.Values.namePrefix}}
         image: {{.Values.image}}
