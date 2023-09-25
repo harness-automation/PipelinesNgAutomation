@@ -1,5 +1,3 @@
 namePrefix: <+stage.variables.resourceNamePrefix>
 
-image: <+artifacts.primary.image>
-dockercfg: <+artifacts.primary.imagePullSecret>
-
+image: library/nginx:latest
