@@ -4,7 +4,7 @@ template:
   versionLabel: v1
   type: Step
   projectIdentifier: CDCNGAuto_FilterTemplatesTest
-  orgIdentifier: Ng_Pipelines_K8s_Organisations
+  orgIdentifier: Pipelines_NonK8s_Org_NG
   description: newTemplate
   tags: {}
   spec:
