@@ -12,7 +12,7 @@ image:
 
 imagePullSecrets: []
 nameOverride: "cherry-awesome-app"
-fullnameOverride: <+stage.variables.resourceName>
+fullnameOverride: <+serviceVariables.resourceName>
 
 serviceAccount:
   # Specifies whether a service account should be created
