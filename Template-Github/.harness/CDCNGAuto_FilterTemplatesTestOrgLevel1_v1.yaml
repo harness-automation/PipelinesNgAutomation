@@ -3,7 +3,7 @@ template:
   identifier: CDCNGAuto_FilterTemplatesTestOrgLevel1
   versionLabel: v1
   type: Step
-  orgIdentifier: Ng_Pipelines_K8s_Organisations
+  orgIdentifier: Pipelines_NonK8s_Org_NG
   tags: {}
   spec:
     timeout: 10s
