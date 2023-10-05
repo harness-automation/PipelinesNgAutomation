@@ -7,7 +7,7 @@ replicaCount: 2
 
 namespace: default
 
-image: nginx:latest
+image: nginx:stable
 pullPolicy: Always
 dockercfg: 
 
