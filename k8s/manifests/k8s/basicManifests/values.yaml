@@ -17,7 +17,17 @@ serviceType: LoadBalancer
 # targetPort is where application is listening on inside the container.
 servicePort: 80
 serviceTargetPort: 80
-
+readinessProbe:
+  enabled: true
+  exec:
+    command:
+    - test
+    - "<+stage.variables.readinessStatus>"
+    - =
+    - "success"
+  initialDelaySeconds: 30
+  periodSeconds: 10 
+  failureThreshold: 2
 # Specify all environment variables to be added to the container.
 # The following two maps, config and secrets, are put into a ConfigMap
 # and a Secret, respectively.
