@@ -1,7 +1,7 @@
 name: <+stage.variables.resourceNamePrefix>
 replicas: 1
-secrets:
-  secretdata:  "<+configFile.getAsBase64("sampleConfigFile")>"
+# secrets:
+#   secretdata:  "<+configFile.getAsBase64("sampleConfigFile")>"
 image: <+artifact.image>
 dockercfg: <+artifact.imagePullSecret>
 
