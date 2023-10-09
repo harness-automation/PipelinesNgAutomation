@@ -65,8 +65,10 @@ spec:
         readinessProbe:
           exec:
             command:
-            - cat
-            - /tmp/healthy
+            - test
+            - "<stage.variables.readinessStatus"
+            - =
+            - "success"
           initialDelaySeconds: 30
           periodSeconds: 5
         {{- end}}
