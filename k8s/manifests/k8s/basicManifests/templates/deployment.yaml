@@ -62,4 +62,11 @@ spec:
         - secretRef:
             name: {{.Values.name}}
         {{- end}}
+        readinessProbe:
+          exec:
+            command:
+            - cat
+            - /tmp/healthy
+          initialDelaySeconds: 30
+          periodSeconds: 5
         {{- end}}
