@@ -22,6 +22,11 @@ serviceTargetPort: 80
 # The following two maps, config and secrets, are put into a ConfigMap
 # and a Secret, respectively.
 # Both are added to the container environment in podSpec as envFrom source. 
+readinessProbe:
+  enabled: true
+  initialDelaySeconds: 30
+  periodSeconds: 10 
+  failureThreshold: 2
 env:
   config:
     key1: value1
