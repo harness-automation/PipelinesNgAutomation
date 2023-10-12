@@ -1,6 +1,6 @@
 launchType: FARGATE
 serviceName: <+stage.variables.var2>
-desiredCount: 1
+desiredCount: 5
 networkConfiguration:
   awsvpcConfiguration:
     securityGroups:
