@@ -1,4 +1,4 @@
-name: <+stage.variables.resourceNamePrefix>
+name: tathagatalationtest
 replicas: 2
 
 image: <+artifact.image>
