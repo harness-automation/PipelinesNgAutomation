@@ -73,3 +73,10 @@ spec:
               name: {{.Values.name}}
           {{- end}}
           {{- end}}
+        env:
+        - name: NAMESPACE
+          value: asimov-manual-update
+        - name: KUBECONTEXT
+          value: development
+        - name: ONE_TEST
+          value: {{.Values.onetest}}
