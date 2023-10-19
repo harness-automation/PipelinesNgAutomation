@@ -1,8 +1,9 @@
 name: tathagatalationtest
 replicas: 2
 
-image: <+artifact.image>
-dockercfg: <+artifact.imagePullSecret>
+image: library/nginx
+# dockercfg: <+artifact.imagePullSecret>
+dockercfg: somerandomvalue
 
 createNamespace: true
 namespace: <+infra.namespace>
