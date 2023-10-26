@@ -1,6 +1,6 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  {{ template "todolist.fullname" . }}-dummy-cm
+ name: {{ template "todolist.fullname" . }}-dummy-cm
 data:
   test: "{{.Values.testVal}}"
