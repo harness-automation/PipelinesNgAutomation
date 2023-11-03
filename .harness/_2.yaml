@@ -3,3 +3,12 @@ service:
   identifier: _2
   orgIdentifier: default
   projectIdentifier: Tathagattest
+  serviceDefinition:
+    spec:
+      variables:
+        - name: servicevar2
+          type: String
+          description: ""
+          required: false
+          value: <+input>
+    type: Kubernetes
