@@ -1,0 +1,13 @@
+infrastructureDefinition:
+  name: infra2remote
+  identifier: infra2remote
+  orgIdentifier: default
+  projectIdentifier: Tathagattest
+  environmentRef: _e1
+  deploymentType: Kubernetes
+  type: KubernetesDirect
+  spec:
+    connectorRef: account.K8s
+    namespace: ddddd
+    releaseName: release-<+INFRA_KEY_SHORT_ID>
+  allowSimultaneousDeployments: false
