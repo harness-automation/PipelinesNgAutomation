@@ -1,0 +1,13 @@
+infrastructureDefinition:
+  name: infrarandombranch2
+  identifier: infrarandombranch2
+  orgIdentifier: default
+  projectIdentifier: Tathagattest
+  environmentRef: _e1
+  deploymentType: Kubernetes
+  type: KubernetesDirect
+  spec:
+    connectorRef: <+input>
+    namespace: <+input>
+    releaseName: release-<+INFRA_KEY_SHORT_ID>
+  allowSimultaneousDeployments: false
