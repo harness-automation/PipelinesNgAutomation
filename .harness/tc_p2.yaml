@@ -12,17 +12,6 @@ pipeline:
         type: Deployment
         spec:
           deploymentType: Kubernetes
-          service:
-            serviceRef: _1
-            serviceInputs:
-              serviceDefinition:
-                type: Kubernetes
-                spec:
-                  variables:
-                    - name: servicevar1
-                      type: String
-                      value: <+input>
-            gitBranch: tathagat
           environment:
             environmentRef: _e1
             gitBranch: tathagat-2
@@ -60,6 +49,20 @@ pipeline:
                   timeout: 10m
                   spec:
                     pruningEnabled: false
+          services:
+            values:
+              - serviceRef: _1
+                serviceInputs:
+                  serviceDefinition:
+                    type: Kubernetes
+                    spec:
+                      variables:
+                        - name: servicevar1
+                          type: String
+                          value: <+input>
+                gitBranch: tathagat
+            metadata:
+              parallel: false
         tags: {}
         failureStrategies:
           - onFailure:
