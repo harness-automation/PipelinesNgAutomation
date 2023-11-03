@@ -1,0 +1,7 @@
+environment:
+  name: "311_e2"
+  identifier: _e2
+  accountId: 5PMLsgZkRMy2cWFiM6mv5A
+  orgIdentifier: default
+  projectIdentifier: Tathagattest
+  type: Production
