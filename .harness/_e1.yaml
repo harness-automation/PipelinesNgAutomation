@@ -1,7 +1,13 @@
 environment:
   name: "311_e1"
   identifier: _e1
-  accountId: 5PMLsgZkRMy2cWFiM6mv5A
+  type: Production
   orgIdentifier: default
   projectIdentifier: Tathagattest
-  type: Production
+  variables:
+    - name: envvar1
+      type: String
+      value: <+input>
+      description: ""
+      required: false
+  storeType: REMOTE
