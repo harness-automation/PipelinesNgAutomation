@@ -10,4 +10,9 @@ environment:
       value: <+input>
       description: ""
       required: false
+    - name: envvar2anotherbranch
+      type: String
+      value: <+input>
+      description: ""
+      required: false
   storeType: REMOTE
