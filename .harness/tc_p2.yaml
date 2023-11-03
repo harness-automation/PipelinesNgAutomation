@@ -1,0 +1,69 @@
+pipeline:
+  name: tc_p2
+  identifier: tc_p2
+  projectIdentifier: Tathagattest
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: stage1
+        identifier: stage1
+        description: ""
+        type: Deployment
+        spec:
+          deploymentType: Kubernetes
+          service:
+            serviceRef: _1
+            serviceInputs:
+              serviceDefinition:
+                type: Kubernetes
+                spec:
+                  variables:
+                    - name: servicevar1
+                      type: String
+                      value: <+input>
+            gitBranch: tathagat
+          environment:
+            environmentRef: _e1
+            gitBranch: tathagat-2
+            environmentInputs:
+              identifier: _e1
+              type: Production
+              variables:
+                - name: envvar1
+                  type: String
+                  value: <+input>
+                - name: envvar2anotherbranch
+                  type: String
+                  value: <+input>
+            deployToAll: false
+            infrastructureDefinitions:
+              - identifier: infra1
+          execution:
+            steps:
+              - step:
+                  name: Rollout Deployment
+                  identifier: rolloutDeployment
+                  type: K8sRollingDeploy
+                  timeout: 10m
+                  spec:
+                    skipDryRun: false
+                    pruningEnabled: false
+                  when:
+                    stageStatus: Success
+                    condition: 1==2
+            rollbackSteps:
+              - step:
+                  name: Rollback Rollout Deployment
+                  identifier: rollbackRolloutDeployment
+                  type: K8sRollingRollback
+                  timeout: 10m
+                  spec:
+                    pruningEnabled: false
+        tags: {}
+        failureStrategies:
+          - onFailure:
+              errors:
+                - AllErrors
+              action:
+                type: StageRollback
