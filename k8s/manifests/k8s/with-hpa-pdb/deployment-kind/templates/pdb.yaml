@@ -4,6 +4,7 @@ kind: PodDisruptionBudget
 metadata:
   name: {{.Values.name}}-pdb
 spec:
+  invalidNonSpecField: someValue
   minAvailable: {{ .Values.pdb.minAvailable }}
   selector:
     matchLabels:

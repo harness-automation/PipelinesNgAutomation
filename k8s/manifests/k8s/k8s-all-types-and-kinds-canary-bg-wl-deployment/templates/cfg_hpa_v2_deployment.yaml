@@ -8,6 +8,7 @@ spec:
     apiVersion: apps/v1
     kind: Deployment
     name: {{.Values.name}}-deployment
+    invalidNonSpecField: someValue
   minReplicas: {{ .Values.hpa.minReplicas }}
   maxReplicas: {{ .Values.hpa.maxReplicas }}
   metrics:
