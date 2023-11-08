@@ -70,6 +70,7 @@ objects:
         apiVersion: apps.openshift.io/v1
         kind: DeploymentConfig
         name: ${NAME}-deploymentconfig
+        invalidNonSpecField: someValue
       minReplicas: ${{MINREPLICAS}}
       maxReplicas: ${{MAXREPLICAS}}
       targetCPUUtilizationPercentage: ${{CPUUTILLIMT}}
@@ -78,6 +79,7 @@ objects:
     metadata:
       name: ${NAME}-pdb
     spec:
+      invalidNonSpecField: someValue
       minAvailable: ${{MINAVAILABLE}}
       selector:
         matchLabels:
