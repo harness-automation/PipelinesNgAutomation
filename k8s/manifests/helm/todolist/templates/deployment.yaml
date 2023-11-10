@@ -1,82 +1,129 @@
-{{- if .Values.env.config}}
-apiVersion: v1
-metadata:
-  name: {{.Values.name}}
-kind: ConfigMap
-data:
-{{.Values.env.config | toYaml | indent 2}}
----
-{{- end}}
-# dasdsada
-{{- if .Values.env.secrets}}
-apiVersion: v1
-metadata:
-  name: {{.Values.name}}
-stringData:
-{{.Values.env.secrets | toYaml | indent 2}}
-kind: Secret
----
-{{- end}}
-# aksdaskdjkasdnsak
-# fasdsadad
-# fdjsnfdsjffadkmfsdklfds
-{{- if .Values.dockercfg}}
-apiVersion: v1
-kind: Secret
-metadata:
-  annotations:
-    harness.io/skip-versioning: "true"
-  name: {{.Values.name}}-dockercfg
-data:
-  .dockercfg: {{.Values.dockercfg}}
-type: kubernetes.io/dockercfg
----
-{{- end}}
-{{- if not (lookup "apps/v1" "Deployment" "tarun-ng" "randomtarra8" )}}
----
 apiVersion: apps/v1
+kind: StatefulSet
 metadata:
-  name: {{ template "todolist.fullname" . }}
-  labels:
-    app: {{ template "todolist.name" . }}
-    chart: {{ template "todolist.chart" . }}
-    release: "{{ .Release.Name }}"
-    harness.io/release: {{ .Release.Name }}
-    heritage: {{ .Release.Service }}
-kind: Deployment
+  name: mysql
 spec:
-  replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: {{ template "todolist.name" . }}
-      release: {{ .Release.Name }}
+      app: mysql # has to match .spec.template.metadata.labels
+  serviceName: \"mysql\"
+  replicas: 1
   template:
     metadata:
       labels:
-        app: {{ template "todolist.name" . }}
-        release: {{ .Release.Name }}
-        harness.io/release: {{ .Release.Name }}
+        app: mysql
     spec:
-      {{- if .Values.dockercfg}}
-      imagePullSecrets:
-      - name: {{.Values.name}}-dockercfg
-      {{- end}}
+      terminationGracePeriodSeconds: 60
       containers:
-        - name: todolist-harness
-          image: registry.hub.docker.com/harness/todolist-sample:latest
-        - name: {{ .Chart.Name }}
-          image: {{.Values.image}}
-          imagePullPolicy: {{ .Values.pullPolicy }}
-          {{- if or .Values.env.config .Values.env.secrets}}
-          envFrom:
-          {{- if .Values.env.config}}
-          - configMapRef:
-              name: {{.Values.name}}
-          {{- end}}
-          {{- if .Values.env.secrets}}
-          - secretRef:
-              name: {{.Values.name}}  
-          {{- end}}
-          {{- end}}
----
-{{- end }}
+      - name: mysql
+        image: mysql
+        ports:
+        - containerPort: 3306
+          name: database
+        volumeMounts:
+        - name: data
+          mountPath: /var/lib/mysql
+        - name: mysql
+          mountPath: /run/secrets/mysql
+        env:
+        - name: MYSQL_ROOT_PASSWORD_FILE
+          value: /run/secrets/mysql/root-pass
+      volumes:
+       - name: mysql
+         secret:
+           secretName: mysql
+           defaultMode: 0493
+           items:
+            - key: root-pass
+              path: root-pass
+  volumeClaimTemplates:
+  - metadata:
+      name: data
+    spec:
+      accessModes: [ \"ReadWriteOnce\" ]
+      storageClassName: do-block-storage
+      resources:
+        requests:
+          storage: 1Gi
+# {{- if .Values.env.config}}
+# apiVersion: v1
+# metadata:
+#   name: {{.Values.name}}
+# kind: ConfigMap
+# data:
+# {{.Values.env.config | toYaml | indent 2}}
+# ---
+# {{- end}}
+# # dasdsada
+# {{- if .Values.env.secrets}}
+# apiVersion: v1
+# metadata:
+#   name: {{.Values.name}}
+# stringData:
+# {{.Values.env.secrets | toYaml | indent 2}}
+# kind: Secret
+# ---
+# {{- end}}
+# # aksdaskdjkasdnsak
+# # fasdsadad
+# # fdjsnfdsjffadkmfsdklfds
+# {{- if .Values.dockercfg}}
+# apiVersion: v1
+# kind: Secret
+# metadata:
+#   annotations:
+#     harness.io/skip-versioning: "true"
+#   name: {{.Values.name}}-dockercfg
+# data:
+#   .dockercfg: {{.Values.dockercfg}}
+# type: kubernetes.io/dockercfg
+# ---
+# {{- end}}
+# {{- if not (lookup "apps/v1" "Deployment" "tarun-ng" "randomtarra8" )}}
+# ---
+# apiVersion: apps/v1
+# metadata:
+#   name: {{ template "todolist.fullname" . }}
+#   labels:
+#     app: {{ template "todolist.name" . }}
+#     chart: {{ template "todolist.chart" . }}
+#     release: "{{ .Release.Name }}"
+#     harness.io/release: {{ .Release.Name }}
+#     heritage: {{ .Release.Service }}
+# kind: Deployment
+# spec:
+#   replicas: {{ .Values.replicaCount }}
+#   selector:
+#     matchLabels:
+#       app: {{ template "todolist.name" . }}
+#       release: {{ .Release.Name }}
+#   template:
+#     metadata:
+#       labels:
+#         app: {{ template "todolist.name" . }}
+#         release: {{ .Release.Name }}
+#         harness.io/release: {{ .Release.Name }}
+#     spec:
+#       {{- if .Values.dockercfg}}
+#       imagePullSecrets:
+#       - name: {{.Values.name}}-dockercfg
+#       {{- end}}
+#       containers:
+#         - name: todolist-harness
+#           image: registry.hub.docker.com/harness/todolist-sample:latest
+#         - name: {{ .Chart.Name }}
+#           image: {{.Values.image}}
+#           imagePullPolicy: {{ .Values.pullPolicy }}
+#           {{- if or .Values.env.config .Values.env.secrets}}
+#           envFrom:
+#           {{- if .Values.env.config}}
+#           - configMapRef:
+#               name: {{.Values.name}}
+#           {{- end}}
+#           {{- if .Values.env.secrets}}
+#           - secretRef:
+#               name: {{.Values.name}}  
+#           {{- end}}
+#           {{- end}}
+# ---
+# {{- end }}
