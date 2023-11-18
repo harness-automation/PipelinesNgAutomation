@@ -25,6 +25,16 @@ pipeline:
             rollbackSteps: []
           service:
             serviceRef: HelmHTTPHelm
+            serviceInputs:
+              serviceDefinition:
+                type: NativeHelm
+                spec:
+                  manifests:
+                    - manifest:
+                        identifier: manfiesto
+                        type: HelmChart
+                        spec:
+                          chartVersion: <+input>
           environment:
             environmentRef: env1
             deployToAll: false
