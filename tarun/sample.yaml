@@ -52,3 +52,9 @@ pipeline:
                 - AllErrors
               action:
                 type: StageRollback
+        variables:
+          - name: resourceNamePrefix
+            type: String
+            description: ""
+            required: false
+            value: dsadasfaeg
