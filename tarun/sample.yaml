@@ -53,3 +53,8 @@ pipeline:
             description: ""
             required: false
             value: dsadasfaeg
+          - name: sss
+            type: String
+            description: ""
+            required: false
+            value: ss
