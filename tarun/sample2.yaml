@@ -52,3 +52,9 @@ pipeline:
                 - AllErrors
               action:
                 type: StageRollback
+        variables:
+          - name: dweadc
+            type: String
+            description: ""
+            required: false
+            value: s
