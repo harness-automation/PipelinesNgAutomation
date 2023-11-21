@@ -8,7 +8,6 @@ spec:
     apiVersion: apps/v1
     kind: StatefulSet
     name: {{.Values.name}}-statefulset
-    invalidNonSpecField: someValue
   minReplicas: {{ .Values.hpa.minReplicas }}
   maxReplicas: {{ .Values.hpa.maxReplicas }}
   targetCPUUtilizationPercentage: {{ .Values.hpa.targetCPUUtilizationPercentage }}
