@@ -24,6 +24,10 @@ pipeline:
                         type: HelmChart
                         spec:
                           chartVersion: <+input>
+                  artifacts:
+                    primary:
+                      primaryArtifactRef: <+input>
+                      sources: <+input>
           environment:
             environmentRef: env1
             deployToAll: false
