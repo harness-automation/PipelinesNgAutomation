@@ -62,3 +62,9 @@ pipeline:
             description: ""
             required: false
             value: letsseeeee
+  variables:
+    - name: sample1
+      type: String
+      description: ""
+      required: false
+      value: library/nginx
