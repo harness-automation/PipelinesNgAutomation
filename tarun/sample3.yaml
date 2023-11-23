@@ -13,21 +13,17 @@ pipeline:
         spec:
           deploymentType: NativeHelm
           service:
-            serviceRef: HelmHTTPHelm
+            serviceRef: helmoci
             serviceInputs:
               serviceDefinition:
                 type: NativeHelm
                 spec:
                   manifests:
                     - manifest:
-                        identifier: manfiesto
+                        identifier: manifeto
                         type: HelmChart
                         spec:
                           chartVersion: <+input>
-                  artifacts:
-                    primary:
-                      primaryArtifactRef: <+input>
-                      sources: <+input>
           environment:
             environmentRef: env1
             deployToAll: false
