@@ -13,7 +13,7 @@ pipeline:
         spec:
           deploymentType: NativeHelm
           service:
-            serviceRef: helmoci
+            serviceRef: ociHelm
             serviceInputs:
               serviceDefinition:
                 type: NativeHelm
