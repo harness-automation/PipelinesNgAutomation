@@ -1,0 +1,66 @@
+pipeline:
+  name: cs3
+  identifier: cs3
+  projectIdentifier: taruntest
+  orgIdentifier: deafult
+  tags: {}
+  stages:
+    - stage:
+        name: helosp
+        identifier: helosp
+        description: ""
+        type: Deployment
+        spec:
+          deploymentType: NativeHelm
+          service:
+            serviceRef: helmoci
+            serviceInputs:
+              serviceDefinition:
+                type: NativeHelm
+                spec:
+                  manifests:
+                    - manifest:
+                        identifier: manifeto
+                        type: HelmChart
+                        spec:
+                          chartVersion: <+input>
+          environment:
+            environmentRef: env1
+            deployToAll: false
+            infrastructureDefinitions:
+              - identifier: das
+          execution:
+            steps:
+              - step:
+                  name: Helm Deployment
+                  identifier: helmDeployment
+                  type: HelmDeploy
+                  timeout: 10m
+                  spec:
+                    skipDryRun: false
+            rollbackSteps:
+              - step:
+                  name: Helm Rollback
+                  identifier: helmRollback
+                  type: HelmRollback
+                  timeout: 10m
+                  spec: {}
+        tags: {}
+        failureStrategies:
+          - onFailure:
+              errors:
+                - AllErrors
+              action:
+                type: StageRollback
+        variables:
+          - name: resourceNamePrefix
+            type: String
+            description: ""
+            required: false
+            value: letsseeeee
+  variables:
+    - name: sample1
+      type: String
+      description: ""
+      required: false
+      value: library/nginx
