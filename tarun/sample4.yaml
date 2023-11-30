@@ -28,7 +28,7 @@ pipeline:
             environmentRef: env1
             deployToAll: false
             infrastructureDefinitions:
-              - identifier: esdfs
+              - identifier: tarie
           execution:
             steps:
               - step:
