@@ -28,7 +28,7 @@ pipeline:
             environmentRef: env1
             deployToAll: false
             infrastructureDefinitions:
-              - identifier: das
+              - identifier: esdfs
           execution:
             steps:
               - step:
