@@ -13,14 +13,14 @@ pipeline:
         spec:
           deploymentType: NativeHelm
           service:
-            serviceRef: ociHelm
+            serviceRef: sup
             serviceInputs:
               serviceDefinition:
                 type: NativeHelm
                 spec:
                   manifests:
                     - manifest:
-                        identifier: manifeto
+                        identifier: blabla
                         type: HelmChart
                         spec:
                           chartVersion: <+input>
