@@ -3,7 +3,7 @@
 # Declare variables to be passed into your templates.
 
 name: todolist-chart
-replicaCount: 3
+replicaCount: 2
 
 namespace: default
 
