@@ -6,3 +6,5 @@ applications:
   memory: 750M
   routes:
     - route: ((ROUTE))
+  services:
+    - myautoscaler
