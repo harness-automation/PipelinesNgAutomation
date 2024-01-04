@@ -3,5 +3,6 @@ appVersion: "1.0"
 description: A Helm chart for Kubernetes
 name: todolist
 version: 0.2.0
+kubeVersion: "1.24.16-gke.500"
 basePath: "/charts"
 
