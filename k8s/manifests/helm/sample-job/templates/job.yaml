@@ -1,14 +1,16 @@
+# https://kubernetes.io/docs/concepts/workloads/controllers/job/
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: pi
+  name: {{.Values.name}}-job
 spec:
   template:
     spec:
+      imagePullSecrets:
+        - name: {{.Values.name}}-dockercfg
       containers:
-      - name: pi
-        image: perl:5.34.0
-        command: ["perl",  "-Mbignum=bpi", "-wle", "print bpi(2000)"]
+        - name: {{.Values.name}}-container
+          image: {{.Values.image}}
+          command: ["/bin/sh","-c","echo hello"]
       restartPolicy: Never
   backoffLimit: 4
-
