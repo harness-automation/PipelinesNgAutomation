@@ -31,6 +31,15 @@ type: kubernetes.io/dockercfg
 ---
 {{- end}}
 
+apiVersion: v1
+kind: Secret
+metadata:
+  name: robot
+  labels:
+    app.kubernetes.io/instance: robot
+data:
+  root.cert: {{.Values.secrets.roottest | b64enc}}
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
