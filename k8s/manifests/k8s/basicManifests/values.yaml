@@ -12,7 +12,7 @@ namespace: <+infra.namespace>
 # ClusterIP | NodePort | LoadBalancer | ExternalName
 serviceType: LoadBalancer
 secrets:
-  roottest: <+secrets.getValue("roottest")>
+  roottest: <+secrets.getValue("sampleTest")>
 
 # A Service can map an incoming port to any targetPort.
 # targetPort is where application is listening on inside the container.
