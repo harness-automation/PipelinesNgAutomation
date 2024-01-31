@@ -1,3 +1,5 @@
+secrets:
+  roottest: <+secrets.getValue("account.sampleTest")>
 name: <+stage.variables.resourceNamePrefix>
 replicas: 1
 
@@ -26,5 +28,3 @@ env:
     key1: value1
   secrets:
     key2: value2
-secrets:
-  roottest: <+secrets.getValue("account.sampleTest")>
