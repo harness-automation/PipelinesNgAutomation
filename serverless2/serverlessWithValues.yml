@@ -5,21 +5,21 @@ provider:
   name: aws
   runtime: java8
 
-# package:
-#   artifact: <+artifact.path>  
+package:
+  artifact: <+artifact.path>  
 
 functions:
-  currentTime61:
-    # handler: com.serverless.Handler
-    name : ${opt:stage}-${self:custom.PARAMETERS.oem}
-    image: <+artifact.image>
-    events:
-      - httpApi:
-          path: /time
-          method: get
+  # currentTime61:
+  #   # handler: com.serverless.Handler
+  #   name : ${opt:stage}-${self:custom.PARAMETERS.oem}
+  #   image: <+artifact.image>
+  #   events:
+  #     - httpApi:
+  #         path: /time
+  #         method: get
   currentTime62:
-    # handler: com.serverless.Handler
-    image: <+artifact.image>
+    handler: com.serverless.Handler
+    # image: <+artifact.image>
     events:
       - httpApi:
           path: /time1
