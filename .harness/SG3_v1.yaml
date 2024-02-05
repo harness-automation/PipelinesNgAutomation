@@ -13,3 +13,6 @@ template:
           template:
             templateRef: account.step2
             versionLabel: v1
+            templateInputs:
+              type: ShellScript
+              timeout: <+input>
