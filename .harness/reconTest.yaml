@@ -250,5 +250,24 @@ pipeline:
                                       templateInputs:
                                         type: ShellScript
                                         timeout: <+input>
+        - stage:
+            identifier: s10
+            template:
+              templateInputs:
+                type: Custom
+                spec:
+                  execution:
+                    steps:
+                      - stepGroup:
+                          identifier: ss
+                          template:
+                            templateInputs:
+                              steps:
+                                - step:
+                                    identifier: ss
+                                    template:
+                                      templateInputs:
+                                        type: ShellScript
+                                        timeout: <+input>
   projectIdentifier: DoNotDelete_AR7
   orgIdentifier: default
