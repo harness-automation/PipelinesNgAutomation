@@ -19,15 +19,12 @@ template:
         serviceInputs: <+input>
       execution:
         steps:
-          - step:
+          - stepGroup:
               name: ss
               identifier: ss
               template:
-                templateRef: account.reconStep
+                templateRef: account.SG3
                 versionLabel: v1
-                templateInputs:
-                  type: ShellScript
-                  timeout: <+input>
         rollbackSteps: []
     failureStrategies:
       - onFailure:
