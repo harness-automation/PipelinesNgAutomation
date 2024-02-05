@@ -1,5 +1,5 @@
 template:
-  name: reconStage
+  name: recon1
   identifier: reconStage
   versionLabel: v1
   type: Stage
