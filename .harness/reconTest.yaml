@@ -75,6 +75,19 @@ pipeline:
                   service:
                     serviceRef: <+input>
                     serviceInputs: <+input>
+                  execution:
+                    steps:
+                      - stepGroup:
+                          identifier: ss
+                          template:
+                            templateInputs:
+                              steps:
+                                - step:
+                                    identifier: ss
+                                    template:
+                                      templateInputs:
+                                        type: ShellScript
+                                        timeout: <+input>
         - stage:
             identifier: s4
             template:
@@ -143,6 +156,19 @@ pipeline:
                   service:
                     serviceRef: <+input>
                     serviceInputs: <+input>
+                  execution:
+                    steps:
+                      - stepGroup:
+                          identifier: ss
+                          template:
+                            templateInputs:
+                              steps:
+                                - step:
+                                    identifier: ss
+                                    template:
+                                      templateInputs:
+                                        type: ShellScript
+                                        timeout: <+input>
         - stage:
             identifier: s7
             template:
@@ -211,5 +237,18 @@ pipeline:
                   service:
                     serviceRef: <+input>
                     serviceInputs: <+input>
+                  execution:
+                    steps:
+                      - stepGroup:
+                          identifier: ss
+                          template:
+                            templateInputs:
+                              steps:
+                                - step:
+                                    identifier: ss
+                                    template:
+                                      templateInputs:
+                                        type: ShellScript
+                                        timeout: <+input>
   projectIdentifier: DoNotDelete_AR7
   orgIdentifier: default
