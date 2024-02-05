@@ -1,0 +1,34 @@
+template:
+  name: recon6
+  identifier: recon6
+  versionLabel: v1
+  type: Stage
+  tags: {}
+  spec:
+    type: Deployment
+    spec:
+      deploymentType: Kubernetes
+      environment:
+        environmentRef: <+input>
+        deployToAll: false
+        environmentInputs: <+input>
+        serviceOverrideInputs: <+input>
+        infrastructureDefinitions: <+input>
+      service:
+        serviceRef: <+input>
+        serviceInputs: <+input>
+      execution:
+        steps:
+          - stepGroup:
+              name: ss
+              identifier: ss
+              template:
+                templateRef: account.SG3
+                versionLabel: v1
+        rollbackSteps: []
+    failureStrategies:
+      - onFailure:
+          errors:
+            - AllErrors
+          action:
+            type: Ignore
