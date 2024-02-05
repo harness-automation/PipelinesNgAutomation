@@ -285,3 +285,26 @@ template:
                                     templateInputs:
                                       type: ShellScript
                                       timeout: <+input>
+      - stage:
+          name: s10
+          identifier: s10
+          tags: {}
+          template:
+            templateRef: account.recon10
+            versionLabel: v1
+            templateInputs:
+              type: Custom
+              spec:
+                execution:
+                  steps:
+                    - stepGroup:
+                        identifier: ss
+                        template:
+                          templateInputs:
+                            steps:
+                              - step:
+                                  identifier: ss
+                                  template:
+                                    templateInputs:
+                                      type: ShellScript
+                                      timeout: <+input>
