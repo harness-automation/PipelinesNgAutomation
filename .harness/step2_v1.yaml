@@ -1,0 +1,19 @@
+template:
+  name: step2
+  identifier: step2
+  versionLabel: v1
+  type: Step
+  tags: {}
+  spec:
+    timeout: 10m
+    type: ShellScript
+    spec:
+      shell: Bash
+      executionTarget: {}
+      delegateSelectors: []
+      source:
+        type: Inline
+        spec:
+          script: echo 0
+      environmentVariables: []
+      outputVariables: []
