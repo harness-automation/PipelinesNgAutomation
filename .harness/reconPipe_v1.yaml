@@ -86,6 +86,19 @@ template:
                 service:
                   serviceRef: <+input>
                   serviceInputs: <+input>
+                execution:
+                  steps:
+                    - stepGroup:
+                        identifier: ss
+                        template:
+                          templateInputs:
+                            steps:
+                              - step:
+                                  identifier: ss
+                                  template:
+                                    templateInputs:
+                                      type: ShellScript
+                                      timeout: <+input>
       - stage:
           name: s4
           identifier: s4
@@ -166,6 +179,19 @@ template:
                 service:
                   serviceRef: <+input>
                   serviceInputs: <+input>
+                execution:
+                  steps:
+                    - stepGroup:
+                        identifier: ss
+                        template:
+                          templateInputs:
+                            steps:
+                              - step:
+                                  identifier: ss
+                                  template:
+                                    templateInputs:
+                                      type: ShellScript
+                                      timeout: <+input>
       - stage:
           name: s7
           identifier: s7
@@ -246,3 +272,16 @@ template:
                 service:
                   serviceRef: <+input>
                   serviceInputs: <+input>
+                execution:
+                  steps:
+                    - stepGroup:
+                        identifier: ss
+                        template:
+                          templateInputs:
+                            steps:
+                              - step:
+                                  identifier: ss
+                                  template:
+                                    templateInputs:
+                                      type: ShellScript
+                                      timeout: <+input>
