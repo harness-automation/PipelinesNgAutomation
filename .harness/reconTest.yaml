@@ -1,0 +1,25 @@
+pipeline:
+  name: reconTest
+  identifier: reconTest
+  tags: {}
+  template:
+    templateRef: account.reconPipe
+    versionLabel: v1
+    templateInputs:
+      stages:
+        - stage:
+            identifier: s1
+            template:
+              templateInputs:
+                type: Deployment
+                spec:
+                  environment:
+                    environmentRef: <+input>
+                    environmentInputs: <+input>
+                    serviceOverrideInputs: <+input>
+                    infrastructureDefinitions: <+input>
+                  service:
+                    serviceRef: <+input>
+                    serviceInputs: <+input>
+  projectIdentifier: DoNotDelete_AR7
+  orgIdentifier: default
