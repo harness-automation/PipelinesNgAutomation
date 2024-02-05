@@ -24,14 +24,6 @@ template:
                 service:
                   serviceRef: <+input>
                   serviceInputs: <+input>
-                execution:
-                  steps:
-                    - step:
-                        identifier: ss
-                        template:
-                          templateInputs:
-                            type: ShellScript
-                            timeout: <+input>
       - stage:
           name: s2
           identifier: s2
@@ -50,14 +42,6 @@ template:
                 service:
                   serviceRef: <+input>
                   serviceInputs: <+input>
-                execution:
-                  steps:
-                    - step:
-                        identifier: sss
-                        template:
-                          templateInputs:
-                            type: ShellScript
-                            timeout: <+input>
       - stage:
           name: s3
           identifier: s3
@@ -76,11 +60,3 @@ template:
                 service:
                   serviceRef: <+input>
                   serviceInputs: <+input>
-                execution:
-                  steps:
-                    - step:
-                        identifier: ss
-                        template:
-                          templateInputs:
-                            type: ShellScript
-                            timeout: <+input>
