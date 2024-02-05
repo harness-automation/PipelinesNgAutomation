@@ -5,7 +5,6 @@ template:
   type: Step
   tags: {}
   spec:
-    timeout: <+input>
     type: ShellScript
     spec:
       shell: Bash
@@ -17,3 +16,4 @@ template:
           script: echo 0
       environmentVariables: []
       outputVariables: []
+    timeout: 10m
