@@ -1,0 +1,25 @@
+template:
+  name: recon10
+  identifier: recon10
+  versionLabel: v1
+  type: Stage
+  tags: {}
+  spec:
+    type: Custom
+    spec:
+      execution:
+        steps:
+          - stepGroup:
+              name: ss
+              identifier: ss
+              template:
+                templateRef: account.SG3
+                versionLabel: v1
+                templateInputs:
+                  steps:
+                    - step:
+                        identifier: ss
+                        template:
+                          templateInputs:
+                            type: ShellScript
+                            timeout: <+input>
