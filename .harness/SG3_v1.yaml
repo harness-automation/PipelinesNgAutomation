@@ -1,0 +1,15 @@
+template:
+  name: SG3
+  identifier: SG3
+  versionLabel: v1
+  type: StepGroup
+  tags: {}
+  spec:
+    stageType: Deployment
+    steps:
+      - step:
+          name: ss
+          identifier: ss
+          template:
+            templateRef: account.step2
+            versionLabel: v1
