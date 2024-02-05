@@ -32,3 +32,55 @@ template:
                           templateInputs:
                             type: ShellScript
                             timeout: <+input>
+      - stage:
+          name: s2
+          identifier: s2
+          tags: {}
+          template:
+            templateRef: account.recon2
+            versionLabel: v1
+            templateInputs:
+              type: Deployment
+              spec:
+                environment:
+                  environmentRef: <+input>
+                  environmentInputs: <+input>
+                  serviceOverrideInputs: <+input>
+                  infrastructureDefinitions: <+input>
+                service:
+                  serviceRef: <+input>
+                  serviceInputs: <+input>
+                execution:
+                  steps:
+                    - step:
+                        identifier: sss
+                        template:
+                          templateInputs:
+                            type: ShellScript
+                            timeout: <+input>
+      - stage:
+          name: s3
+          identifier: s3
+          tags: {}
+          template:
+            templateRef: account.recon3
+            versionLabel: v1
+            templateInputs:
+              type: Deployment
+              spec:
+                environment:
+                  environmentRef: <+input>
+                  environmentInputs: <+input>
+                  serviceOverrideInputs: <+input>
+                  infrastructureDefinitions: <+input>
+                service:
+                  serviceRef: <+input>
+                  serviceInputs: <+input>
+                execution:
+                  steps:
+                    - step:
+                        identifier: ss
+                        template:
+                          templateInputs:
+                            type: ShellScript
+                            timeout: <+input>
