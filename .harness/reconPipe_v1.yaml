@@ -84,3 +84,163 @@ template:
                           templateInputs:
                             type: ShellScript
                             timeout: <+input>
+      - stage:
+          name: s4
+          identifier: s4
+          tags: {}
+          template:
+            templateRef: account.recon4
+            versionLabel: v1
+            templateInputs:
+              type: Deployment
+              spec:
+                environment:
+                  environmentRef: <+input>
+                  environmentInputs: <+input>
+                  serviceOverrideInputs: <+input>
+                  infrastructureDefinitions: <+input>
+                service:
+                  serviceRef: <+input>
+                  serviceInputs: <+input>
+                execution:
+                  steps:
+                    - stepGroup:
+                        identifier: ss
+                        template:
+                          templateInputs:
+                            steps:
+                              - step:
+                                  identifier: ss
+                                  template:
+                                    templateInputs:
+                                      type: ShellScript
+                                      timeout: <+input>
+      - stage:
+          name: s5
+          identifier: s5
+          tags: {}
+          template:
+            templateRef: account.recon5
+            versionLabel: v1
+            templateInputs:
+              type: Deployment
+              spec:
+                environment:
+                  environmentRef: <+input>
+                  environmentInputs: <+input>
+                  serviceOverrideInputs: <+input>
+                  infrastructureDefinitions: <+input>
+                service:
+                  serviceRef: <+input>
+                  serviceInputs: <+input>
+                execution:
+                  steps:
+                    - stepGroup:
+                        identifier: ss
+                        template:
+                          templateInputs:
+                            steps:
+                              - step:
+                                  identifier: ss
+                                  template:
+                                    templateInputs:
+                                      type: ShellScript
+                                      timeout: <+input>
+      - stage:
+          name: s6
+          identifier: s6
+          tags: {}
+          template:
+            templateRef: account.recon6
+            versionLabel: v1
+            templateInputs:
+              type: Deployment
+              spec:
+                environment:
+                  environmentRef: <+input>
+                  environmentInputs: <+input>
+                  serviceOverrideInputs: <+input>
+                  infrastructureDefinitions: <+input>
+                service:
+                  serviceRef: <+input>
+                  serviceInputs: <+input>
+      - stage:
+          name: s7
+          identifier: s7
+          tags: {}
+          template:
+            templateRef: account.recon4
+            versionLabel: v1
+            templateInputs:
+              type: Deployment
+              spec:
+                environment:
+                  environmentRef: <+input>
+                  environmentInputs: <+input>
+                  serviceOverrideInputs: <+input>
+                  infrastructureDefinitions: <+input>
+                service:
+                  serviceRef: <+input>
+                  serviceInputs: <+input>
+                execution:
+                  steps:
+                    - stepGroup:
+                        identifier: ss
+                        template:
+                          templateInputs:
+                            steps:
+                              - step:
+                                  identifier: ss
+                                  template:
+                                    templateInputs:
+                                      type: ShellScript
+                                      timeout: <+input>
+      - stage:
+          name: s8
+          identifier: s8
+          tags: {}
+          template:
+            templateRef: account.recon5
+            versionLabel: v1
+            templateInputs:
+              type: Deployment
+              spec:
+                environment:
+                  environmentRef: <+input>
+                  environmentInputs: <+input>
+                  serviceOverrideInputs: <+input>
+                  infrastructureDefinitions: <+input>
+                service:
+                  serviceRef: <+input>
+                  serviceInputs: <+input>
+                execution:
+                  steps:
+                    - stepGroup:
+                        identifier: ss
+                        template:
+                          templateInputs:
+                            steps:
+                              - step:
+                                  identifier: ss
+                                  template:
+                                    templateInputs:
+                                      type: ShellScript
+                                      timeout: <+input>
+      - stage:
+          name: s9
+          identifier: s9
+          tags: {}
+          template:
+            templateRef: account.recon6
+            versionLabel: v1
+            templateInputs:
+              type: Deployment
+              spec:
+                environment:
+                  environmentRef: <+input>
+                  environmentInputs: <+input>
+                  serviceOverrideInputs: <+input>
+                  infrastructureDefinitions: <+input>
+                service:
+                  serviceRef: <+input>
+                  serviceInputs: <+input>
