@@ -23,12 +23,17 @@ pipeline:
                     serviceInputs: <+input>
                   execution:
                     steps:
-                      - step:
+                      - stepGroup:
                           identifier: ss
                           template:
                             templateInputs:
-                              type: ShellScript
-                              timeout: <+input>
+                              steps:
+                                - step:
+                                    identifier: ss
+                                    template:
+                                      templateInputs:
+                                        type: ShellScript
+                                        timeout: <+input>
         - stage:
             identifier: s2
             template:
@@ -45,12 +50,17 @@ pipeline:
                     serviceInputs: <+input>
                   execution:
                     steps:
-                      - step:
-                          identifier: sss
+                      - stepGroup:
+                          identifier: ss
                           template:
                             templateInputs:
-                              type: ShellScript
-                              timeout: <+input>
+                              steps:
+                                - step:
+                                    identifier: ss
+                                    template:
+                                      templateInputs:
+                                        type: ShellScript
+                                        timeout: <+input>
         - stage:
             identifier: s3
             template:
@@ -65,13 +75,141 @@ pipeline:
                   service:
                     serviceRef: <+input>
                     serviceInputs: <+input>
+        - stage:
+            identifier: s4
+            template:
+              templateInputs:
+                type: Deployment
+                spec:
+                  environment:
+                    environmentRef: <+input>
+                    environmentInputs: <+input>
+                    serviceOverrideInputs: <+input>
+                    infrastructureDefinitions: <+input>
+                  service:
+                    serviceRef: <+input>
+                    serviceInputs: <+input>
                   execution:
                     steps:
-                      - step:
+                      - stepGroup:
                           identifier: ss
                           template:
                             templateInputs:
-                              type: ShellScript
-                              timeout: <+input>
+                              steps:
+                                - step:
+                                    identifier: ss
+                                    template:
+                                      templateInputs:
+                                        type: ShellScript
+                                        timeout: <+input>
+        - stage:
+            identifier: s5
+            template:
+              templateInputs:
+                type: Deployment
+                spec:
+                  environment:
+                    environmentRef: <+input>
+                    environmentInputs: <+input>
+                    serviceOverrideInputs: <+input>
+                    infrastructureDefinitions: <+input>
+                  service:
+                    serviceRef: <+input>
+                    serviceInputs: <+input>
+                  execution:
+                    steps:
+                      - stepGroup:
+                          identifier: ss
+                          template:
+                            templateInputs:
+                              steps:
+                                - step:
+                                    identifier: ss
+                                    template:
+                                      templateInputs:
+                                        type: ShellScript
+                                        timeout: <+input>
+        - stage:
+            identifier: s6
+            template:
+              templateInputs:
+                type: Deployment
+                spec:
+                  environment:
+                    environmentRef: <+input>
+                    environmentInputs: <+input>
+                    serviceOverrideInputs: <+input>
+                    infrastructureDefinitions: <+input>
+                  service:
+                    serviceRef: <+input>
+                    serviceInputs: <+input>
+        - stage:
+            identifier: s7
+            template:
+              templateInputs:
+                type: Deployment
+                spec:
+                  environment:
+                    environmentRef: <+input>
+                    environmentInputs: <+input>
+                    serviceOverrideInputs: <+input>
+                    infrastructureDefinitions: <+input>
+                  service:
+                    serviceRef: <+input>
+                    serviceInputs: <+input>
+                  execution:
+                    steps:
+                      - stepGroup:
+                          identifier: ss
+                          template:
+                            templateInputs:
+                              steps:
+                                - step:
+                                    identifier: ss
+                                    template:
+                                      templateInputs:
+                                        type: ShellScript
+                                        timeout: <+input>
+        - stage:
+            identifier: s8
+            template:
+              templateInputs:
+                type: Deployment
+                spec:
+                  environment:
+                    environmentRef: <+input>
+                    environmentInputs: <+input>
+                    serviceOverrideInputs: <+input>
+                    infrastructureDefinitions: <+input>
+                  service:
+                    serviceRef: <+input>
+                    serviceInputs: <+input>
+                  execution:
+                    steps:
+                      - stepGroup:
+                          identifier: ss
+                          template:
+                            templateInputs:
+                              steps:
+                                - step:
+                                    identifier: ss
+                                    template:
+                                      templateInputs:
+                                        type: ShellScript
+                                        timeout: <+input>
+        - stage:
+            identifier: s9
+            template:
+              templateInputs:
+                type: Deployment
+                spec:
+                  environment:
+                    environmentRef: <+input>
+                    environmentInputs: <+input>
+                    serviceOverrideInputs: <+input>
+                    infrastructureDefinitions: <+input>
+                  service:
+                    serviceRef: <+input>
+                    serviceInputs: <+input>
   projectIdentifier: DoNotDelete_AR7
   orgIdentifier: default
