@@ -1,0 +1,26 @@
+template:
+  name: reconPipe
+  identifier: reconPipe
+  versionLabel: v1
+  type: Pipeline
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: s1
+          identifier: s1
+          tags: {}
+          template:
+            templateRef: account.reconStage
+            versionLabel: v1
+            templateInputs:
+              type: Deployment
+              spec:
+                environment:
+                  environmentRef: <+input>
+                  environmentInputs: <+input>
+                  serviceOverrideInputs: <+input>
+                  infrastructureDefinitions: <+input>
+                service:
+                  serviceRef: <+input>
+                  serviceInputs: <+input>
