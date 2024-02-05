@@ -24,11 +24,3 @@ template:
                 service:
                   serviceRef: <+input>
                   serviceInputs: <+input>
-                execution:
-                  steps:
-                    - step:
-                        identifier: ss
-                        template:
-                          templateInputs:
-                            type: ShellScript
-                            timeout: <+input>
