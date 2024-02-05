@@ -1,5 +1,5 @@
 template:
-  name: reconStep
+  name: step1
   identifier: reconStep
   versionLabel: v1
   type: Step
