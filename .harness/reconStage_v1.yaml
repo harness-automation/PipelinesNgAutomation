@@ -25,6 +25,9 @@ template:
               template:
                 templateRef: account.reconStep
                 versionLabel: v1
+                templateInputs:
+                  type: ShellScript
+                  timeout: <+input>
         rollbackSteps: []
     failureStrategies:
       - onFailure:
