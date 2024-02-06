@@ -33,7 +33,7 @@ spec:
                       count_v2=$((count_v2 + 1))
                   fi
                   echo "Response: $response"
-                  sleep 0.1
+                  sleep 0.05
               done
               echo "DONE_COOKING"
               echo "Number of v1 responses: $count_v1"
