@@ -24,19 +24,6 @@ template:
                 service:
                   serviceRef: <+input>
                   serviceInputs: <+input>
-                execution:
-                  steps:
-                    - stepGroup:
-                        identifier: ss
-                        template:
-                          templateInputs:
-                            steps:
-                              - step:
-                                  identifier: ss
-                                  template:
-                                    templateInputs:
-                                      type: ShellScript
-                                      timeout: <+input>
       - stage:
           name: s2
           identifier: s2
@@ -55,19 +42,6 @@ template:
                 service:
                   serviceRef: <+input>
                   serviceInputs: <+input>
-                execution:
-                  steps:
-                    - stepGroup:
-                        identifier: ss
-                        template:
-                          templateInputs:
-                            steps:
-                              - step:
-                                  identifier: ss
-                                  template:
-                                    templateInputs:
-                                      type: ShellScript
-                                      timeout: <+input>
       - stage:
           name: s3
           identifier: s3
@@ -117,19 +91,6 @@ template:
                 service:
                   serviceRef: <+input>
                   serviceInputs: <+input>
-                execution:
-                  steps:
-                    - stepGroup:
-                        identifier: ss
-                        template:
-                          templateInputs:
-                            steps:
-                              - step:
-                                  identifier: ss
-                                  template:
-                                    templateInputs:
-                                      type: ShellScript
-                                      timeout: <+input>
       - stage:
           name: s5
           identifier: s5
@@ -148,19 +109,6 @@ template:
                 service:
                   serviceRef: <+input>
                   serviceInputs: <+input>
-                execution:
-                  steps:
-                    - stepGroup:
-                        identifier: ss
-                        template:
-                          templateInputs:
-                            steps:
-                              - step:
-                                  identifier: ss
-                                  template:
-                                    templateInputs:
-                                      type: ShellScript
-                                      timeout: <+input>
       - stage:
           name: s6
           identifier: s6
@@ -210,19 +158,6 @@ template:
                 service:
                   serviceRef: <+input>
                   serviceInputs: <+input>
-                execution:
-                  steps:
-                    - stepGroup:
-                        identifier: ss
-                        template:
-                          templateInputs:
-                            steps:
-                              - step:
-                                  identifier: ss
-                                  template:
-                                    templateInputs:
-                                      type: ShellScript
-                                      timeout: <+input>
       - stage:
           name: s8
           identifier: s8
@@ -241,19 +176,6 @@ template:
                 service:
                   serviceRef: <+input>
                   serviceInputs: <+input>
-                execution:
-                  steps:
-                    - stepGroup:
-                        identifier: ss
-                        template:
-                          templateInputs:
-                            steps:
-                              - step:
-                                  identifier: ss
-                                  template:
-                                    templateInputs:
-                                      type: ShellScript
-                                      timeout: <+input>
       - stage:
           name: s9
           identifier: s9
