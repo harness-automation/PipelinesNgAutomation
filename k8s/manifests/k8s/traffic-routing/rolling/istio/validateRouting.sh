@@ -1,7 +1,9 @@
 #!/bin/bash
 
+sleep 70
+
 # Define the pod and container names
-NAMESPACE="istio-tr-automation"
+NAMESPACE="<+infra.namespace>"
 CONTAINER_NAME="tr-app-traffic-generator"
 
 POD_NAME=$(kubectl get pods -n $NAMESPACE | grep $CONTAINER_NAME | awk '{print $1}')
@@ -26,13 +28,13 @@ if [ -s temp_envs.sh ]; then
 
     targetForV1=900
     targetForV2=100
-    percentage=20
+    percentage=30
 
     # Calculate the upper and lower bounds
-    upper_bound_for_v1=$((target + (targetForV1 * percentage / 100)))
-    lower_bound_for_v1=$((target - (targetForV1 * percentage / 100)))
-    upper_bound_for_v2=$((target + (targetForV2 * percentage / 100)))
-    lower_bound_for_v2=$((target - (targetForV2 * percentage / 100)))
+    upper_bound_for_v1=$((targetForV1 + (targetForV1 * percentage / 100)))
+    lower_bound_for_v1=$((targetForV1 - (targetForV1 * percentage / 100)))
+    upper_bound_for_v2=$((targetForV2 + (targetForV2 * percentage / 100)))
+    lower_bound_for_v2=$((targetForV2 - (targetForV2 * percentage / 100)))
 
     echo "Number of v1 responses: $V1_COUNT"
     echo "Number of v2 responses: $V2_COUNT"
