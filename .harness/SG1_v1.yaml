@@ -11,5 +11,5 @@ template:
           name: ss
           identifier: ss
           template:
-            templateRef: account.reconStep
-            versionLabel: v1
+            templateRef: account.step_11
+            versionLabel: "1"
