@@ -24,7 +24,7 @@ spec:
               count_v1=0
               count_v2=0
               
-              sleep {{ .Values.trafficGeneratorSleepTimer }}
+              sleep 1
               for i in $(seq 1 1000) 
               do
                   response=$(curl http://tr-bg-app-svc:6060 | sed -n 's/.*"payload":"\([^"]*\)".*/\1/p')
