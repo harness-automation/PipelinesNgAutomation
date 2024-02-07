@@ -15,11 +15,3 @@ template:
               template:
                 templateRef: account.SG3
                 versionLabel: v1
-                templateInputs:
-                  steps:
-                    - step:
-                        identifier: ss
-                        template:
-                          templateInputs:
-                            type: ShellScript
-                            timeout: <+input>
