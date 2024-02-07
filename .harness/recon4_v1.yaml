@@ -25,6 +25,14 @@ template:
               template:
                 templateRef: account.SG1
                 versionLabel: v1
+                templateInputs:
+                  steps:
+                    - step:
+                        identifier: ss
+                        template:
+                          templateInputs:
+                            type: ShellScript
+                            timeout: <+input>
         rollbackSteps: []
     failureStrategies:
       - onFailure:
