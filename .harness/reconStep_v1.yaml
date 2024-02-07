@@ -16,4 +16,4 @@ template:
           script: echo 0
       environmentVariables: []
       outputVariables: []
-    timeout: 10m
+    timeout: <+input>
