@@ -11,6 +11,5 @@ template:
           name: ss
           identifier: ss
           template:
-            templateRef: account.step_11
-            versionLabel: "1"
-            gitBranch: main
+            templateRef: account.step3
+            versionLabel: v1
