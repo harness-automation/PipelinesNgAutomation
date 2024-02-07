@@ -14,3 +14,6 @@ template:
             templateRef: account.step_11
             versionLabel: "1"
             gitBranch: main
+            templateInputs:
+              type: ShellScript
+              timeout: <+input>
