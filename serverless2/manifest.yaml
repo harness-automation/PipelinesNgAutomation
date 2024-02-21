@@ -1,0 +1,5 @@
+service: my-func
+plugins:
+- serverless-ignore
+- serverless-domain-manager
+- serverless-dotenv-plugin
