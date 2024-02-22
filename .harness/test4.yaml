@@ -1,0 +1,9 @@
+pipeline:
+  name: test4
+  identifier: test4
+  tags: {}
+  template:
+    templateRef: account.test4_ssrso
+    versionLabel: v1
+  projectIdentifier: DoNotDelete_AR7
+  orgIdentifier: default
