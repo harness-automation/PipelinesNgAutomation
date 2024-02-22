@@ -119,5 +119,5 @@ template:
                 errors:
                   - AllErrors
                 action:
-                  type: Ignore
+                  type: MarkAsFailure
     allowStageExecutions: true
