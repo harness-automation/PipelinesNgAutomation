@@ -3,7 +3,7 @@ frameworkVersion: '2.50.0'
 
 provider:
   name: aws
-  runtime: nodejs14.x
+  runtime: nodejs20.x
 
 package:
   artifact: <+artifact.path>
