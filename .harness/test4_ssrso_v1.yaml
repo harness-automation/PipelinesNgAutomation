@@ -1,0 +1,47 @@
+template:
+  name: test4_ssrso
+  identifier: test4_ssrso
+  versionLabel: v1
+  type: Pipeline
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: s1
+          identifier: s1
+          description: ""
+          type: Deployment
+          spec:
+            deploymentType: Kubernetes
+            service:
+              serviceRef: account.accser
+            environment:
+              environmentRef: account.env_ar7
+              deployToAll: false
+              infrastructureDefinitions:
+                - identifier: inf_ar7
+            execution:
+              steps:
+                - step:
+                    type: ShellScript
+                    name: ShellScript_1
+                    identifier: ShellScript_1
+                    spec:
+                      shell: Bash
+                      executionTarget: {}
+                      source:
+                        type: Inline
+                        spec:
+                          script: echo "hi"
+                      environmentVariables: []
+                      outputVariables: []
+                    timeout: 10m
+              rollbackSteps: []
+          tags: {}
+          failureStrategies:
+            - onFailure:
+                errors:
+                  - AllErrors
+                action:
+                  type: Ignore
+    allowStageExecutions: true
