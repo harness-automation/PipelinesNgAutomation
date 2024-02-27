@@ -48,7 +48,7 @@ affinity: {}
 
 env:
   config:
-    key1: value1
+    key1: <+configFile.getAsBase64("samplo")>
   secrets:
     key2: value2
 
