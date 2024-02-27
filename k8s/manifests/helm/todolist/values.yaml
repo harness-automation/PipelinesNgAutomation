@@ -46,9 +46,11 @@ tolerations: []
 
 affinity: {}
 
+testing: <+configFile.getAsBase64("samplo")>
+
 env:
   config:
-    key1: <+configFile.getAsBase64("samplo")>
+    key1:key1
   secrets:
     key2: value2
 
