@@ -5,4 +5,4 @@ metadata:
 data:
   test: "{{.Values.testVal}}"
 binaryData:
-  key: {{ .Values.testing }}
+  key: {{.Values.testing}}
