@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sleep 70
+sleep 100
 
 # Define the pod and container names
 NAMESPACE="<+infra.namespace>"
