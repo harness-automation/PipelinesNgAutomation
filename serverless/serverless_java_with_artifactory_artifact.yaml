@@ -3,7 +3,7 @@ frameworkVersion: '2.50.0'
 
 provider:
   name: aws
-  runtime: java8
+  runtime: java21
 
 package:
   artifact: <+artifact.path>
