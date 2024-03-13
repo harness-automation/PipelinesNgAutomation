@@ -5,6 +5,7 @@ provider:
   name: aws
   runtime: nodejs20.x
   tracing: true # enable tracing
+  lambdaHashingVersion: "20201221"
   iamRoleStatements:
     - Effect: "Allow" # xray permissions (required)
       Action:
