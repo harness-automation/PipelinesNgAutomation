@@ -14,3 +14,7 @@ pipeline:
           org: Ng_Pipelines_K8s_Organisations
           pipeline: CP1
           project: DoNotDelete_Aman
+          inputs: {}
+          outputs:
+            - name: output
+              value: "112321341"
