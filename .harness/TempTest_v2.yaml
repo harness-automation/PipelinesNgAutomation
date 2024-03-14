@@ -1,0 +1,40 @@
+template:
+  name: TempTest
+  identifier: TempTest
+  type: Pipeline
+  projectIdentifier: Aninditaa_Test
+  orgIdentifier: Pipelines_NonK8s_Org_NG
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: sta
+          identifier: sta
+          description: ""
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    type: ShellScript
+                    name: ShellScript_1
+                    identifier: ShellScript_1
+                    spec:
+                      shell: Bash
+                      executionTarget: {}
+                      source:
+                        type: Inline
+                        spec:
+                          script: |
+                            echo "hello"
+                      environmentVariables: []
+                      outputVariables: []
+                    timeout: 10m
+                - step:
+                    type: Wait
+                    name: Wait_1
+                    identifier: Wait_1
+                    spec:
+                      duration: 10m
+          tags: {}
+  versionLabel: v2
