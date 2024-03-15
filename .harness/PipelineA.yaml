@@ -4,7 +4,7 @@ pipeline:
   tags: {}
   template:
     templateRef: TempA
-    versionLabel: "1"
+    versionLabel: "2"
     gitBranch: Test-patch
   projectIdentifier: Aninditaa_Test
   orgIdentifier: Pipelines_NonK8s_Org_NG
