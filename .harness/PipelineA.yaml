@@ -1,0 +1,10 @@
+pipeline:
+  name: PipelineA
+  identifier: PipelineA
+  tags: {}
+  template:
+    templateRef: TempA
+    versionLabel: "1"
+    gitBranch: Test-patch
+  projectIdentifier: Aninditaa_Test
+  orgIdentifier: Pipelines_NonK8s_Org_NG
