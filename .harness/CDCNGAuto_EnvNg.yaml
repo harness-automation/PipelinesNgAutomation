@@ -1,0 +1,6 @@
+environment:
+  identifier: CDCNGAuto_EnvNg
+  tags: {}
+  name: CDCNGAuto_EnvNg
+  description: ""
+  type: Production
