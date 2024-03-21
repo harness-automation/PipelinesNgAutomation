@@ -1,0 +1,10 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sampleteating
+spec:
+  template: 
+    spec:
+      containers:
+        - name: sampleteating
+          image: index.docker.io/library/nginx:stable
