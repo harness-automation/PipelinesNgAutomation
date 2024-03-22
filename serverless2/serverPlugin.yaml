@@ -5,7 +5,7 @@ provider:
   name: aws
   runtime: java21
   stage: ${opt:stage, "yui"}
-  stackName: ${self:service}-${self:provider.stage}
+  stackName: ${self:service}-${self:provider.stage}-custom
 
 # package:
 #   artifact: <+artifact.path>  
