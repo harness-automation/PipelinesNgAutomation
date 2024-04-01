@@ -1,15 +1,18 @@
-service: helloworld
+service: hello-world-website
 frameworkVersion: '3.30.1'
 
 provider:
   name: aws
-  runtime: java21
+  runtime: nodejs14.x
+  region: us-east-1
+  
 functions:
   hello:
     handler: handler.hello
     events:
-      - httpApi:
-          path: /
+      - http:
+          path: hello
           method: get
+          cors: true
 package:
   artifact: <+artifact.path>
