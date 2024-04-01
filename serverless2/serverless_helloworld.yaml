@@ -13,5 +13,3 @@ functions:
           method: get
 package:
   artifact: <+artifact.path>
-plugins:
-  - serverless-manifest-plugin
