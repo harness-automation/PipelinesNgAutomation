@@ -14,5 +14,4 @@ functions:
 package:
   artifact: <+artifact.path>
 plugins:
-  - serverless-deployment-bucket@latest
   - serverless-manifest-plugin
