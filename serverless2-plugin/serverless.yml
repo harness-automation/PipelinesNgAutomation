@@ -15,7 +15,7 @@ plugins:
 provider:
   name: aws
   runtime: nodejs18.x
-  stackName: ${self:service}-${self:provider.stage}-custom
+  stackName: ${self:service}-custom
 
 # The `functions` block defines what code to deploy
 functions:
