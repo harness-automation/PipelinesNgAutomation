@@ -1,0 +1,5 @@
+service:
+  name: test
+  identifier: test
+  orgIdentifier: Pipelines_NonK8s_Org_NG
+  projectIdentifier: NGPipeAutoWait4nT8OoYkFY
