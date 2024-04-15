@@ -1,1 +1,1 @@
-replicaCount: 1
+version: <+stage.variables.var1>
