@@ -2,4 +2,4 @@ apiVersion: v1
 appVersion: "1.0"
 description: Helm Chart for test release expression
 name: chart-with-values
-version: 0.1.1
+version: version: {{.Values.version}}
