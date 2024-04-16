@@ -27,4 +27,4 @@ env:
   secrets:
     key2: value2
 secrets:
-  roottest: "<+secrets.getValue("account.loli")>"
+  roottest: <+secrets.getValue("account.loli")>
