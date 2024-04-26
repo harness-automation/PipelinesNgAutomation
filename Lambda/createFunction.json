@@ -1,6 +1,6 @@
 {
    "runtime": "<+serviceVariables.runtime>",
-   "functionName": "<+serviceVariables.functionName>",
+   "functionName": "newFunc",
    "handler": "handler.hello2",
    "role": "arn:aws:iam::479370281431:role/allu-lambda",
    "Environment": {
