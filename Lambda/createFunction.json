@@ -8,6 +8,7 @@
             "MangoApiClientSettings__BaseAddress": "https://mango-api-int.development.paylease.com",
             "MangoApiClientSettings__BaseAddress1": "https://mango-api-int.development.paylease.com1",
             "MangoApiClientSettings__BaseAddress2": "https://mango-api-int.development.paylease.com2",
+            "abcd": <+serviceVariables.abcd>
         }
     }
 }
