@@ -3,8 +3,8 @@
    "functionName": "newFunc",
    "handler": "handler.hello2",
    "role": "arn:aws:iam::479370281431:role/allu-lambda",
-   "Environment": {
-        "Variables": {
+   "environment": {
+        "variables": {
             "MangoApiClientSettings__BaseAddress": "https://mango-api-int.development.paylease.com"
         }
     }
