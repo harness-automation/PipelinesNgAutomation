@@ -1,9 +1,0 @@
-applications:
-- name: ((NAME))
-  instances: ((INSTANCE))
-  memory: <+serviceVariables.memory>
-  disk: <+stage.variables.disk>
-  routes:
-    - route: ((ROUTE))
-  services:
-    - myautoscaler
