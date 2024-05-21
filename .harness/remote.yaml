@@ -1,0 +1,13 @@
+infrastructureDefinition:
+  name: remote
+  identifier: remote
+  orgIdentifier: deafult
+  projectIdentifier: taruntest
+  environmentRef: env1
+  deploymentType: Kubernetes
+  type: KubernetesDirect
+  spec:
+    connectorRef: account.cdngqatargetcluster
+    namespace: tarun-ng
+    releaseName: release-<+INFRA_KEY_SHORT_ID>
+  allowSimultaneousDeployments: false
