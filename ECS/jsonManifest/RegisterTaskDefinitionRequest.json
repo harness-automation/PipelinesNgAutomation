@@ -9,7 +9,7 @@
                 "logDriver": "awslogs",
                 "secretOptions": null,
                 "options": {
-                    "awslogs-group": "/aws/ecs/containerinsights/ecs-cluster-3/performance",
+                    "awslogs-group": "/aws/ecs/containerinsights/ecs-cluster-3/<+env.variables.env>",
                     "awslogs-region": "us-east-1",
                     "awslogs-stream-prefix": "ecs"
                 }
