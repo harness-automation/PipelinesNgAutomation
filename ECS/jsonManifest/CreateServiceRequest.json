@@ -1,6 +1,6 @@
 {
   "launchType": "FARGATE",
-  "serviceName": <+stage.variables.var1>,
+  "serviceName": <+serviceVariables.service_name>,
   "desiredCount": 1,
   "networkConfiguration": {
       "awsvpcConfiguration": {
