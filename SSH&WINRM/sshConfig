@@ -1,0 +1,27 @@
+service:
+  name: $name
+  identifier: $identifier
+  description: $description
+  tags: {}
+  serviceDefinition:
+    spec:
+      artifacts:
+        primary:
+          spec:
+            connectorRef: $connectorRef
+            artifactDirectory: $artifactDirectory
+            artifactPath: $artifactPath
+            repository: $repository
+            repositoryFormat: $repositoryFormat
+          type: $artifactType
+      configFiles:
+        - configFile:
+            identifier: $fileIdentifier
+            spec:
+              store:
+                type: Harness
+                spec:
+                  files:
+                    - $fileName
+                  secretFiles: [ ]
+    type: $type
