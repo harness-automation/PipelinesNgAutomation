@@ -76,6 +76,7 @@ pipeline:
                         primary:
                           primaryArtifactRef: <+input>
                           sources: <+input>
+              - serviceRef: org.saliutos
             metadata:
               parallel: false
         tags: {}
