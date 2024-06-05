@@ -17,7 +17,7 @@ pdb:
 
 hpa:
   minReplicas: 1
-  maxReplicas: 10
+  maxReplicas: 2
   targetCPUUtilizationPercentage: 50
 
 env:

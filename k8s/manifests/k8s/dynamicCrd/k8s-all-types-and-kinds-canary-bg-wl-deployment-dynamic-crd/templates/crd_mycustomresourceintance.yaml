@@ -1,5 +1,5 @@
 apiVersion: "stable.example.com/v1"
-kind: CronTab
+kind: {{.Values.name}}
 metadata:
   name: {{.Values.name}}-crd-resource
 spec:
