@@ -1,0 +1,70 @@
+{
+  "serviceName": <+stage.variables.var1>,
+  "desiredCount": 2,
+  "propagateTags": "SERVICE",
+  "schedulingStrategy": "REPLICA",
+  "enableECSManagedTags": true,
+  "placementConstraints": [],
+  "healthCheckGracePeriodSeconds": 0,
+  "capacityProviderStrategy": [
+    {
+      "capacityProvider": "FARGATE",
+      "weight": 0,
+      "base": 0
+    },
+    {
+      "capacityProvider": "FARGATE_SPOT",
+      "weight": 1,
+      "base": 0
+    }
+  ],
+  "networkConfiguration": {
+      "awsvpcConfiguration": {
+          "securityGroups": [
+              "sg-afc848e7"
+          ],
+          "subnets": [
+              "subnet-9757dc98"
+          ],
+          "assignPublicIp": "ENABLED"
+      }
+  },
+  "deploymentConfiguration": {
+      "maximumPercent": 100,
+      "minimumHealthyPercent": 0
+  },
+  "tags": [
+    {
+      "key": "Environment",
+      "value": "MAYANK"
+    },
+    {
+      "key": "Project",
+      "value": "HARNESS"
+    },
+    {
+      "key": "CortexTeam",
+      "value": "api-management"
+    },
+    {
+      "key": "CortexTeam1",
+      "value": "api-management"
+    },
+    {
+      "key": "CortexTeam2",
+      "value": "api-management"
+    },
+    {
+      "key": "CortexTeam3",
+      "value": "api-management"
+    },
+    {
+      "key": "CortexTeam4",
+      "value": "api-management"
+    },
+    {
+      "key": "CortexTeam5",
+      "value": "api-management"
+    }
+  ]
+}
