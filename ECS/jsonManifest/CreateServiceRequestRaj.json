@@ -1,6 +1,6 @@
 {
   "serviceName": "rajECSService",
-  "desiredCount": 2,
+  "desiredCount": 1,
   "propagateTags": "SERVICE",
   "forceNewDeployment": true,
   "schedulingStrategy": "REPLICA",
@@ -68,6 +68,10 @@
     },
     {
       "key": "CortexTeam6",
+      "value": "api-management"
+    },
+    {
+      "key": "CortexTeam7",
       "value": "api-management"
     }
   ]
