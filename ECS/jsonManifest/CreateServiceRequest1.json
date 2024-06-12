@@ -2,7 +2,6 @@
   "serviceName": <+stage.variables.var1>,
   "desiredCount": 1,
   "propagateTags": "SERVICE",
-  "enableECSManagedTags": true,
   "networkConfiguration": {
       "awsvpcConfiguration": {
           "securityGroups": [
@@ -10,7 +9,8 @@
           ],
           "subnets": [
               "subnet-9757dc98"
-          ]
+          ],
+          "assignPublicIp": "ENABLED"
       }
   },
   "deploymentConfiguration": {
