@@ -1,6 +1,7 @@
 {
   "serviceName": <+stage.variables.var1>,
   "desiredCount": 2,
+  "forceNewDeployment": true,
   "propagateTags": "SERVICE",
   "schedulingStrategy": "REPLICA",
   "enableECSManagedTags": true,
