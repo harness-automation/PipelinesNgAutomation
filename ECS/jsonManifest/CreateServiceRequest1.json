@@ -1,5 +1,4 @@
 {
-  "launchType": "FARGATE",
   "serviceName": <+stage.variables.var1>,
   "desiredCount": 1,
   "propagateTags": "SERVICE",
@@ -37,6 +36,10 @@
     },
     {
       "key": "CortexTeam2",
+      "value": "api-management"
+    },
+    {
+      "key": "CortexTeam3",
       "value": "api-management"
     }
   ]
