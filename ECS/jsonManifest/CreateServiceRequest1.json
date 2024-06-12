@@ -10,8 +10,7 @@
           ],
           "subnets": [
               "subnet-9757dc98"
-          ],
-          "assignPublicIp": "ENABLED"
+          ]
       }
   },
   "deploymentConfiguration": {
