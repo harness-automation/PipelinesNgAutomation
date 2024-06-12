@@ -2,6 +2,7 @@
   "serviceName": <+stage.variables.var1>,
   "desiredCount": 1,
   "propagateTags": "SERVICE",
+  "enableECSManagedTags": true,
   "networkConfiguration": {
       "awsvpcConfiguration": {
           "securityGroups": [
@@ -28,6 +29,14 @@
     },
     {
       "key": "CortexTeam",
+      "value": "api-management"
+    },
+    {
+      "key": "CortexTeam1",
+      "value": "api-management"
+    }
+    {
+      "key": "CortexTeam2",
       "value": "api-management"
     }
   ]
