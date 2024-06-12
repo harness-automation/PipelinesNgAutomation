@@ -2,6 +2,7 @@
   "serviceName": "rajECSService",
   "desiredCount": 2,
   "propagateTags": "SERVICE",
+  "forceNewDeployment": true,
   "schedulingStrategy": "REPLICA",
   "enableECSManagedTags": true,
   "placementConstraints": [],
