@@ -6,7 +6,6 @@
   "schedulingStrategy": "REPLICA",
   "enableECSManagedTags": true,
   "placementConstraints": [],
-  "healthCheckGracePeriodSeconds": 0,
   "capacityProviderStrategy": [
     {
       "capacityProvider": "FARGATE",
