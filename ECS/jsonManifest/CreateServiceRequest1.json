@@ -42,6 +42,10 @@
     {
       "key": "CortexTeam3",
       "value": "api-management"
+    },
+    {
+      "key": "CortexTeam4",
+      "value": "api-management"
     }
   ]
 }
