@@ -1,5 +1,5 @@
 {
-  "serviceName": <+stage.variables.var1>,
+  "serviceName": "rajECSService",
   "desiredCount": 2,
   "propagateTags": "SERVICE",
   "schedulingStrategy": "REPLICA",
