@@ -25,12 +25,11 @@
           ],
           "subnets": [
               "subnet-9757dc98"
-          ],
-          "assignPublicIp": "ENABLED"
+          ]
       }
   },
   "deploymentConfiguration": {
-      "maximumPercent": 100,
+      "maximumPercent": 90,
       "minimumHealthyPercent": 0
   },
   "tags": [
