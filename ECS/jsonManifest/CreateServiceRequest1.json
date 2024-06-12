@@ -16,7 +16,7 @@
   },
   "deploymentConfiguration": {
       "maximumPercent": 100,
-      "minimumHealthyPercent": 0
+      "minimumHealthyPercent": 1
   },
   "tags": [
     {
