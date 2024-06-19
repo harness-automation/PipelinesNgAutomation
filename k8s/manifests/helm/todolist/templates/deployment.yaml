@@ -36,7 +36,7 @@ kind: Deployment
 metadata:
   name: abc
   labels:
-    app: {{ template "todolist.fullname" . }}
+    app: abc
     chart: {{ template "todolist.chart" . }}
     release: "{{ .Release.Name }}"
     harness.io/release: {{ .Release.Name }}
