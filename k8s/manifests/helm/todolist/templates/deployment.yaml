@@ -42,7 +42,7 @@ metadata:
     harness.io/release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
 spec:
-  replicas: {{ .Values.replicaCount }}
+  replicas: 4
   selector:
     matchLabels:
       app: {{ template "todolist.name" . }}
