@@ -34,7 +34,7 @@ type: kubernetes.io/dockercfg
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ template "todolist.fullname" . }}
+  name: abc
   labels:
     app: {{ template "todolist.fullname" . }}
     chart: {{ template "todolist.chart" . }}
@@ -71,3 +71,7 @@ spec:
               name: {{.Values.name}}
           {{- end}}
           {{- if .Values.env.secrets}}
+          - secretRef:
+              name: {{.Values.name}}  
+          {{- end}}
+          {{- end}}
