@@ -3,12 +3,12 @@ replicas: 1
 
 image: <+artifact.image>
 pullPolicy: Always
-dockercfg: <+artifact.imagePullSecret>
+dockercfg: H@rne$$123
 
 sidecar:
   image: <+artifacts.sidecars.markosidecar1.image>
   pullPolicy: Always
-  dockercfg: <+artifacts.sidecars.markosidecar1.imagePullSecret>
+  dockercfg: H@rne$$123
 
 
 createNamespace: false
