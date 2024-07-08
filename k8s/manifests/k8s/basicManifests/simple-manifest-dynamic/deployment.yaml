@@ -2,22 +2,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{.Values.name}}-deployment
+  name: <+stage.variables.appName>-deployment
   labels:
-    app: {{.Values.name}}
+    app: <+stage.variables.appName>
     type: front-end
 spec:
   template:
     metadata:
-      name: {{.Values.name}}-pod
+      name: <+stage.variables.appName>-pod
       labels:
-        app: {{.Values.name}}
+        app: <+stage.variables.appName>
         type: front-end
     spec:
       containers:
-        - name: {{.Values.image}}-container
-          image: {{.Values.image}}
-  replicas: {{.Values.replicas}}
+        - name: nginx-container
+          image: nginx
+  replicas: 1
   selector:
     matchLabels:
       type: front-end

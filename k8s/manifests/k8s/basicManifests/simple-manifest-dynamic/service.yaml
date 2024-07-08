@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{.Values.name}}-service
+  name: <+stage.variables.appName>-service
 spec:
   ports:
     - protocol: TCP
       port: 80
       targetPort: 9376
   selector:
-    app: {{.Values.name}}
+    app: <+stage.variables.appName>
     type: front-end
