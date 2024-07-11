@@ -12,6 +12,6 @@ deploymentConfiguration:
   maximumPercent: 100
   minimumHealthyPercent: 0
 loadBalancers:
-- targetGroupArn: <+targetGroupArn>
+- targetGroupArn: arn:aws:elasticloadbalancing:us-east-1:479370281431:targetgroup/ecs-auto-todolist10/8e3328ba8d4c060b
   containerName: nginx
   containerPort: 8080
