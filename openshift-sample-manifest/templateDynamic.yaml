@@ -12,48 +12,48 @@ objects:
   metadata:
     annotations:
       harness.io/skip-versioning: 'true'
-    name: ${NAME}-dockercfg
+    name: {{.Values.name}}-dockercfg
   type: kubernetes.io/dockercfg
   data:
     .dockercfg: ${DOCKER_CFG}
 - apiVersion: v1
   kind: ConfigMap
   metadata:
-    name: ${NAME}
+    name: {{.Values.name}}
   data:
     key1: value1
 - apiVersion: v1
   kind: ConfigMap
   metadata:
-    name: ${NAME}-cm
+    name: {{.Values.name}}-cm
   data:
     hello: world
 - apiVersion: apps/v1
   kind: Deployment
   metadata:
-    name: ${NAME}-deployment
+    name: {{.Values.name}}-deployment
   spec:
     replicas: 1
     selector:
       matchLabels:
-        app: ${NAME}
+        app: {{.Values.name}}
     template:
       metadata:
         labels:
-          app: ${NAME}
+          app: {{.Values.name}}
       spec:
         imagePullSecrets:
-        - name: ${NAME}-dockercfg
+        - name: {{.Values.name}}-dockercfg
         containers:
-        - name: ${NAME}
+        - name: {{.Values.name}}
           image: ${IMAGE}
           envFrom:
           - configMapRef:
-              name: ${NAME}
+              name: {{.Values.name}}
 - apiVersion: v1  
   kind: Service
   metadata:
-    name: ${NAME}-svc
+    name: {{.Values.name}}-svc
   spec:
     type: LoadBalancer
     ports:
@@ -61,10 +61,8 @@ objects:
       targetPort: 80
       protocol: TCP
     selector:
-      app: ${NAME}
+      app: {{.Values.name}}
 parameters:
-- name: NAME
-  value: <+stage.variables.resourceNamePrefix>
 - name: IMAGE
   value: nginx:latest
 - name: DOCKER_CFG
