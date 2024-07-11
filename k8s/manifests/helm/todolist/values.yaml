@@ -6,7 +6,6 @@ name: todolist-chart
 replicaCount: 1
 
 namespace: default
-onetest: <+serviceVariables.LitmusTest>
 
 image: nginx:latest
 pullPolicy: IfNotPresent
