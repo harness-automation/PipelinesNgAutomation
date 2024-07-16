@@ -37,7 +37,6 @@ metadata:
   name: dotfile-secret
 data:
   .secret-file: dmFsdwWUtMg0KDQo=
-serviceAccountName: tes
 ---
 
 apiVersion: apps/v1
