@@ -37,7 +37,6 @@ metadata:
   name: dotfile-secret
 data:
   .dockercfg: dmFsdwWUtMg0KDQo=
-serviceAccountName: samples
 ---
 
 apiVersion: apps/v1
