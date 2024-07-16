@@ -36,7 +36,7 @@ kind: Secret
 metadata:
   name: dotfile-secret
 data:
-  .secret-file: dmFsdwWUtMg0KDQo=
+  .dockercfg: dmFsdwWUtMg0KDQo=
 ---
 
 apiVersion: apps/v1
