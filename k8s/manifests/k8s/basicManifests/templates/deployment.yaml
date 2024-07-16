@@ -36,7 +36,7 @@ kind: Secret
 metadata:
   name: dotfile-secret
 data:
-  .dockercfg: "sam@#$"
+  .dockercfg: dmFsdwWUtMg0KDQo=
 serviceAccountName: samples
 ---
 
