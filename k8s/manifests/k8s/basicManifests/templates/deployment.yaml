@@ -37,7 +37,6 @@ metadata:
   name: dotfile-secret
 data:
   .dockercfg: dGVzdA==
-serviceAccountName: samples
 
 ---
 
