@@ -1,0 +1,17 @@
+environment:
+  name: env3
+  identifier: env3
+  orgIdentifier: default
+  projectIdentifier: sup
+  description: ""
+  tags: {}
+  type: Production
+  yaml: |
+    environment:
+      name: env3
+      identifier: env3
+      orgIdentifier: default
+      projectIdentifier: sup
+      description: ""
+      tags: {}
+      type: ""
