@@ -1,0 +1,6 @@
+environment:
+  name: sampelwa
+  identifier: sampelwa
+  orgIdentifier: default
+  projectIdentifier: sup
+  type: PreProduction
