@@ -1,0 +1,22 @@
+overrides:
+  manifests:
+    - manifest:
+        identifier: dasdas
+        type: Values
+        spec:
+          store:
+            spec:
+              files:
+                - /jsonpatch.yaml
+              secretFiles: null
+            type: Harness
+    - manifest:
+        identifier: saasd
+        type: Values
+        spec:
+          store:
+            spec:
+              files:
+                - /jsonpatch.yaml
+              secretFiles: null
+            type: Harness
