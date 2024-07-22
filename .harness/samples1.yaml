@@ -1,0 +1,6 @@
+environment:
+  name: samples1
+  identifier: samples1
+  orgIdentifier: default
+  projectIdentifier: sup
+  type: PreProduction
