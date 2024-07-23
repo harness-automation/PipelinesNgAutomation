@@ -6,10 +6,12 @@ name: todolist-chart
 replicaCount: 2
 
 namespace: default
-
-image: nginx:latest
+# nginx:latest
+image: <+stage.variables.Dockertag>
+# nginx:latest
 pullPolicy: Always
 dockercfg: 
+
 
 service:
   type: ClusterIP
