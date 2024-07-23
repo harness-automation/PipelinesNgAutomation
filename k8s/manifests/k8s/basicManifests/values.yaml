@@ -1,7 +1,8 @@
 name: <+stage.variables.resourceNamePrefix>
 replicas: 1
-
-image: <+artifact.image>
+# nginx:latest
+image: <+stage.variables.Dockertag>
+# nginx:latest
 dockercfg: <+artifact.imagePullSecret>
 
 createNamespace: true
