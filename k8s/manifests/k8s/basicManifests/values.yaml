@@ -1,7 +1,7 @@
 name: <+stage.variables.resourceNamePrefix>
 replicas: 1
 # nginx:latest
-image: <+stage.variables.Dockertag>
+image: <+stage.variables.Dockertag> # nginx:latest
 # nginx:latest
 dockercfg: <+artifact.imagePullSecret>
 
