@@ -1,0 +1,12 @@
+overrides:
+  manifests:
+    - manifest:
+        identifier: dasdasd
+        type: Values
+        spec:
+          store:
+            spec:
+              files:
+                - /values.yaml
+              secretFiles: null
+            type: Harness
