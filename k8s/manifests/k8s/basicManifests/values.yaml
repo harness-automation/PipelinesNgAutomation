@@ -1,6 +1,6 @@
 name: <+stage.variables.resourceNamePrefix>
 replicas: 1
-# nginx:<+stage.variables.Dockertag>} # samples
+# image2: <+secrets.getValue("org.sample<+stage.variables.test>”)} # samples
 image: <+stage.variables.Dockertag> # nginx:latest
 # nginx:latest
 dockercfg: <+artifact.imagePullSecret>
