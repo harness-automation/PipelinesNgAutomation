@@ -25,6 +25,9 @@ spec:
               count_v2=0
               
               sleep 20
+
+              echo "START_COOKING"
+              
               for i in $(seq 1 1000) 
               do
                   response=$(curl http://tr-bg-app-svc-root:6060 | sed -n 's/.*"payload":"\([^"]*\)".*/\1/p')
