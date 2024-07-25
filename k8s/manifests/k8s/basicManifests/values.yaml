@@ -1,12 +1,13 @@
 name: <+stage.variables.resourceNamePrefix>
 replicas: 1
+namespace: <+infra.namespace>
+
 # image2: <+secrets.getValue("org.sample<+stage.variables.test>”)} # samples
 image: <+stage.variables.Dockertag> # nginx:latest
 # nginx:latest
 dockercfg: <+artifact.imagePullSecret>
 
 createNamespace: true
-namespace: <+infra.namespace>
 
 # Service Type allow you to specify what kind of service you want.
 # Possible values for ServiceType are:
