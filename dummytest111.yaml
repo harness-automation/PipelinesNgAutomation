@@ -1,0 +1,12 @@
+overrides:
+  manifests:
+    - manifest:
+        identifier: ddsadas
+        type: Values
+        spec:
+          store:
+            spec:
+              files:
+                - /samplea
+              secretFiles: null
+            type: Harness
