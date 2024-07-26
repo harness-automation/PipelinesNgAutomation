@@ -1,0 +1,12 @@
+overrides:
+  manifests:
+    - manifest:
+        identifier: bhhn
+        type: Values
+        spec:
+          store:
+            spec:
+              files:
+                - /valeustoe.yaml
+              secretFiles: null
+            type: Harness
