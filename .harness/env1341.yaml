@@ -7,6 +7,6 @@ overrides:
           store:
             spec:
               files:
-                - /valeustoe.yaml
+                - /sample
               secretFiles: null
             type: Harness
