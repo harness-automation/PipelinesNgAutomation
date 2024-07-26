@@ -1,6 +1,6 @@
 name: <+stage.variables.resourceNamePrefix>
 replicas: 1
-namespace: <+infra.namespace>
+namespace: <+infra.namespaceee>
 
 # image2: <+secrets.getValue("org.sample<+stage.variables.test>”)} # samples
 image: <+stage.variables.Dockertag> # nginx:latest
