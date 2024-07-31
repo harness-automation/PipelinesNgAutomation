@@ -1,5 +1,5 @@
 launchType: FARGATE
-serviceName: <+stage.variables.var1>_<+env.name>
+serviceName: <+stage.variables.var1>_<+env.name>_<+service.name> 
 desiredCount: 1
 networkConfiguration:
   awsvpcConfiguration:
