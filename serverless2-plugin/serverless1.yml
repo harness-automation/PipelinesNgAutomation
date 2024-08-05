@@ -118,7 +118,7 @@ package:
 
 plugins:
 
-  - serverless-deployment-bucket@latest
+  - serverless-deployment-bucket
 
   - serverless-plugin-utils
 
