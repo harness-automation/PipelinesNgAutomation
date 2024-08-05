@@ -19,3 +19,8 @@ flightstatusUrl: <+env.variables.flightstatusUrl>
 regionsUrl: <+env.variables.regionsUrl>
 regionCode: <+env.variables.regionCode>
 syncLambda: <+env.variables.syncLambda>
+LambdaExecutionRole: <+env.variables.LambdaExecutionRole>
+memorySize: <+serviceVariables.memorySize>
+timeout: <+serviceVariables.timeout>
+DatadogPythonLayer: <+env.variables.DatadogPythonLayer>
+DatadogExtensionLayer: <+env.variables.DatadogExtensionLayer>
