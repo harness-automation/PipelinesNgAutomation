@@ -1,0 +1,164 @@
+service: <+pipeline.variables.appci>-<+serviceVariables.serviceName>-lambda
+
+frameworkVersion: '2 || 3'
+
+provider:
+
+  name: aws
+
+  stackName: harness-<+pipeline.variables.appci>-<+serviceVariables.serviceName>-lambda
+
+  deploymentMethod: direct
+
+  runtime: <+serviceVariables.runtime>
+
+  profile: default
+
+  versionFunctions: <+serviceVariables.versionFunctions>
+
+  tracing:
+
+    lambda: false
+
+  deploymentPrefix: harness-<+pipeline.variables.appci>
+
+  vpc:
+
+    securityGroupIds:
+
+      <+stage.variables.BaselineSGID>
+
+    subnetIds:
+
+      ${split(${self:custom.subnets}, ',')}
+
+  tags:
+
+    ApplicationCI: <+pipeline.variables.appci>
+
+    EnvironmentId: <+env.name>
+
+  stackTags:
+
+    ApplicationCI: <+pipeline.variables.appci>
+
+  environment:
+
+    DD_API_KEY_SECRET_ARN: <+env.variables.DDAPIKeySecretARN>
+
+    DD_ENV: <+env.name>
+
+    DD_SERVICE: ${self:service}
+
+    DD_VERSION: 1.3.5 #update with artifact tag
+
+    DD_MERGE_XRAY_TRACES: <+env.variables.DD_XRAY_TRACES>
+
+    DD_LAMBDA_HANDLER: <+serviceVariables.LambdaHandler>
+
+    DD_TRACE_ENABLED: true
+
+    dynamo_db: <+env.variables.dynamo_db>
+
+    OPFLTURL: <+env.variables.OPFLTURL>
+
+    STAFFPOSNURL: <+env.variables.STAFFPOSNURL>
+
+    SPBACKSYNCURL: <+env.variables.SPBACKSYNCURL>
+
+    S3bucket: <+env.variables.S3bucket>
+
+    fascheduleLambda: <+env.variables.fascheduleLambda>
+
+    fascheduleUrl: <+env.variables.fascheduleUrl>
+
+    tripstatusUrl: <+env.variables.tripstatusUrl>
+
+    flightstatusUrl: <+env.variables.flightstatusUrl>
+
+    regionsUrl: <+env.variables.regionsUrl>
+
+    regionCode: <+env.variables.regionCode>
+
+    syncLambda: <+env.variables.syncLambda>
+
+ 
+
+functions:
+
+  Serverless:
+
+    handler: datadog_lambda.handler.handler
+
+    # This is a runtime handler should be DD handler, using DD layers 
+
+    role: <+env.variables.LambdaExecutionRole>
+
+    ephemeralStorageSize: 10240
+
+    description:
+
+    memorySize: <+serviceVariables.memorySize>
+
+    timeout: <+serviceVariables.timeout>
+
+    # url:
+
+    #   authorizer: aws_iam
+
+    layers:  
+      - <+env.variables.DatadogPythonLayer>
+      - <+env.variables.DatadogExtensionLayer>
+
+ 
+
+package:
+
+  artifact: <+artifact.path>
+
+plugins:
+
+  - serverless-deployment-bucket@latest
+
+  - serverless-plugin-utils
+
+
+custom:
+
+  subnets: "<+stage.variables.Subnets>"
+
+  datadog:
+
+    site: Cloud Monitoring as a Service | Datadog 
+
+    apiKeySecretArn: ${self:provider.environment.DD_API_KEY_SECRET_ARN}
+
+    enableDDTracing: true
+
+    enableDDLogs: true
+
+    env: ${self:provider.environment.DD_ENV}
+
+    service: ${self:provider.environment.DD_SERVICE}
+
+    version: ${self:provider.environment.DD_VERSION}
+
+    tags: "applicationci: <+pipeline.variables.appci>"
+
+ 
+
+resources:
+
+  Outputs:
+
+    LambdaFunctionArn:
+
+      Description: Lambda Function Arn Output to export
+
+      Value: !GetAtt ServerlessLambdaFunction.Arn
+
+      Export:
+
+        Name:
+
+          Fn::Sub: ${self:service}-<+env.name>
