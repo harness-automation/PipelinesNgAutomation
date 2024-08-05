@@ -1,4 +1,4 @@
-service: <+pipeline.variables.appci>-<+serviceVariables.serviceName>-lambda
+service: {{.Values.appci}}-{{.Values.serviceName}}-lambda
 
 frameworkVersion: '2 || 3'
 
@@ -6,27 +6,27 @@ provider:
 
   name: aws
 
-  stackName: harness-<+pipeline.variables.appci>-<+serviceVariables.serviceName>-lambda
+  stackName: harness-{{.Values.appci}}-{{.Values.serviceName}}-lambda
 
   deploymentMethod: direct
 
-  runtime: <+serviceVariables.runtime>
+  runtime: {{.Values.runtime}}
 
   profile: default
 
-  versionFunctions: <+serviceVariables.versionFunctions>
+  versionFunctions: {{.Values.versionFunctions}}
 
   tracing:
 
     lambda: false
 
-  deploymentPrefix: harness-<+pipeline.variables.appci>
+  deploymentPrefix: harness-{{.Values.appci}}
 
   vpc:
 
     securityGroupIds:
 
-      <+stage.variables.BaselineSGID>
+      {{.Values.BaselineSGID}}
 
     subnetIds:
 
@@ -34,17 +34,17 @@ provider:
 
   tags:
 
-    ApplicationCI: <+pipeline.variables.appci>
+    ApplicationCI: {{.Values.appci}}
 
-    EnvironmentId: <+env.name>
+    EnvironmentId: {{.Values.envName}}
 
   stackTags:
 
-    ApplicationCI: <+pipeline.variables.appci>
+    ApplicationCI: {{.Values.appci}}
 
   environment:
 
-    DD_API_KEY_SECRET_ARN: <+env.variables.DDAPIKeySecretARN>
+    DD_API_KEY_SECRET_ARN: {{.Values.DDAPIKeySecretARN}}
 
     DD_ENV: <+env.name>
 
