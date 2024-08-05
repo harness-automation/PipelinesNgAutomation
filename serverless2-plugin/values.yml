@@ -1,3 +1,12 @@
 appci: <+pipeline.variables.appci>
 serviceName: <+serviceVariables.serviceName>
 runtime: <+serviceVariables.runtime>
+versionFunctions: <+serviceVariables.versionFunctions>
+BaselineSGID: <+stage.variables.BaselineSGID>
+envName: <+env.name>
+DDAPIKeySecretARN: <+env.variables.DDAPIKeySecretARN>
+DDXRAYTRACES: <+env.variables.DD_XRAY_TRACES>
+LambdaHandler: <+serviceVariables.LambdaHandler>
+dynamoDb: <+env.variables.dynamo_db>
+OPFLTURL: <+env.variables.OPFLTURL>
+STAFFPOSNURL: <+env.variables.STAFFPOSNURL>
