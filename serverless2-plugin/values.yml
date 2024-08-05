@@ -10,3 +10,12 @@ LambdaHandler: <+serviceVariables.LambdaHandler>
 dynamoDb: <+env.variables.dynamo_db>
 OPFLTURL: <+env.variables.OPFLTURL>
 STAFFPOSNURL: <+env.variables.STAFFPOSNURL>
+SPBACKSYNCURL: <+env.variables.SPBACKSYNCURL>
+S3bucket: <+env.variables.S3bucket>
+fascheduleLambda: <+env.variables.fascheduleLambda>
+fascheduleUrl: <+env.variables.fascheduleUrl>
+tripstatusUrl: <+env.variables.tripstatusUrl>
+flightstatusUrl: <+env.variables.flightstatusUrl>
+regionsUrl: <+env.variables.regionsUrl>
+regionCode: <+env.variables.regionCode>
+syncLambda: <+env.variables.syncLambda>
