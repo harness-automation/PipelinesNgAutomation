@@ -46,41 +46,41 @@ provider:
 
     DD_API_KEY_SECRET_ARN: {{.Values.DDAPIKeySecretARN}}
 
-    DD_ENV: <+env.name>
+    DD_ENV: {{.Values.envName}}
 
     DD_SERVICE: ${self:service}
 
     DD_VERSION: 1.3.5 #update with artifact tag
 
-    DD_MERGE_XRAY_TRACES: <+env.variables.DD_XRAY_TRACES>
+    DD_MERGE_XRAY_TRACES: {{.Values.DDXRAYTRACES}}
 
-    DD_LAMBDA_HANDLER: <+serviceVariables.LambdaHandler>
+    DD_LAMBDA_HANDLER: {{.Values.LambdaHandler}}
 
     DD_TRACE_ENABLED: true
 
-    dynamo_db: <+env.variables.dynamo_db>
+    dynamo_db: {{.Values.dynamoDb}}
 
-    OPFLTURL: <+env.variables.OPFLTURL>
+    OPFLTURL: {{.Values.OPFLTURL}}
 
-    STAFFPOSNURL: <+env.variables.STAFFPOSNURL>
+    STAFFPOSNURL: {{.Values.STAFFPOSNURL}}
 
-    SPBACKSYNCURL: <+env.variables.SPBACKSYNCURL>
+    SPBACKSYNCURL: {{.Values.SPBACKSYNCURL}}
 
-    S3bucket: <+env.variables.S3bucket>
+    S3bucket: {{.Values.S3bucket}}
 
-    fascheduleLambda: <+env.variables.fascheduleLambda>
+    fascheduleLambda: {{.Values.fascheduleLambda}}
 
-    fascheduleUrl: <+env.variables.fascheduleUrl>
+    fascheduleUrl: {{.Values.fascheduleUrl}}
 
-    tripstatusUrl: <+env.variables.tripstatusUrl>
+    tripstatusUrl: {{.Values.tripstatusUrl}}
 
-    flightstatusUrl: <+env.variables.flightstatusUrl>
+    flightstatusUrl: {{.Values.flightstatusUrl}}
 
-    regionsUrl: <+env.variables.regionsUrl>
+    regionsUrl: {{.Values.regionsUrl}}
 
-    regionCode: <+env.variables.regionCode>
+    regionCode: {{.Values.regionCode}}
 
-    syncLambda: <+env.variables.syncLambda>
+    syncLambda: {{.Values.syncLambda}}
 
  
 
@@ -92,23 +92,23 @@ functions:
 
     # This is a runtime handler should be DD handler, using DD layers 
 
-    role: <+env.variables.LambdaExecutionRole>
+    role: {{.Values.LambdaExecutionRole}}
 
     ephemeralStorageSize: 10240
 
     description:
 
-    memorySize: <+serviceVariables.memorySize>
+    memorySize: {{.Values.memorySize}}
 
-    timeout: <+serviceVariables.timeout>
+    timeout: {{.Values.timeout}}
 
     # url:
 
     #   authorizer: aws_iam
 
     layers:  
-      - <+env.variables.DatadogPythonLayer>
-      - <+env.variables.DatadogExtensionLayer>
+      - {{.Values.DatadogPythonLayer}}
+      - {{.Values.DatadogExtensionLayer}}
 
  
 
@@ -143,7 +143,7 @@ custom:
 
     version: ${self:provider.environment.DD_VERSION}
 
-    tags: "applicationci: <+pipeline.variables.appci>"
+    tags: "applicationci: {{.Values.appci}}"
 
  
 
@@ -161,4 +161,4 @@ resources:
 
         Name:
 
-          Fn::Sub: ${self:service}-<+env.name>
+          Fn::Sub: ${self:service}-{{.Values.envName}}
