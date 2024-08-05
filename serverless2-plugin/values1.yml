@@ -24,3 +24,4 @@ memorySize: <+serviceVariables.memorySize>
 timeout: <+serviceVariables.timeout>
 DatadogPythonLayer: <+env.variables.DatadogPythonLayer>
 DatadogExtensionLayer: <+env.variables.DatadogExtensionLayer>
+Subnets: <+stage.variables.Subnets>
