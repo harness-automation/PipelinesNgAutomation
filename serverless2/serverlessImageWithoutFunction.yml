@@ -1,0 +1,6 @@
+service: asdfasdfasd
+frameworkVersion: '3.30.1'
+
+provider:
+  name: aws
+  runtime: java8
