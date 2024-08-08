@@ -159,4 +159,4 @@ resources:
 
         Name:
 
-          Fn::Sub: ${self:service}-{{.Values.envName}}
+          Fn::Sub: ${self:service}-asdf
