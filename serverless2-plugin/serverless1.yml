@@ -12,8 +12,6 @@ provider:
 
   runtime: {{.Values.runtime}}
 
-  profile: default
-
   versionFunctions: {{.Values.versionFunctions}}
 
   tracing:
