@@ -90,7 +90,7 @@ functions:
 
     # This is a runtime handler should be DD handler, using DD layers 
 
-    role: {{.Values.LambdaExecutionRole}}
+    role: arn:aws:iam::806630305776:role/pluginroletestcf
 
     ephemeralStorageSize: 10240
 
