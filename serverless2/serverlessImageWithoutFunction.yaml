@@ -4,7 +4,7 @@ frameworkVersion:  '2 || 3'
 provider:
   name: aws
   profile: default
-  runtime: java21
+  runtime: python3.7
 
 package:
   artifact: <+artifact.path>
