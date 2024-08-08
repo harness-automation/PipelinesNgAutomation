@@ -6,7 +6,7 @@ provider:
 
   name: aws
 
-  stackName: harness-{{.Values.appci}}-{{.Values.serviceName}}-lambda
+  stackName: harness-{{.Values.appci}}-{{.Values.serviceName}}-lambda1
 
   deploymentMethod: direct
 
