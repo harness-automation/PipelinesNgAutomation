@@ -1,0 +1,5 @@
+service:
+  name: monolith
+  identifier: monolith
+  orgIdentifier: CIB
+  projectIdentifier: MerchantServices
