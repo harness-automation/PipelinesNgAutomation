@@ -3,7 +3,7 @@
 # Declare variables to be passed into your templates.
 
 name: <+service.name><+serviceVariables.name>
-replicaCount: 2
+replicaCount: 1
 
 namespace: <+infra.namespace>
 
