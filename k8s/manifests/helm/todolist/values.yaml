@@ -1,7 +1,2 @@
-name: todolist-chart
-replicaCount: 2
-
-namespace: default
-
 image: "nginx\":latest"
 
