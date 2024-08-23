@@ -7,7 +7,7 @@ replicaCount: 2
 
 namespace: <+pipeline.stages.k8s.spec.infrastructure.output.namespace>
 
-image: "nginx\":latest"
+image: "nginx:latest"
 pullPolicy: Always
 dockercfg: 
 
