@@ -5,7 +5,7 @@
 name: todolist-chart
 replicaCount: 2
 
-namespace: <+infra.namespace>
+namespace: <+pipeline.stages.K8sStage.spec.infrastructure.output.namespace>
 
 image: "nginx:latest"
 pullPolicy: "[-A-Za-z0-9\\p{Lu}\\p{Ll}\\p{Lo}\\p{Nd}\\p{Zs}, \\\\\\[\\]\\(\\)',‚:;.&#-—‘’“”`§~†|±!+=*@_?€™’\"\\{\\}]*"
