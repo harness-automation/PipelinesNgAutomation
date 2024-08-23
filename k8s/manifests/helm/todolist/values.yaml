@@ -1,6 +1,6 @@
 # Default values for todolist.
 # This is a YAML-formatted file.
-# Declare variables to be passed into your templates.
+# Declare variables to be passed into your <+sadflj.asdfaf.adsf> templates.
 
 name: todolist-chart
 replicaCount: 2
