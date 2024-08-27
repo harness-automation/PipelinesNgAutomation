@@ -1,0 +1,15 @@
+template:
+  name: steptemplate_0912
+  identifier: steptemplate_0912
+  versionLabel: v1
+  type: Step
+  tags: {}
+  spec:
+    timeout: 10m
+    type: ShellScriptProvision
+    spec:
+      source:
+        type: Inline
+        spec:
+          script: <+input>
+      environmentVariables: []
