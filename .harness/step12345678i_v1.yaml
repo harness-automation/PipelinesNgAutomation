@@ -5,7 +5,7 @@ template:
   type: Step
   tags: {}
   spec:
-    timeout: 10m
+  timeout: 10m
     type: ShellScript
     spec:
       shell: Bash
