@@ -2,9 +2,9 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
-appName: "first-child"
-name: "first-child"
-name: "first-child"
+appName: <+stage.variables.resourceName>
+name: <+stage.variables.resourceName>
+name: <+stage.variables.resourceName>
 kubeApiVersion: "apps/v1"
 replicaCount: 2
 
