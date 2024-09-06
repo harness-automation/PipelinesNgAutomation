@@ -1,0 +1,71 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: test-configmap
+data:
+  helloWorld: {{ .Values.testValues.helloWorld | toYaml | indent 2 | nindent 2 }}
+  helloBacktick: {{ .Values.testValues.helloBacktick | toYaml | indent 2 | nindent 2 }}
+  helloDoubleQuotes: {{ .Values.testValues.helloDoubleQuotes | toYaml | indent 2 | nindent 2 }}
+  helloSimple: {{ .Values.testValues.helloSimple | toYaml | indent 2 | nindent 2 }}
+  helloSingleQuotes: {{ .Values.testValues.helloSingleQuotes | toYaml | indent 2 | nindent 2 }}
+  helloDoubleQuotesEscaped: {{ .Values.testValues.helloDoubleQuotesEscaped | toYaml | indent 2 | nindent 2 }}
+  helloInteger: {{ .Values.testValues.helloInteger | toYaml | indent 2 | nindent 2 }}
+  helloIntegerString: {{ .Values.testValues.helloIntegerString | toYaml | indent 2 | nindent 2 }}
+  helloDecimal: {{ .Values.testValues.helloDecimal | toYaml | indent 2 | nindent 2 }}
+  helloDecimalString: {{ .Values.testValues.helloDecimalString | toYaml | indent 2 | nindent 2 }}
+  helloHex: {{ .Values.testValues.helloHex | toYaml | indent 2 | nindent 2 }}
+  helloHexString: {{ .Values.testValues.helloHexString | toYaml | indent 2 | nindent 2 }}
+  helloHarnessExpression: {{ .Values.testValues.helloHarnessExpression | toYaml | indent 2 | nindent 2 }}
+  helloHarnessExpressionSingleQuotes: {{ .Values.testValues.helloHarnessExpressionSingleQuotes | toYaml | indent 2 | nindent 2 }}
+  helloHarnessExpressionDoubleQuotes: {{ .Values.testValues.helloHarnessExpressionDoubleQuotes | toYaml | indent 2 | nindent 2 }}
+  helloSecretExpression: {{ .Values.testValues.helloSecretExpression | toYaml | indent 2 | nindent 2 }}
+  helloSecretExpressionSingleQuotes: {{ .Values.testValues.helloSecretExpressionSingleQuotes | toYaml | indent 2 | nindent 2 }}
+  helloSecretExpressionDoubleQuotes: {{ .Values.testValues.helloSecretExpressionDoubleQuotes | toYaml | indent 2 | nindent 2 }}
+  helloNull: {{ .Values.testValues.helloNull | toYaml | indent 2 | nindent 2 }}
+  helloNullString: {{ .Values.testValues.helloNullString | toYaml | indent 2 | nindent 2 }}
+  helloNullUppercase: {{ .Values.testValues.helloNullUppercase | toYaml | indent 2 | nindent 2 }}
+  helloCharacter: {{ .Values.testValues.helloCharacter | toYaml | indent 2 | nindent 2 }}
+  helloCharacterString: {{ .Values.testValues.helloCharacterString | toYaml | indent 2 | nindent 2 }}
+  helloLargeNumber: {{ .Values.testValues.helloLargeNumber | toYaml | indent 2 | nindent 2 }}
+  helloLargeNumberString: {{ .Values.testValues.helloLargeNumberString | toYaml | indent 2 | nindent 2 }}
+  helloText: {{ .Values.testValues.helloText | toYaml | indent 2 | nindent 2 }}
+  helloTextSingleQuotes: {{ .Values.testValues.helloTextSingleQuotes | toYaml | indent 2 | nindent 2 }}
+  helloTextDoubleQuotes: {{ .Values.testValues.helloTextDoubleQuotes | toYaml | indent 2 | nindent 2 }}
+  helloEscaped: {{ .Values.testValues.helloEscaped | toYaml | indent 2 | nindent 2 }}
+
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: test-secret
+type: Opaque
+stringData:
+  helloWorld: {{ .Values.testValues.helloWorld | toYaml | indent 2 | nindent 2 }}
+  helloBacktick: {{ .Values.testValues.helloBacktick | toYaml | indent 2 | nindent 2 }}
+  helloDoubleQuotes: {{ .Values.testValues.helloDoubleQuotes | toYaml | indent 2 | nindent 2 }}
+  helloSimple: {{ .Values.testValues.helloSimple | toYaml | indent 2 | nindent 2 }}
+  helloSingleQuotes: {{ .Values.testValues.helloSingleQuotes | toYaml | indent 2 | nindent 2 }}
+  helloDoubleQuotesEscaped: {{ .Values.testValues.helloDoubleQuotesEscaped | toYaml | indent 2 | nindent 2 }}
+  helloInteger: {{ .Values.testValues.helloInteger | toYaml | indent 2 | nindent 2 }}
+  helloIntegerString: {{ .Values.testValues.helloIntegerString | toYaml | indent 2 | nindent 2 }}
+  helloDecimal: {{ .Values.testValues.helloDecimal | toYaml | indent 2 | nindent 2 }}
+  helloDecimalString: {{ .Values.testValues.helloDecimalString | toYaml | indent 2 | nindent 2 }}
+  helloHex: {{ .Values.testValues.helloHex | toYaml | indent 2 | nindent 2 }}
+  helloHexString: {{ .Values.testValues.helloHexString | toYaml | indent 2 | nindent 2 }}
+  helloHarnessExpression: {{ .Values.testValues.helloHarnessExpression | toYaml | indent 2 | nindent 2 }}
+  helloHarnessExpressionSingleQuotes: {{ .Values.testValues.helloHarnessExpressionSingleQuotes | toYaml | indent 2 | nindent 2 }}
+  helloHarnessExpressionDoubleQuotes: {{ .Values.testValues.helloHarnessExpressionDoubleQuotes | toYaml | indent 2 | nindent 2 }}
+  helloSecretExpression: {{ .Values.testValues.helloSecretExpression | toYaml | indent 2 | nindent 2 }}
+  helloSecretExpressionSingleQuotes: {{ .Values.testValues.helloSecretExpressionSingleQuotes | toYaml | indent 2 | nindent 2 }}
+  helloSecretExpressionDoubleQuotes: {{ .Values.testValues.helloSecretExpressionDoubleQuotes | toYaml | indent 2 | nindent 2 }}
+  helloNull: {{ .Values.testValues.helloNull | toYaml | indent 2 | nindent 2 }}
+  helloNullString: {{ .Values.testValues.helloNullString | toYaml | indent 2 | nindent 2 }}
+  helloNullUppercase: {{ .Values.testValues.helloNullUppercase | toYaml | indent 2 | nindent 2 }}
+  helloCharacter: {{ .Values.testValues.helloCharacter | toYaml | indent 2 | nindent 2 }}
+  helloCharacterString: {{ .Values.testValues.helloCharacterString | toYaml | indent 2 | nindent 2 }}
+  helloLargeNumber: {{ .Values.testValues.helloLargeNumber | toYaml | indent 2 | nindent 2 }}
+  helloLargeNumberString: {{ .Values.testValues.helloLargeNumberString | toYaml | indent 2 | nindent 2 }}
+  helloText: {{ .Values.testValues.helloText | toYaml | indent 2 | nindent 2 }}
+  helloTextSingleQuotes: {{ .Values.testValues.helloTextSingleQuotes | toYaml | indent 2 | nindent 2 }}
+  helloTextDoubleQuotes: {{ .Values.testValues.helloTextDoubleQuotes | toYaml | indent 2 | nindent 2 }}
+  helloEscaped: {{ .Values.testValues.helloEscaped | toYaml | indent 2 | nindent 2 }}
