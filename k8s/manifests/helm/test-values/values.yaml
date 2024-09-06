@@ -5,7 +5,7 @@ testValues:
   helloSimple: "This is Anshul's value"
   helloSingleQuotes: "'This is Anshul's value'"
   helloDoubleQuotesEscaped: "\"This is Anshul's value\""
-  helloInteger: 1
+  helloInteger: "1"
   helloIntegerString: "1"
   helloDecimal: "0.1"
   helloDecimalString: "0.1"
@@ -28,3 +28,5 @@ testValues:
   helloTextSingleQuotes: "'ABC cds'"
   helloTextDoubleQuotes: "\"ABC cds\""
   helloEscaped: "hello\\value"
+  secret: <+stage.variables.secretName>
+  configMap: <+stage.variables.configMapName>
