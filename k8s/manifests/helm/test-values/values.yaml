@@ -28,5 +28,5 @@ testValues:
   helloTextSingleQuotes: "'ABC cds'"
   helloTextDoubleQuotes: "\"ABC cds\""
   helloEscaped: "hello\\value"
-  secret: <+stage.variables.secretName>
-  configMap: <+stage.variables.configMapName>
+  secret: <+pipeline.stages.stage.variables.secretName>
+  configMap: <+pipeline.stages.stage.variables.configMapName>
