@@ -1,0 +1,26 @@
+testValues:
+  configMap: "my-app-config"
+  secret: "my-app-secret"
+
+configMapData:
+  helloWorld: "World"
+  helloBacktick: "`world`"
+  helloDoubleQuotes: "\"world\""
+  helloSimple: "This is Anshul's value"
+  helloSingleQuotes: "'This is Anshul's value'"
+  helloDoubleQuotesEscaped: "\"This is Anshul's value\""
+  helloInteger: 1
+  helloDecimal: 0.1
+  helloHex: "0xabd"
+  helloNull: null
+  helloCharacter: "A"
+  helloLargeNumber: 123456789012345678901234567890123456789012345678901234567890
+  helloText: "ABC cds"
+  helloEscaped: "hello\\value"
+
+secretData:
+  secretPassword: "c2VjcmV0UGFzc3dvcmQ="  # Base64 encoded string
+  secretApiKey: "YXBpS2V5MTIzNDU2Nzg5MA=="  # Base64 encoded string
+  secretNumber: "MTA="  # Base64 encoded number (10)
+  secretSpecialChar: "IUAjJCVeJiooKQ=="  # Base64 encoded special characters string
+  secretNullValue: ""  # Empty value to demonstrate null/empty handling
