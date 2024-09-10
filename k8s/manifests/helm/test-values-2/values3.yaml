@@ -1,21 +1,36 @@
 testValues:
-  configMap: "my-app-config"
-  secret: "my-app-secret"
+  configMap: "<+pipeline.stages.stage.variables.configMapName>"
+  secret: "<+pipeline.stages.stage.variables.secretName>"
 
 configMapData:
-  helloWorld: "World"
-  helloBacktick: "`world`"
+  helloWorld: World
+  helloBacktick: `world`
   helloDoubleQuotes: "\"world\""
   helloSimple: "This is Anshul's value"
   helloSingleQuotes: "'This is Anshul's value'"
   helloDoubleQuotesEscaped: "\"This is Anshul's value\""
   helloInteger: 1
+  helloIntegerString: "1"
   helloDecimal: 0.1
+  helloDecimalString: "0.1"
   helloHex: "0xabd"
+  helloHexString: "0xabd"
+  helloHarnessExpression: "<harness_expression>"
+  helloHarnessExpressionSingleQuotes: "'<harness_expression>'"
+  helloHarnessExpressionDoubleQuotes: "\"<harness_expression>\""
+  helloSecretExpression: "<secret_expression>"
+  helloSecretExpressionSingleQuotes: "'<secret_expression>'"
+  helloSecretExpressionDoubleQuotes: "\"<secret_expression>\""
   helloNull: null
-  helloCharacter: "A"
+  helloNullString: "null"
+  helloNullUppercase: NULL
+  helloCharacter: A
+  helloCharacterString: "A"
   helloLargeNumber: 123456789012345678901234567890123456789012345678901234567890
+  helloLargeNumberString: "123456789012345678901234567890123456789012345678901234567890"
   helloText: "ABC cds"
+  helloTextSingleQuotes: "'ABC cds'"
+  helloTextDoubleQuotes: "\"ABC cds\""
   helloEscaped: "hello\\value"
 
 secretData:
@@ -24,3 +39,32 @@ secretData:
   secretNumber: "MTA="  # Base64 encoded number (10)
   secretSpecialChar: "IUAjJCVeJiooKQ=="  # Base64 encoded special characters string
   secretNullValue: ""  # Empty value to demonstrate null/empty handling
+  helloWorld: World
+  helloBacktick: `world`
+  helloDoubleQuotes: "\"world\""
+  helloSimple: "This is Anshul's value"
+  helloSingleQuotes: "'This is Anshul's value'"
+  helloDoubleQuotesEscaped: "\"This is Anshul's value\""
+  helloInteger: 1
+  helloIntegerString: "1"
+  helloDecimal: 0.1
+  helloDecimalString: "0.1"
+  helloHex: "0xabd"
+  helloHexString: "0xabd"
+  helloHarnessExpression: "<harness_expression>"
+  helloHarnessExpressionSingleQuotes: "'<harness_expression>'"
+  helloHarnessExpressionDoubleQuotes: "\"<harness_expression>\""
+  helloSecretExpression: "<secret_expression>"
+  helloSecretExpressionSingleQuotes: "'<secret_expression>'"
+  helloSecretExpressionDoubleQuotes: "\"<secret_expression>\""
+  helloNull: null
+  helloNullString: "null"
+  helloNullUppercase: NULL
+  helloCharacter: A
+  helloCharacterString: "A"
+  helloLargeNumber: 123456789012345678901234567890123456789012345678901234567890
+  helloLargeNumberString: "123456789012345678901234567890123456789012345678901234567890"
+  helloText: "ABC cds"
+  helloTextSingleQuotes: "'ABC cds'"
+  helloTextDoubleQuotes: "\"ABC cds\""
+  helloEscaped: "hello\\value"
