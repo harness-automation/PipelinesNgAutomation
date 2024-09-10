@@ -1,0 +1,4 @@
+apiVersion: v2
+name: test-values
+description: A Helm chart for testing ConfigMap and Secret values
+version: 0.1.0
