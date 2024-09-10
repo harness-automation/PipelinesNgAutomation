@@ -4,7 +4,7 @@ testValues:
 
 configMapData:
   helloWorld: World
-  helloBacktick: `world`
+  helloBacktick: "`world`"
   helloDoubleQuotes: "\"world\""
   helloSimple: "This is Anshul's value"
   helloSingleQuotes: "'This is Anshul's value'"
@@ -40,7 +40,7 @@ secretData:
   secretSpecialChar: "IUAjJCVeJiooKQ=="  # Base64 encoded special characters string
   secretNullValue: ""  # Empty value to demonstrate null/empty handling
   helloWorld: World
-  helloBacktick: `world`
+  helloBacktick: "`world`"
   helloDoubleQuotes: "\"world\""
   helloSimple: "This is Anshul's value"
   helloSingleQuotes: "'This is Anshul's value'"
