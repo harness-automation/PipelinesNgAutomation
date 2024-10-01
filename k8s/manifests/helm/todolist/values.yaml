@@ -5,9 +5,9 @@
 name: todolist-chart
 replicaCount: 2
 
-namespace: <+pipeline.variables.name_space>
+namespace: tarun-ng
 # nginx:latest
-image: <+stage.variables.Dockertag>
+image: <+pipeline.variables.docker_image>
 # nginx:latest
 pullPolicy: Always
 dockercfg: 
