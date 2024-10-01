@@ -5,7 +5,7 @@
 name: todolist-chart
 replicaCount: 2
 
-namespace: default
+namespace: <+pipeline.variables.name_space>
 # nginx:latest
 image: <+stage.variables.Dockertag>
 # nginx:latest
