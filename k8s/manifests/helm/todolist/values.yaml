@@ -7,7 +7,7 @@ replicaCount: 2
 
 namespace: tarun-ng
 # nginx:latest
-image: <+pipeline.variables.docker_image>
+image: nginx:latest
 # nginx:latest
 pullPolicy: Always
 dockercfg: 
@@ -50,7 +50,7 @@ affinity: {}
 
 env:
   config:
-    key1: value1
+    key1: <+pipeline.variables.config_key>
   secrets:
     key2: value2
 
