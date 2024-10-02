@@ -72,6 +72,6 @@ spec:
           {{- end}}
           {{- if .Values.env.secrets}}
           - secretRef:
-              name: {{.Values.name}}  
+              name: wrong-secret 
           {{- end}}
           {{- end}}
