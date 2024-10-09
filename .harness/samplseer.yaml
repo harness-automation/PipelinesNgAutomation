@@ -1,0 +1,35 @@
+pipeline:
+  name: samplseer
+  identifier: samplseer
+  tags: {}
+  template:
+    templateRef: samplsres
+    versionLabel: v1
+    templateInputs:
+      stages:
+        - stage:
+            identifier: samplesr
+            type: Deployment
+            spec:
+              service:
+                serviceInputs:
+                  serviceDefinition:
+                    type: Kubernetes
+                    spec:
+                      artifacts:
+                        primary:
+                          primaryArtifactRef: dsda
+        - stage:
+            identifier: DEV_Deploy_West
+            type: Deployment
+            spec:
+              service:
+                serviceInputs:
+                  serviceDefinition:
+                    type: Kubernetes
+                    spec:
+                      artifacts:
+                        primary:
+                          primaryArtifactRef: dsda
+  projectIdentifier: DoNotDelete_Tarun_Bugathon
+  orgIdentifier: default
