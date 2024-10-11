@@ -50,7 +50,7 @@ affinity: {}
 
 env:
   secrets:
-    key2: <+pipeline.variables.pods_values>
+    key2: dasds
   config:
     key1: <+<+pipeline.variables.secondary_aws_region> == "us-west-2"?"<+<+pipeline.stages.<+stage.identifier>.variables.app_domain_global_cert_arn>,<+pipeline.stages.<+stage.identifier>.variables.app_domain_region_cert_arn>>":<+pipeline.stages.<+stage.identifier>.variables.app_domain_global_cert_arn>>
 
