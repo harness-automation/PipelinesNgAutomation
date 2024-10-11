@@ -1,5 +1,5 @@
 pipeline:
-  name: Repo2-main-CD-pipe
+  name: Repo2-test-CD-pipe
   identifier: Repo2mainCDpipe
   projectIdentifier: DoNotDelete_ElasticBugBash
   orgIdentifier: default
