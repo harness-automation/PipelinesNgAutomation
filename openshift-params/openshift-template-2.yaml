@@ -25,7 +25,7 @@ objects:
       spec:
         containers:
         - name: nginx
-          image: nginx:1.14.2
+          image: quay.io/nginx/nginx-ingress
           ports:
           - containerPort: 80
 parameters:
