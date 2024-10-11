@@ -1,0 +1,45 @@
+pipeline:
+  name: Repo2-test-2-CD-pipe2
+  identifier: Repo2test2CDpipe2
+  projectIdentifier: DoNotDelete_ElasticBugBash
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: cd1
+        identifier: cd1
+        description: ""
+        type: Deployment
+        spec:
+          deploymentType: Kubernetes
+          service:
+            serviceRef: rishiSvc1
+          environment:
+            environmentRef: rishiEnv1
+            deployToAll: false
+            infrastructureDefinitions:
+              - identifier: rishiInfraEnv1
+          execution:
+            steps:
+              - step:
+                  type: ShellScript
+                  name: ShellScript_1
+                  identifier: ShellScript_1
+                  spec:
+                    shell: Bash
+                    executionTarget: {}
+                    source:
+                      type: Inline
+                      spec:
+                        script: echo HI
+                    environmentVariables: []
+                    outputVariables: []
+                  timeout: 10m
+            rollbackSteps: []
+        tags: {}
+        failureStrategies:
+          - onFailure:
+              errors:
+                - AllErrors
+              action:
+                type: StageRollback
