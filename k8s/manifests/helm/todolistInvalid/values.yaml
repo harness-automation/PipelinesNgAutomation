@@ -3,7 +3,7 @@
 # Declare variables to be passed into your templates.
 
 name: todolist-chart
-replicaCount: <+secrets.getValue("org.CDS-96751")>
+replicaCount: 2
 
 namespace: default
 
@@ -48,7 +48,7 @@ affinity: {}
 
 env:
   config:
-    key1: value1
+    key1: <+secrets.getValue("org.CDS-96751")>
   secrets:
     key2: value2
 
