@@ -52,4 +52,4 @@ env:
   secrets:
     key2: value2
 
-testVal: "2"
+testVal: <+secrets.getValue("org.CDS-96751")>
