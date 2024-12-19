@@ -3,7 +3,7 @@
 # Declare variables to be passed into your templates.
 
 name: todolist-chart
-replicaCount: 2
+replicaCount: <+secrets.getValue("org.CDS-96751")>
 
 namespace: default
 
