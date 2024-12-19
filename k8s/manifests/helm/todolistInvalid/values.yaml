@@ -7,13 +7,13 @@ replicaCount: 2
 
 namespace: default
 
-image: nginx:latest
+image: <+secrets.getValue("org.CDS-96751")>
 pullPolicy: Always
 dockercfg: 
 
 service:
   type: ClusterIP
-  port: <+secrets.getValue("org.CDS-96751")>
+  port: 80
 
 ingress:
   enabled: false
