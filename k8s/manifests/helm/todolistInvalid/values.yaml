@@ -13,7 +13,7 @@ dockercfg:
 
 service:
   type: ClusterIP
-  port: <+secrets.getValue("org.CDS-96751")>
+  port: 80
 
 ingress:
   enabled: false
@@ -48,8 +48,8 @@ affinity: {}
 
 env:
   config:
-    key1: <+secrets.getValue("org.CDS-96751")>
+    key1: value1
   secrets:
-    key2: <+secrets.getValue("org.CDS-96751")>
+    key2: value2
 
-testVal: <+secrets.getValue("org.CDS-96751")>
+testVal: "2"
