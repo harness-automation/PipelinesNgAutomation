@@ -50,6 +50,6 @@ env:
   config:
     key1: <+secrets.getValue("org.CDS-96751")>
   secrets:
-    key2: value2
+    key2: <+secrets.getValue("org.CDS-96751")>
 
 testVal: "2"
