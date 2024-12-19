@@ -61,7 +61,7 @@ spec:
       containers:
         - name: todolist-harness
           image: registry.hub.docker.com/harness/todolist-sample:latest
-        - name: {{ .Chart.Name }}
+        - name: {{.Values.name}}
           image: {{.Values.image}}
           imagePullPolicy: {{ .Values.pullPolicy }}
           {{- if or .Values.env.config .Values.env.secrets}}
