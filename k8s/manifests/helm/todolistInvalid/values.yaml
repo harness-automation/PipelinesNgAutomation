@@ -8,7 +8,7 @@ replicaCount: 2
 namespace: default
 
 image: nginx:latest
-pullPolicy: <+secrets.getValue("org.CDS-96751")>
+pullPolicy: Always
 dockercfg: 
 
 service:
@@ -48,8 +48,8 @@ affinity: {}
 
 env:
   config:
-    key1: <+secrets.getValue("org.CDS-96751")>
+    key1: value1
   secrets:
     key2: value2
 
-testVal: <+secrets.getValue("org.CDS-96751")>
+testVal: "2"
