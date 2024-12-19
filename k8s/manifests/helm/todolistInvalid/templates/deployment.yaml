@@ -37,7 +37,7 @@ metadata:
   name: {{ template "todolist.fullname" . }}
   labels:
     app: {{ template "todolist.name" . }}
-    chart: {{ template "todolist.chart" . }}
+    chart: {{.Values.name}}
     release: "{{ .Release.Name }}"
     harness.io/release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
