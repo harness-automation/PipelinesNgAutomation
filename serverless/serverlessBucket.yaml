@@ -4,16 +4,8 @@ frameworkVersion: '2.50.0'
 provider:
   name: aws
   runtime: nodejs20.x
-  deploymentMethod: direct
   tracing: true # enable tracing
   deploymentBucket: anildownloads3
-  stackTags:
-    harness_service_name: opsheet-wait-times-service
-    bapp_id: BAPP0005087
-    name_node_id: '2575'
-    environment: latest
-  alb:
-    targetGroupPrefix: opsheet-wait-times-service
   iamRoleStatements:
     - Effect: "Allow" # xray permissions (required)
       Action:
@@ -21,7 +13,6 @@ provider:
         - "xray:PutTelemetryRecords"
       Resource:
         - "*"
-  stage: dev
   region: us-east-1
   deploymentBucketObject:
     name: anildownloads3
