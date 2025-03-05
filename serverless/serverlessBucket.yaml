@@ -6,7 +6,7 @@ provider:
   runtime: nodejs20.x
   deploymentMethod: direct
   tracing: true # enable tracing
-  deploymentBucket: awswdprcastdevconnector-serverless-deploy
+  deploymentBucket: anildownloads3
   stackTags:
     harness_service_name: opsheet-wait-times-service
     bapp_id: BAPP0005087
@@ -24,7 +24,7 @@ provider:
   stage: dev
   region: us-east-1
   deploymentBucketObject:
-    name: awswdprcastdevconnector-serverless-deploy-us-east-1
+    name: anildownloads3
 functions:
   hello:
     handler: handler.hello
