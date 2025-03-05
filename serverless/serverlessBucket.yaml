@@ -5,7 +5,7 @@ provider:
   name: aws
   runtime: nodejs20.x
   tracing: true # enable tracing
-  deploymentBucket: anildownloads3
+  deploymentBucket: anilqa
   iamRoleStatements:
     - Effect: "Allow" # xray permissions (required)
       Action:
@@ -15,7 +15,7 @@ provider:
         - "*"
   region: us-east-1
   deploymentBucketObject:
-    name: anildownloads3
+    name: anilqa
 functions:
   hello:
     handler: handler.hello
