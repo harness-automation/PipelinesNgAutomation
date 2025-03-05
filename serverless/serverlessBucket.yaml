@@ -1,4 +1,4 @@
-service: serverlessprodsanity
+service: serverlessprodsanityeight
 frameworkVersion: '2.50.0'
 
 provider:
