@@ -1,6 +1,6 @@
 function:
   name: gcf-go-helloworld-automation-mayank
-  runtime: go119
+  runtime: go121
   entryPoint: HelloGet
   httpsTrigger:
     securityLevel: SECURE_OPTIONAL
