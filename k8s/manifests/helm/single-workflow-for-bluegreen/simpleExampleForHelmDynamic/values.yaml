@@ -1,0 +1,4 @@
+name: <+stage.variables.resourceNamePrefix>
+replicas: 1
+image: nginx
+servicePort: 80
