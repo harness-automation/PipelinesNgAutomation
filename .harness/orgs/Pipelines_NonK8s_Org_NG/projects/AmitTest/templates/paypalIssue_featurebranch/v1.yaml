@@ -1,0 +1,30 @@
+template:
+  name: paypalIssue_featurebranch
+  identifier: paypalIssue_featurebranch
+  versionLabel: v1
+  type: Pipeline
+  projectIdentifier: AmitTest
+  orgIdentifier: Pipelines_NonK8s_Org_NG
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: stg1
+          identifier: stg1
+          tags: {}
+          template:
+            templateRef: stgTemplate_featurebranch
+            versionLabel: v1
+            templateInputs:
+              type: Custom
+              spec:
+                execution:
+                  steps:
+                    - step:
+                        identifier: ShellScript_1
+                        type: ShellScript
+                        spec:
+                          source:
+                            type: Inline
+                            spec:
+                              script: <+input>
