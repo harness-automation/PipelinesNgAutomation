@@ -1,0 +1,24 @@
+template:
+  name: stepGroup_featureBranch
+  identifier: stepGroup_featureBranch
+  versionLabel: v1
+  type: StepGroup
+  projectIdentifier: naidusanity
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stageType: Custom
+    steps:
+      - step:
+          name: step1
+          identifier: step1
+          template:
+            templateRef: stepTemplate_featurebranch
+            versionLabel: v1
+            templateInputs:
+              type: ShellScript
+              spec:
+                source:
+                  type: Inline
+                  spec:
+                    script: <+input>
