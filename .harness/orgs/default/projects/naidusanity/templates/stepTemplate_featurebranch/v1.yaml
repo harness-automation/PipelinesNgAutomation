@@ -19,3 +19,15 @@ template:
           script: <+input>
       environmentVariables: []
       outputVariables: []
+    failureStrategies:
+      - onFailure:
+          errors:
+            - Authentication
+          action:
+            type: Ignore
+      - onFailure:
+          errors:
+            - Authorization
+            - DelegateProvisioning
+          action:
+            type: MarkAsSuccess
