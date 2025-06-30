@@ -1,0 +1,56 @@
+---
+service:
+  serviceDefinition:
+    type: "ECS"
+    spec:
+      manifests:
+      - manifest:
+          identifier: "taskDef"
+          type: "EcsTaskDefinition"
+          spec:
+            store:
+              type: "Github"
+              spec:
+                connectorRef: "account.GitHubAccHttpConnectorForAutomationTest"
+                gitFetchType: "Branch"
+                paths:
+                - "ECS/sample/RegisterTaskDefinitionRequest.yaml"
+                repoName: "PipelinesNgAutomation"
+                branch: "master"
+      - manifest:
+          identifier: "ServiceDef"
+          type: "EcsServiceDefinition"
+          spec:
+            store:
+              type: "Github"
+              spec:
+                connectorRef: "account.GitHubAccHttpConnectorForAutomationTest"
+                gitFetchType: "Branch"
+                paths:
+                - "ECS/sample/CreateServiceRequest.yaml"
+                repoName: "PipelinesNgAutomation"
+                branch: "master"
+      artifacts:
+        primary:
+          identifier: ""
+          spec:
+            version: "index.docker.io/harness/todolist-sample:10"
+            timeout: "10m"
+            scripts:
+              fetchAllArtifacts:
+                artifactsArrayPath: "$.artifact"
+                versionPath: "version"
+                spec:
+                  shell: "Bash"
+                  source:
+                    spec:
+                      script: "echo '{ \"artifact\": [{ \"version\": \"index.docker.io/harness/todolist-sample:10\"\
+                        }]}' > $HARNESS_ARTIFACT_RESULT_PATH"
+                    type: "Inline"
+          type: "CustomArtifact"
+  gitOpsEnabled: false
+  projectIdentifier: "test456"
+  orgIdentifier: "API_ApiAutomationOrgCDP"
+  identifier: "EcsService2_G1_Clone"
+  tags: {}
+  name: "EcsService2_G1 - Clone"
