@@ -1,0 +1,8 @@
+pipeline:
+  stages:
+    - name: Hello World
+      id: hello_world
+      steps:
+        - name: Echo Hello World
+          id: echo_hello_world
+          run: echo "hello world"
