@@ -1,0 +1,4 @@
+service:
+  name: fd
+  identifier: fd
+  orgIdentifier: Ng_Pipelines_K8s_Organisations
