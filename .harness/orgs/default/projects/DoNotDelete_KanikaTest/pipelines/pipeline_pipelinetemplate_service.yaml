@@ -1,0 +1,23 @@
+pipeline:
+  name: pipeline_pipelinetemplate_service
+  identifier: pipeline_pipelinetemplate_service
+  tags: {}
+  template:
+    templateRef: pipeline_template_repob
+    versionLabel: v1
+    templateInputs:
+      stages:
+        - stage:
+            identifier: stg1
+            type: Deployment
+            spec:
+              environment:
+                environmentRef: <+input>
+                environmentInputs: <+input>
+                serviceOverrideInputs: <+input>
+                infrastructureDefinitions: <+input>
+              service:
+                serviceRef: <+input>
+                serviceInputs: <+input>
+  projectIdentifier: DoNotDelete_KanikaTest
+  orgIdentifier: default
