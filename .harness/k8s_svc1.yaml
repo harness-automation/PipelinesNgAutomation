@@ -29,14 +29,5 @@ service:
               fetchHelmChartMetadata: false
               optionalValuesYaml: false
       artifacts:
-        primary:
-          primaryArtifactRef: <+input>
-          sources:
-            - spec:
-                connectorRef: account.DockerForRolloutAutomation
-                imagePath: library/nginx
-                tag: <+input>
-                digest: ""
-              identifier: a1
-              type: DockerRegistry
+        primary: {}
     type: NativeHelm
