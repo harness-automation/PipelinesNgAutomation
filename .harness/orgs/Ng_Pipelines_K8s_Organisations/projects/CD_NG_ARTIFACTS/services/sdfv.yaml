@@ -1,0 +1,5 @@
+service:
+  name: sdfv
+  identifier: sdfv
+  orgIdentifier: Ng_Pipelines_K8s_Organisations
+  projectIdentifier: CD_NG_ARTIFACTS
