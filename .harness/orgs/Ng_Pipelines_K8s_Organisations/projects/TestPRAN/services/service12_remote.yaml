@@ -1,0 +1,5 @@
+service:
+  name: service12_remote
+  identifier: service12_remote
+  orgIdentifier: Ng_Pipelines_K8s_Organisations
+  projectIdentifier: TestPRAN
