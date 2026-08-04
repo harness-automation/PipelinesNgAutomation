@@ -5,7 +5,6 @@ pipeline:
   template:
     templateRef: dgsdf
     versionLabel: v1
-    gitBranch: main
     templateInputs:
       stages:
         - stage:
