@@ -1,0 +1,5 @@
+service:
+  name: serviceremote
+  identifier: serviceremote
+  orgIdentifier: Ng_Pipelines_K8s_Organisations
+  projectIdentifier: TestPRAN
