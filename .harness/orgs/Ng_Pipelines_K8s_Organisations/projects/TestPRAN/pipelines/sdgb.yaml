@@ -4,6 +4,7 @@ pipeline:
   tags: {}
   template:
     templateRef: asd
+    gitBranch: main
     versionLabel: v1
     templateInputs:
       stages:
